@@ -13,9 +13,6 @@
         android:theme="@style/Theme.FitNext"
         tools:targetApi="34">
         <activity
-            android:name=".RegistrationActivity"
-            android:exported="false" />
-        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
