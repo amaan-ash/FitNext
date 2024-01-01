@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        //rest of the code
+        //rest of the code below
 
 
     }
