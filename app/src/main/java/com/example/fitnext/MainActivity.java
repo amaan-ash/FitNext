@@ -11,12 +11,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         try {
+            //to make the splash screen visible for 3 seconds
             Thread.sleep(3000);
-            SplashScreen.installSplashScreen(MainActivity.this);
         } catch (InterruptedException e) {
          throw new RuntimeException();
         }
 
+        //to display the splash screen
+        SplashScreen.installSplashScreen(MainActivity.this);
+
         setContentView(R.layout.activity_main);
+
+
     }
 }
