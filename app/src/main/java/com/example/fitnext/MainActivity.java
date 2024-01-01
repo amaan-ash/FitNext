@@ -1,7 +1,7 @@
 package com.example.fitnext;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.core.splashscreen.SplashScreen;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,8 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             Thread.sleep(3000);
+            SplashScreen.installSplashScreen(MainActivity.this);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+         throw new RuntimeException();
         }
 
         setContentView(R.layout.activity_main);
