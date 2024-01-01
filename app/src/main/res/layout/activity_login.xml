@@ -51,6 +51,7 @@
                >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputUsername"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/muli_black"
@@ -58,8 +59,8 @@
                     android:layout_marginStart="0dp"
                     android:drawableStart="@drawable/ic_account_user"
                     android:drawablePadding="10dp"
+                    android:autofillHints="username"
                     android:drawableTint="@color/black"
-                    android:drawableEnd=""
                     android:inputType="text"
 
                     />
@@ -81,6 +82,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/muli_black"
@@ -89,6 +91,7 @@
                     android:drawableStart="@drawable/ic_password"
                     android:drawablePadding="10dp"
                     android:inputType="textPassword"
+                    android:autofillHints="password"
                     android:drawableTint="@color/black"
 
                     />
@@ -167,7 +170,12 @@
         </LinearLayout>
 
         <!-- Your remaining layout code -->
-
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/googleicon"
     </LinearLayout>
 
 
