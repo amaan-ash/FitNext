@@ -5,39 +5,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        >
 
     <ImageView
-        android:id="@+id/inventoryView"
+        android:id="@+id/heartIcon"
         android:layout_width="match_parent"
-        android:layout_height="347dp"
-        android:layout_margin="15dp"
-        android:contentDescription="inventory image"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:contentDescription="fitness health icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.041"
-        app:srcCompat="@drawable/" />
+        app:srcCompat="@drawable/fitt2" /> <!---or fitnessmain image -->
 
     <TextView
-        android:id="@+id/welcomeView"
-        android:layout_width="wrap_content"
-        android:layout_height="65dp"
-        android:text="Welcome!!"
-        android:textSize="35sp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muli_black"
+        android:text="Stay Fit | Stay Happy"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inventoryView"
+        app:layout_constraintTop_toBottomOf="@+id/heartIcon"
         app:layout_constraintVertical_bias="0.075" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
@@ -46,34 +61,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeView"
-        app:layout_constraintVertical_bias="0.049">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.049"
+        >
 
 
         <Button
-            android:id="@+id/loginButtonMain"
+            android:id="@+id/loginBtnMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:drawableLeft="@drawable/ic_person_login"
+            android:background="@color/lavender"
             android:text="Login"
-            android:textColorHint="#ffff"
+            android:textColor="@color/white"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="168dp"
-            tools:layout_editor_absoluteY="591dp" />
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/registerButtonMain"
+            android:id="@+id/registerBtnMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_person_register"
+            android:layout_margin="15dp"
+            android:background="@color/lavender"
             android:text="Register"
-            android:textColorHint="#FFFF"
+            android:textColor="@color/white"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="105dp"
-            tools:layout_editor_absoluteY="492dp" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

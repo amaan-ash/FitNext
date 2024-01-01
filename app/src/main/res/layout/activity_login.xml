@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    >
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender"
+    android:background="@color/white"
     android:padding="30dp"
     tools:context=".LoginActivity">
 
@@ -18,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/muli_black"
             android:text="login"
             android:textAllCaps="true"
@@ -38,11 +43,11 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Enter Username"
                 app:boxStrokeColor="@color/black"
-                app:hintTextColor="@color/white"
+                app:hintTextColor="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:boxBackgroundMode="outline"
                 app:endIconMode="clear_text"
-                app:endIconTint="@color/white"
+                app:endIconTint="@color/black"
                >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -53,7 +58,8 @@
                     android:layout_marginStart="0dp"
                     android:drawableStart="@drawable/ic_account_user"
                     android:drawablePadding="10dp"
-                    android:drawableTint="@color/white"
+                    android:drawableTint="@color/black"
+                    android:drawableEnd=""
                     android:inputType="text"
 
                     />
@@ -66,12 +72,12 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Enter Password"
                 app:boxStrokeColor="@color/black"
-                app:hintTextColor="@color/white"
+                app:hintTextColor="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:boxBackgroundMode="outline"
                 android:layout_marginTop="3dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/white"
+                app:endIconTint="@color/black"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -83,7 +89,7 @@
                     android:drawableStart="@drawable/ic_password"
                     android:drawablePadding="10dp"
                     android:inputType="textPassword"
-                    android:drawableTint="@color/white"
+                    android:drawableTint="@color/black"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +98,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:orientation="horizontal">
 
             <TextView
@@ -118,16 +125,55 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Login here"
             android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:background="@color/black"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="0dp"
 
             />
 
+
+        <!-- Your existing layout code -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#000" /> <!-- Adjust the background color and height as needed -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" OR "
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000000" /> <!-- Adjust the text color as needed -->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#000" />
+
+        </LinearLayout>
+
+        <!-- Your remaining layout code -->
 
     </LinearLayout>
 
 
 
+
+
+
 </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
