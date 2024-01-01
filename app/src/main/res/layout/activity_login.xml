@@ -5,6 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity"
     >
 
 <ScrollView
@@ -12,7 +13,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="30dp"
-    tools:context=".LoginActivity">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/muli_black"
-            android:text="login"
+            android:text="Hello There Welcome"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="40sp"
@@ -41,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Enter Username"
+                android:hint="Enter Email ID"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
                 app:boxStrokeWidthFocused="2dp"
@@ -51,7 +52,7 @@
                >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputUsername"
+                    android:id="@+id/textInputEmailLogin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/muli_black"
@@ -59,9 +60,9 @@
                     android:layout_marginStart="0dp"
                     android:drawableStart="@drawable/ic_account_user"
                     android:drawablePadding="10dp"
-                    android:autofillHints="username"
+                   android:autofillHints="emailAddress"
                     android:drawableTint="@color/black"
-                    android:inputType="text"
+                  android:inputType="textEmailAddress"
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -82,7 +83,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputPassword"
+                    android:id="@+id/textInputPasswordLogin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/muli_black"
@@ -148,6 +149,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center">
 
             <View
@@ -182,10 +184,10 @@
                 android:id="@+id/googleBtn"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="20dp"
                android:translationX="80dp"
                 android:background="@color/white"
-                android:src="@drawable/googleicon"/>
+                android:src="@drawable/googleicon"
+                />
 
             <ImageView
                 android:id="@+id/callBtn"
@@ -194,7 +196,7 @@
                 android:src="@drawable/callicon"
                 android:background="@color/white"
                 android:translationX="170dp"
-                android:layout_marginTop="20dp"/>
+                />
 
         </LinearLayout>
         <!-- Your remaining layout code -->
