@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     //this method is invoked when the user clicks on Register Here button
     private void registerUser() {
-        String email=textInputEmailRegister.getText().toString();
+        String email=textInputEmailRegister.getText().toString().trim();
         String password=textInputPasswordRegister.getText().toString().trim();
         String confirmPassword=textConfirmPasswordRegister.getText().toString().trim();
 
@@ -106,6 +106,9 @@ public class RegisterActivity extends AppCompatActivity {
                 textLayoutEmailRegister.setError("Not a valid email Address");
                 textLayoutEmailRegister.requestFocus();
                 return;
+            }
+            else{
+                textLayoutEmailRegister.setError(null);
             }
         }
         if(password.isEmpty()){
@@ -151,6 +154,24 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
             return;
+        }
+
+
+        if (password.length() < 8) {
+            textLayoutPasswordRegister.setError("Less length");
+            textLayoutPasswordRegister.requestFocus();
+            return;
+        }
+        else {
+            textLayoutPasswordRegister.setError(null);
+        }
+        if(!password.equals(confirmPassword)){
+            textLayoutConfirmPasswordRegister.setError("Password Do not Match");
+            textLayoutConfirmPasswordRegister.requestFocus();
+            return;
+        }
+        else{
+            textLayoutConfirmPasswordRegister.setError(null);
         }
 
 
