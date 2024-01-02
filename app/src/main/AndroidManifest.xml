@@ -13,11 +13,16 @@
         android:theme="@style/Theme.FitNext"
         tools:targetApi="34">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".DashBoard"
             android:exported="false" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

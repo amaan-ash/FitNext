@@ -38,6 +38,7 @@
                 android:layout_marginTop="50dp">
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutEmailRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -68,6 +69,7 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutPasswordRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -98,6 +100,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutConfirmPasswordRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -145,6 +148,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/black" />
                 <TextView
+                    android:id="@+id/goToSigninTextview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign In"
