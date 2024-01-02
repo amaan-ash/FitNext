@@ -158,15 +158,16 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         if (password.length() < 8) {
-            textLayoutPasswordRegister.setError("Less length");
+            textLayoutPasswordRegister.setError("Minimum 8 characters");
             textLayoutPasswordRegister.requestFocus();
             return;
         }
         else {
             textLayoutPasswordRegister.setError(null);
         }
+
         if(!password.equals(confirmPassword)){
-            textLayoutConfirmPasswordRegister.setError("Password Do not Match");
+            textLayoutConfirmPasswordRegister.setError("Passwords Do not Match");
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
         }
