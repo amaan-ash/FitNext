@@ -90,14 +90,14 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                // Check if the password contains any blank spaces
+//                 Check if the password contains any blank spaces
                 if (editable.toString().contains(" ")) {
                     // Password contains blank spaces, show an error message
-                    textLayoutPasswordLogin.setError("password cannot contain blank spaces");
-                } else {
-                    // Password is valid, clear any previous error
-                    textLayoutPasswordLogin.setError(null);
-                }
+                    textLayoutPasswordLogin.setError("password cannot contain blank spaces");}
+//                } else {
+//                    // Password is valid, clear any previous error
+//                    textLayoutPasswordLogin.setError(null);
+//                }
             }
 
         });
