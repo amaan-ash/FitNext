@@ -58,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
 
 
+
+        //the below code is used to prevent entering of the white space
         InputFilter noWhiteSpaceFilter = new InputFilter() {
             @Override
             public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
@@ -74,6 +76,8 @@ public class LoginActivity extends AppCompatActivity {
         };
 
         textInputPasswordLogin.setFilters(new InputFilter[]{noWhiteSpaceFilter});
+
+
 
         //TextWatcher implementation for Email Field
         textInputEmailLogin.addTextChangedListener(new TextWatcher() {
@@ -109,17 +113,11 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-//                 Check if the password contains any blank spaces
-                if (editable.toString().contains(" ")) {
-                    // Password contains blank spaces, show an error message
-                    textLayoutPasswordLogin.setError("password cannot contain blank spaces");
-                    textLayoutPasswordLogin.requestFocus();
-                    return;
-                }
-//
             }
 
         });
+
+
         //setting the newUser Textview
         newUserTextview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +139,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //this method is called for the login purpose
                 loginUser();
 
             }
@@ -196,11 +195,6 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-         if(password.contains(" ")){
-            textLayoutPasswordLogin.setError("password cannot contain blank spaces");
-            textLayoutPasswordLogin.requestFocus();
-            return;
-        }
 
             Toast.makeText(this, "login code here", Toast.LENGTH_SHORT).show();
 
@@ -233,13 +227,13 @@ public class LoginActivity extends AppCompatActivity {
             textLayoutEmailLogin.setError("email is required");
             textLayoutEmailLogin.requestFocus();
             return;
-        } else {
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 textLayoutEmailLogin.setError("not a valid email address");
                 textLayoutEmailLogin.requestFocus();
                 return;
             }
-        }
+
 
         // Clear the error if the email is valid
         textLayoutEmailLogin.setError(null);
@@ -252,18 +246,13 @@ public class LoginActivity extends AppCompatActivity {
             textLayoutPasswordLogin.setError("password is required");
             textLayoutPasswordLogin.requestFocus();
             return;
-        } else if (password.length() < 8) {
+        }
+         if (password.length() < 8) {
             textLayoutPasswordLogin.setError("minimum 8 characters required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
-            // Check if the password contains any blank spaces
-            else if (password.contains(" ")) {
-                // Password contains blank spaces, show an error message
-                textLayoutPasswordLogin.setError("password cannot contain blank spaces");
-                textLayoutPasswordLogin.requestFocus();
-                return;
-            }
+
 
             textLayoutPasswordLogin.setError(null);
         }

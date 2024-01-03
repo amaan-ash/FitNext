@@ -80,6 +80,8 @@ public class RegisterActivity extends AppCompatActivity {
         textInputPasswordRegister.setFilters(new InputFilter[]{noWhiteSpaceFilter});
         textConfirmPasswordRegister.setFilters(new InputFilter[]{noWhiteSpaceFilter});
 
+
+
         //setting the login button
         goToLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,7 +181,7 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-
+            //remove the error
             textLayoutConfirmPasswordRegister.setError(null);
 
     }
@@ -266,17 +268,18 @@ public class RegisterActivity extends AppCompatActivity {
             textLayoutEmailRegister.setError("email is required");
             textLayoutEmailRegister.requestFocus();
             return;
-        } else {
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 textLayoutEmailRegister.setError("not a valid email address");
                 textLayoutEmailRegister.requestFocus();
                 return;
-            }
         }
 
         // Clear the error if the email is valid
         textLayoutEmailRegister.setError(null);
     }
+
 
     //this method is invoked when the user clicks on Register Here button
     private void registerUser() {
