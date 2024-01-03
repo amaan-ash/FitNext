@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
         forgotPasswordTextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                resetPassword();
             }
         });
 
@@ -223,7 +223,9 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                   progressBar.setVisibility(View.GONE);
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this, DashBoard.class));
+
+                    Intent intent=new Intent(LoginActivity.this,DashBoard.class);
+                    startActivity(intent);
                     finish();
                 }
                 else{
@@ -286,5 +288,34 @@ public class LoginActivity extends AppCompatActivity {
 
             textLayoutPasswordLogin.setError(null);
         }
+
+
+        //the below code is used for resetting the password
+    public void resetPassword(){
+        final String resetEmail = textInputEmailLogin.getText().toString();
+
+        if (resetEmail.isEmpty()) {
+            textLayoutEmailLogin.setError("enter email to reset password");
+            textLayoutEmailLogin.requestFocus();
+            return;
+        }
+        progressBar.setVisibility(View.VISIBLE);
+
+        //using the firebase code to send email for resetting the password
+        auth.sendPasswordResetEmail(resetEmail)
+
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(LoginActivity.this, "An email has been sent to reset password", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                        }
+
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
+    }
     }
 
