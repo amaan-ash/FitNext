@@ -157,7 +157,7 @@ public class LoginActivity extends AppCompatActivity {
         googleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                loginWithGoogle();
             }
         });
 
@@ -175,6 +175,13 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    //the below method is used to login with google
+    private void loginWithGoogle() {
+
+    }
+
+
+    //the below method calls the validate() method which is used to login
     private void loginUser() {
         email = textInputEmailLogin.getText().toString().trim();
         password = textInputPasswordLogin.getText().toString().trim();
