@@ -15,7 +15,7 @@ import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class DashBoard extends AppCompatActivity {
-    private Button button2;
+    private Button logoutBtn;
     FirebaseAuth auth;
 
     @Override
@@ -24,15 +24,12 @@ public class DashBoard extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
 
         auth= FirebaseAuth.getInstance();
-        button2=findViewById(R.id.button2);
+        logoutBtn=findViewById(R.id.logoutBtn);
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                auth.signOut();
-                finish();
-                startActivity(new Intent(DashBoard.this,MainActivity.class));
-                Toast.makeText(DashBoard.this,"Logout Successful", Toast.LENGTH_SHORT).show();
+                logout();
             }
         });
         //the below is the replacement of the onBackPressed() method
@@ -51,6 +48,31 @@ public class DashBoard extends AppCompatActivity {
     }
 
 
+    private void logout() {
+        new AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Do you really want to Logout?")
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If the user clicks "Yes", perform below operation
+                        auth.signOut();
+                        finishAffinity();
+                        startActivity(new Intent(DashBoard.this,MainActivity.class));
+                        Toast.makeText(DashBoard.this,"Logout Successful", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If the user clicks "No", do nothing and close the dialog
+                        dialog.dismiss();
+                    }
+                })
+                .setIcon(R.drawable.alert)
+                .show();
+
+    }
+
+
     private void showExitConfirmationDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Exit")
@@ -58,7 +80,7 @@ public class DashBoard extends AppCompatActivity {
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // If the user clicks "Yes", exit the app
-                        finish();
+                        finishAffinity();
                     }
                 })
                 .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
