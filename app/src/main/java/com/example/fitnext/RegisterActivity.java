@@ -334,8 +334,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         //the below code is used if all the inputs are given correctly by the user
 
-        Toast.makeText(this, "registration is ongoing", Toast.LENGTH_SHORT).show();
 
+        Toast.makeText(this, "Registration in Progress", Toast.LENGTH_SHORT).show();
         progressBar.setVisibility(View.VISIBLE);
 
 
@@ -367,21 +367,15 @@ public class RegisterActivity extends AppCompatActivity {
                                             if (task.isSuccessful()) {
                                                 Log.d("final","the user is registered");
 
-                                                Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
                                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                                finish();
 
-                                                textInputEmailRegister.setText("");
-                                                textInputPasswordRegister.setText("");
-                                                textConfirmPasswordRegister.setText("");
-
-                                                textLayoutEmailRegister.setError(null);
-                                                textLayoutPasswordRegister.setError(null);
-                                                textLayoutConfirmPasswordRegister.setError(null);
                                             }
 
                                             else {
                                                 Log.d("registration failed","task is successful but registration is failed");
-                                                Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
