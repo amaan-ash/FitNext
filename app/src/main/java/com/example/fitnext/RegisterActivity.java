@@ -19,8 +19,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
     private TextInputLayout textLayoutPasswordRegister;
@@ -38,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
     String password;
     String confirmPassword;
 
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +61,9 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn=findViewById(R.id.registerBtn);
         goToLoginBtn=findViewById(R.id.goToLoginBtn);
         progressBar=findViewById(R.id.progressBar);
+
+        //getting the instance of the FireBaseAuth class
+        auth = FirebaseAuth.getInstance();
 
         //rest of the code
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -322,9 +332,71 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        else{
-          Toast.makeText(this, "registration is ongoing", Toast.LENGTH_SHORT).show();
-      }
+        //the below code is used if all the inputs are given correctly by the user
+
+        Toast.makeText(this, "registration is ongoing", Toast.LENGTH_SHORT).show();
+
+        progressBar.setVisibility(View.VISIBLE);
+
+
+
+        //to register the user
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if (task.isSuccessful()) {
+                            final User user = new User(
+                                    email,
+                                    password
+
+                            );
+
+                            //important to retrieve data and send data based on user email
+                            FirebaseUser userNameInFirebase = auth.getCurrentUser();
+                            String UserID=userNameInFirebase.getEmail();
+                            String resultEmail = UserID.replace(".","");
+
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(resultEmail).child("UserDetails")
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            progressBar.setVisibility(View.GONE);
+                                            if (task.isSuccessful()) {
+                                                Log.d("final","the user is registered");
+
+                                                Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_LONG).show();
+                                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+
+                                                textInputEmailRegister.setText("");
+                                                textInputPasswordRegister.setText("");
+                                                textConfirmPasswordRegister.setText("");
+
+                                                textLayoutEmailRegister.setError(null);
+                                                textLayoutPasswordRegister.setError(null);
+                                                textLayoutConfirmPasswordRegister.setError(null);
+                                            }
+
+                                            else {
+                                                Log.d("registration failed","task is successful but registration is failed");
+                                                Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
+
+                        }
+
+                        else {
+                            Log.d("task no successful","the task is not successful");
+                            progressBar.setVisibility(View.GONE);
+                            Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+
 
 
 
