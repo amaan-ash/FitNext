@@ -1,5 +1,6 @@
 package com.example.fitnext;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -49,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
         goToLoginBtn=findViewById(R.id.goToLoginBtn);
         progressBar=findViewById(R.id.progressBar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //rest of the code
 
@@ -225,5 +228,17 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // Handle the Up button press
+                super.onBackPressed();
+                return true;
+            // Other menu item cases can be added here if needed
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }

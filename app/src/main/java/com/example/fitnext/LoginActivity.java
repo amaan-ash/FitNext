@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -47,7 +48,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 //                startActivity(intent);
 //                finish();
                 progressBar.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -89,5 +90,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
