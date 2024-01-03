@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="New User?"
-                    android:textColor="@color/black"
+                    android:textColor="@color/red"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -157,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
                     android:text="Forgot Password?"
-                    android:textColor="@color/black"
+                    android:textColor="@color/red"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
