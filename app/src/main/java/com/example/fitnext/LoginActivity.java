@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.MenuItem;
@@ -154,38 +155,38 @@ public class LoginActivity extends AppCompatActivity {
         password = textInputPasswordLogin.getText().toString().trim();
 
 
-        if(email.isEmpty()){
+        if(TextUtils.isEmpty(email)){
             textLayoutEmailLogin.setError("email is required");
             textLayoutEmailLogin.requestFocus();
             return;
         }
-        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             textLayoutEmailLogin.setError("not a valid email address");
             textLayoutEmailLogin.requestFocus();
             return;
         }
 
-        else if(password.isEmpty()){
+        if(TextUtils.isEmpty(password)){
             textLayoutPasswordLogin.setError("password is required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
-        else if(password.contains(" ")){
-            textLayoutPasswordLogin.setError("password cannot contain blank spaces");
-            textLayoutPasswordLogin.requestFocus();
-            return;
-        }
 
-        else if(password.length() < 8){
+        if(password.length() < 8){
             textLayoutPasswordLogin.setError("minimum 8 characters required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
 
-        else {
-            Toast.makeText(this, "rest code here", Toast.LENGTH_SHORT).show();
-
+         if(password.contains(" ")){
+            textLayoutPasswordLogin.setError("password cannot contain blank spaces");
+            textLayoutPasswordLogin.requestFocus();
+            return;
         }
+
+            Toast.makeText(this, "login code here", Toast.LENGTH_SHORT).show();
+
+
 
 
     }
@@ -210,7 +211,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //the below method is used for validating the email
     private void validateEmail(String email) {
-        if (email.isEmpty()) {
+        if (TextUtils.isEmpty(email)) {
             textLayoutEmailLogin.setError("email is required");
             textLayoutEmailLogin.requestFocus();
             return;
@@ -229,7 +230,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //the below method is used for validating the password
     private void validatePassword(String password) {
-        if (password.isEmpty()) {
+        if (TextUtils.isEmpty(password)) {
             textLayoutPasswordLogin.setError("password is required");
             textLayoutPasswordLogin.requestFocus();
             return;

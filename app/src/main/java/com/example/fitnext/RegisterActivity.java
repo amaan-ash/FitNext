@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
@@ -117,6 +119,13 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
+                //Check if the password contains any blank spaces
+                if (editable.toString().contains(" ")) {
+                    // Password contains blank spaces, show an error message
+                    textLayoutPasswordRegister.setError("password cannot contain blank spaces");
+                    textLayoutPasswordRegister.requestFocus();
+                    return;
+                }
 
             }
         });
@@ -136,14 +145,20 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-
+                //Check if the password contains any blank spaces
+                if (editable.toString().contains(" ")) {
+                    // Password contains blank spaces, show an error message
+                    textLayoutConfirmPasswordRegister.setError("password cannot contain blank spaces");
+                    textLayoutConfirmPasswordRegister.requestFocus();
+                    return;
+                }
             }
         });
 
     }
 
     private void validateConfirmPassword(String confirmPassword) {
-        if (confirmPassword.isEmpty()) {
+        if (TextUtils.isEmpty(confirmPassword)) {
             textLayoutConfirmPasswordRegister.setError("confirm your password");
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
@@ -156,21 +171,36 @@ public class RegisterActivity extends AppCompatActivity {
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
         }
+
+        if (confirmPassword.contains(" ")) {
+            // Password contains blank spaces, show an error message
+            textLayoutPasswordRegister.setError("password cannot contain blank spaces");
+            textLayoutPasswordRegister.requestFocus();
+            return;
+        }
             textLayoutConfirmPasswordRegister.setError(null);
 
     }
 
     //this method is for validating the entered password
     private void validateEnterPassword(String password) {
-        if (password.length() < 1) {
-            textLayoutPasswordRegister.setError("please enter password");
+        if (TextUtils.isEmpty(password)) {
+            textLayoutPasswordRegister.setError("password is required");
             textLayoutPasswordRegister.requestFocus();
             return;
-        } else if (password.length() < 8) {
+        }
+        else if (password.length() < 8) {
             textLayoutPasswordRegister.setError("minimum 8 characters required");
             textLayoutPasswordRegister.requestFocus();
             return;
 
+        }
+        // Check if the password contains any blank spaces
+        else if (password.contains(" ")) {
+            // Password contains blank spaces, show an error message
+            textLayoutPasswordRegister.setError("password cannot contain blank spaces");
+            textLayoutPasswordRegister.requestFocus();
+            return;
         }
         //clear the error if the password is valid
         textLayoutPasswordRegister.setError(null);
@@ -178,7 +208,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     //  this method for email validation
     private void validateEmail(String email) {
-        if (email.isEmpty()) {
+        if (TextUtils.isEmpty(email)) {
             textLayoutEmailRegister.setError("email is required");
             textLayoutEmailRegister.requestFocus();
             return;
@@ -200,22 +230,51 @@ public class RegisterActivity extends AppCompatActivity {
          password = textInputPasswordRegister.getText().toString().trim();
          confirmPassword = textConfirmPasswordRegister.getText().toString().trim();
 
-      if(email.isEmpty()){
+      if(TextUtils.isEmpty(email)){
           textLayoutEmailRegister.setError("email is required");
           textLayoutEmailRegister.requestFocus();
           return;
       }
-       if(password.isEmpty()){
+
+      if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+          textLayoutEmailRegister.setError("not a valid email address");
+          textLayoutEmailRegister.requestFocus();
+          return;
+      }
+
+       if(TextUtils.isEmpty(password)){
           textLayoutPasswordRegister.setError("please enter password");
           textLayoutPasswordRegister.requestFocus();
           return;
       }
 
-       if(confirmPassword.isEmpty()){
+       if(password.contains(" ")){
+          textLayoutPasswordRegister.setError("password cannot contain blank spaces");
+          textLayoutPasswordRegister.requestFocus();
+          return;
+      }
+
+       if(password.length() < 8){
+          textLayoutPasswordRegister.setError("minimum 8 characters required");
+          textLayoutPasswordRegister.requestFocus();
+          return;
+      }
+
+        if(TextUtils.isEmpty(confirmPassword)){
            textLayoutConfirmPasswordRegister.setError("confirm your password");
            textLayoutConfirmPasswordRegister.requestFocus();
            return;
        }
+
+        if (!confirmPassword.equals(password)) {
+            textLayoutConfirmPasswordRegister.setError("Passwords do not match");
+            textLayoutConfirmPasswordRegister.requestFocus();
+            return;
+        }
+
+        else{
+          Toast.makeText(this, "registration is ongoing", Toast.LENGTH_SHORT).show();
+      }
 
 
 
