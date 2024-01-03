@@ -240,7 +240,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        // Handle the Up button press
+        // Handle the Up arrow button of the app bar
         if (item.getItemId() == android.R.id.home) {
             super.onBackPressed();
             return true;
