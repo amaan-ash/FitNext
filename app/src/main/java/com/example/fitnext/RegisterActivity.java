@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -58,6 +60,25 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         progressBar.setVisibility(View.GONE);
+
+        //for preventing the user from entering the white space
+        InputFilter noWhiteSpaceFilter = new InputFilter() {
+            @Override
+            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+                // Check each character being entered
+                for (int i = start; i < end; i++) {
+                    if (Character.isWhitespace(source.charAt(i))) {
+                        // If a blank space is detected, prevent it from being entered
+                        return "";
+                    }
+                }
+                // Allow other characters
+                return null;
+            }
+        };
+
+        textInputPasswordRegister.setFilters(new InputFilter[]{noWhiteSpaceFilter});
+        textConfirmPasswordRegister.setFilters(new InputFilter[]{noWhiteSpaceFilter});
 
         //setting the login button
         goToLoginBtn.setOnClickListener(new View.OnClickListener() {
@@ -119,13 +140,6 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                //Check if the password contains any blank spaces
-                if (editable.toString().contains(" ")) {
-                    // Password contains blank spaces, show an error message
-                    textLayoutPasswordRegister.setError("password cannot contain blank spaces");
-                    textLayoutPasswordRegister.requestFocus();
-                    return;
-                }
 
             }
         });
@@ -145,13 +159,6 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                //Check if the password contains any blank spaces
-                if (editable.toString().contains(" ")) {
-                    // Password contains blank spaces, show an error message
-                    textLayoutConfirmPasswordRegister.setError("password cannot contain blank spaces");
-                    textLayoutConfirmPasswordRegister.requestFocus();
-                    return;
-                }
             }
         });
 
@@ -172,39 +179,86 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        if (confirmPassword.contains(" ")) {
-            // Password contains blank spaces, show an error message
-            textLayoutPasswordRegister.setError("password cannot contain blank spaces");
-            textLayoutPasswordRegister.requestFocus();
-            return;
-        }
+
             textLayoutConfirmPasswordRegister.setError(null);
 
     }
 
     //this method is for validating the entered password
     private void validateEnterPassword(String password) {
+        // Check if the password is empty
         if (TextUtils.isEmpty(password)) {
-            textLayoutPasswordRegister.setError("password is required");
+            textLayoutPasswordRegister.setError("Password is required");
             textLayoutPasswordRegister.requestFocus();
             return;
         }
-        else if (password.length() < 8) {
-            textLayoutPasswordRegister.setError("minimum 8 characters required");
-            textLayoutPasswordRegister.requestFocus();
-            return;
 
-        }
-        // Check if the password contains any blank spaces
-        else if (password.contains(" ")) {
-            // Password contains blank spaces, show an error message
-            textLayoutPasswordRegister.setError("password cannot contain blank spaces");
+        // Check if the password is less than 8 characters
+        if (password.length() < 8) {
+            textLayoutPasswordRegister.setError("Minimum 8 characters required");
             textLayoutPasswordRegister.requestFocus();
             return;
         }
-        //clear the error if the password is valid
+
+        // Check if the password contains at least one uppercase letter
+        if (!containsUppercase(password)) {
+            textLayoutPasswordRegister.setError("Password must contain at least one uppercase letter");
+            textLayoutPasswordRegister.requestFocus();
+            return;
+        }
+
+        // Check if the password contains at least one number
+        if (!containsNumber(password)) {
+            textLayoutPasswordRegister.setError("Password must contain at least one number");
+            textLayoutPasswordRegister.requestFocus();
+            return;
+        }
+
+        // Check if the password contains only allowed special symbols
+        if (!containsOnlyAllowedSymbols(password)) {
+            textLayoutPasswordRegister.setError("Password can only contain '@' symbol");
+            textLayoutPasswordRegister.requestFocus();
+            return;
+        }
+
+        // Clear the error if the password is valid
         textLayoutPasswordRegister.setError(null);
     }
+
+    // Helper method to check if the password contains at least one uppercase letter
+    private boolean containsUppercase(String password) {
+        for (char c : password.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Helper method to check if the password contains at least one number
+    private boolean containsNumber(String password) {
+        for (char c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Helper method to check if the password contains only allowed special symbols
+    private boolean containsOnlyAllowedSymbols(String password) {
+        // Define allowed special symbols
+        String allowedSymbols = "@";
+
+        for (char c : password.toCharArray()) {
+            if (!Character.isLetterOrDigit(c) && allowedSymbols.indexOf(c) == -1) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
     //  this method for email validation
     private void validateEmail(String email) {
@@ -247,13 +301,6 @@ public class RegisterActivity extends AppCompatActivity {
           textLayoutPasswordRegister.requestFocus();
           return;
       }
-
-       if(password.contains(" ")){
-          textLayoutPasswordRegister.setError("password cannot contain blank spaces");
-          textLayoutPasswordRegister.requestFocus();
-          return;
-      }
-
        if(password.length() < 8){
           textLayoutPasswordRegister.setError("minimum 8 characters required");
           textLayoutPasswordRegister.requestFocus();

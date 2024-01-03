@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Patterns;
@@ -56,6 +58,22 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
 
 
+        InputFilter noWhiteSpaceFilter = new InputFilter() {
+            @Override
+            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+                // Check each character being entered
+                for (int i = start; i < end; i++) {
+                    if (Character.isWhitespace(source.charAt(i))) {
+                        // If a blank space is detected, prevent it from being entered
+                        return "";
+                    }
+                }
+                // Allow other characters
+                return null;
+            }
+        };
+
+        textInputPasswordLogin.setFilters(new InputFilter[]{noWhiteSpaceFilter});
 
         //TextWatcher implementation for Email Field
         textInputEmailLogin.addTextChangedListener(new TextWatcher() {
