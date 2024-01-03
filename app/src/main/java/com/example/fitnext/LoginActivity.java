@@ -90,8 +90,16 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-
+                // Check if the password contains any blank spaces
+                if (editable.toString().contains(" ")) {
+                    // Password contains blank spaces, show an error message
+                    textLayoutPasswordLogin.setError("password cannot contain blank spaces");
+                } else {
+                    // Password is valid, clear any previous error
+                    textLayoutPasswordLogin.setError(null);
+                }
             }
+
         });
         //setting the newUser Textview
         newUserTextview.setOnClickListener(new View.OnClickListener() {
@@ -151,14 +159,34 @@ public class LoginActivity extends AppCompatActivity {
             textLayoutEmailLogin.requestFocus();
             return;
         }
-        if(password.isEmpty()){
-            textLayoutPasswordLogin.setError("please enter password");
+        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            textLayoutEmailLogin.setError("not a valid email address");
+            textLayoutEmailLogin.requestFocus();
+            return;
+        }
+
+        else if(password.isEmpty()){
+            textLayoutPasswordLogin.setError("password is required");
+            textLayoutPasswordLogin.requestFocus();
+            return;
+        }
+        else if(password.contains(" ")){
+            textLayoutPasswordLogin.setError("password cannot contain blank spaces");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
+        else if(password.length() < 8){
+            textLayoutPasswordLogin.setError("minimum 8 characters required");
+            textLayoutPasswordLogin.requestFocus();
+            return;
+        }
 
+        else{
+            Toast.makeText(this, "shit", Toast.LENGTH_SHORT).show();
+        }
+
+        Toast.makeText(this, "testing", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -202,7 +230,7 @@ public class LoginActivity extends AppCompatActivity {
     //the below method is used for validating the password
     private void validatePassword(String password) {
         if (password.length() < 1) {
-            textLayoutPasswordLogin.setError("please enter password");
+            textLayoutPasswordLogin.setError("password is required");
             textLayoutPasswordLogin.requestFocus();
             return;
         } else if (password.length() < 8) {
