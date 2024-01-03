@@ -236,7 +236,7 @@ public class LoginActivity extends AppCompatActivity {
                                         , Toast.LENGTH_LONG).show();
                             }
                         }else{
-                            Toast.makeText(LoginActivity.this, "Invalid Credentials"
+                            Toast.makeText(LoginActivity.this, "Invalid credentials or the account doesn't exist"
                                     , Toast.LENGTH_LONG).show();
                         }
                     }

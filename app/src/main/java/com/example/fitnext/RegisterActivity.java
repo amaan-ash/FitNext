@@ -183,6 +183,34 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
+        // Check if the password is less than 6 characters
+        if (confirmPassword.length() < 6) {
+            textLayoutConfirmPasswordRegister.setError("Minimum 6 characters required");
+            textLayoutConfirmPasswordRegister.requestFocus();
+            return;
+        }
+
+        // Check if the password contains at least one uppercase letter
+        if (!containsUppercase(confirmPassword)) {
+            textLayoutConfirmPasswordRegister.setError("Password must contain at least one uppercase letter");
+            textLayoutConfirmPasswordRegister.requestFocus();
+            return;
+        }
+
+        // Check if the password contains at least one number
+        if (!containsNumber(confirmPassword)) {
+            textLayoutConfirmPasswordRegister.setError("Password must contain at least one number");
+            textLayoutConfirmPasswordRegister.requestFocus();
+            return;
+        }
+
+        // Check if the password contains only allowed special symbols
+        if (!containsOnlyAllowedSymbols(confirmPassword)) {
+            textLayoutConfirmPasswordRegister.setError("Password can only contain '@' symbol");
+            textLayoutConfirmPasswordRegister.requestFocus();
+            return;
+        }
+
         String password=textInputPasswordRegister.getText().toString().trim();
 
         if (!password.equals(confirmPassword)) {
