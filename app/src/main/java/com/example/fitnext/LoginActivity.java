@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -19,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginBtn;
     private ImageView googleBtn;
     private ImageView callBtn;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,9 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn=findViewById(R.id.loginBtn);
         googleBtn=findViewById(R.id.googleBtn);
         callBtn=findViewById(R.id.callBtn);
+        progressBar=findViewById(R.id.progressBar);
 
+        progressBar.setVisibility(View.GONE);
 
         //rest of the code below
 
@@ -59,9 +63,10 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(), DashBoard.class);
-                startActivity(intent);
-                finish();
+//                Intent intent=new Intent(getApplicationContext(), DashBoard.class);
+//                startActivity(intent);
+//                finish();
+                progressBar.setVisibility(View.VISIBLE);
             }
         });
 
