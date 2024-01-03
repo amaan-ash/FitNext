@@ -181,24 +181,24 @@ public class LoginActivity extends AppCompatActivity {
 
 
         if(TextUtils.isEmpty(email)){
-            textLayoutEmailLogin.setError("email is required");
+            textLayoutEmailLogin.setError("Email is required");
             textLayoutEmailLogin.requestFocus();
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            textLayoutEmailLogin.setError("not a valid email address");
+            textLayoutEmailLogin.setError("Not a valid email address");
             textLayoutEmailLogin.requestFocus();
             return;
         }
 
         if(TextUtils.isEmpty(password)){
-            textLayoutPasswordLogin.setError("password is required");
+            textLayoutPasswordLogin.setError("Password is required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
 
-        if(password.length() < 8){
-            textLayoutPasswordLogin.setError("minimum 8 characters required");
+        if(password.length() < 6){
+            textLayoutPasswordLogin.setError("Minimum 6 characters required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
@@ -213,6 +213,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+    //the below method is used to validate the email and password after clicking on Login Button
     public void validate(String userEmail, String userPassword){
 
        progressBar.setVisibility(View.VISIBLE);
@@ -226,13 +228,15 @@ public class LoginActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.GONE);
                         if(task.isSuccessful()){
                             if(auth.getCurrentUser().isEmailVerified()){
+                                Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
+                                finish();
                                 startActivity(new Intent(LoginActivity.this, DashBoard.class));
                             }else{
                                 Toast.makeText(LoginActivity.this, "Please verify your email address"
                                         , Toast.LENGTH_LONG).show();
                             }
                         }else{
-                            Toast.makeText(LoginActivity.this, task.getException().getMessage()
+                            Toast.makeText(LoginActivity.this, "Invalid Credentials"
                                     , Toast.LENGTH_LONG).show();
                         }
                     }
@@ -259,12 +263,12 @@ public class LoginActivity extends AppCompatActivity {
     //the below method is used for validating the email
     private void validateEmail(String email) {
         if (TextUtils.isEmpty(email)) {
-            textLayoutEmailLogin.setError("email is required");
+            textLayoutEmailLogin.setError("Email is required");
             textLayoutEmailLogin.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                textLayoutEmailLogin.setError("not a valid email address");
+                textLayoutEmailLogin.setError("Not a valid email address");
                 textLayoutEmailLogin.requestFocus();
                 return;
             }
@@ -278,12 +282,12 @@ public class LoginActivity extends AppCompatActivity {
     //the below method is used for validating the password
     private void validatePassword(String password) {
         if (TextUtils.isEmpty(password)) {
-            textLayoutPasswordLogin.setError("password is required");
+            textLayoutPasswordLogin.setError("Password is required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
-         if (password.length() < 8) {
-            textLayoutPasswordLogin.setError("minimum 8 characters required");
+         if (password.length() < 6) {
+            textLayoutPasswordLogin.setError("Minimum 6 characters required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
@@ -298,7 +302,7 @@ public class LoginActivity extends AppCompatActivity {
         final String resetEmail = textInputEmailLogin.getText().toString();
 
         if (resetEmail.isEmpty()) {
-            textLayoutEmailLogin.setError("enter email to reset password");
+            textLayoutEmailLogin.setError("Enter email to reset password");
             textLayoutEmailLogin.requestFocus();
             return;
         }

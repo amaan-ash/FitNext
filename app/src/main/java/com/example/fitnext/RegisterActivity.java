@@ -178,7 +178,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void validateConfirmPassword(String confirmPassword) {
         if (TextUtils.isEmpty(confirmPassword)) {
-            textLayoutConfirmPasswordRegister.setError("confirm your password");
+            textLayoutConfirmPasswordRegister.setError("Confirm your password");
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
         }
@@ -186,7 +186,7 @@ public class RegisterActivity extends AppCompatActivity {
         String password=textInputPasswordRegister.getText().toString().trim();
 
         if (!password.equals(confirmPassword)) {
-            textLayoutConfirmPasswordRegister.setError("passwords do not match");
+            textLayoutConfirmPasswordRegister.setError("Passwords do not match");
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
         }
@@ -206,8 +206,8 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         // Check if the password is less than 8 characters
-        if (password.length() < 8) {
-            textLayoutPasswordRegister.setError("Minimum 8 characters required");
+        if (password.length() < 6) {
+            textLayoutPasswordRegister.setError("Minimum 6 characters required");
             textLayoutPasswordRegister.requestFocus();
             return;
         }
@@ -304,24 +304,24 @@ public class RegisterActivity extends AppCompatActivity {
       }
 
       if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-          textLayoutEmailRegister.setError("not a valid email address");
+          textLayoutEmailRegister.setError("Not a valid email address");
           textLayoutEmailRegister.requestFocus();
           return;
       }
 
        if(TextUtils.isEmpty(password)){
-          textLayoutPasswordRegister.setError("please enter password");
+          textLayoutPasswordRegister.setError("Please enter password");
           textLayoutPasswordRegister.requestFocus();
           return;
       }
-       if(password.length() < 8){
-          textLayoutPasswordRegister.setError("minimum 8 characters required");
+       if(password.length() < 6){
+          textLayoutPasswordRegister.setError("Minimum 6 characters required");
           textLayoutPasswordRegister.requestFocus();
           return;
       }
 
         if(TextUtils.isEmpty(confirmPassword)){
-           textLayoutConfirmPasswordRegister.setError("confirm your password");
+           textLayoutConfirmPasswordRegister.setError("Confirm your password");
            textLayoutConfirmPasswordRegister.requestFocus();
            return;
        }
@@ -355,15 +355,10 @@ public class RegisterActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
-                                                Toast.makeText(RegisterActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
                                                 Toast.makeText(RegisterActivity.this, "Please check your email for verification", Toast.LENGTH_LONG).show();
-                                               textInputEmailRegister.setText("");
-                                               textInputPasswordRegister.setText("");
-                                               textConfirmPasswordRegister.setText("");
-
-                                               textLayoutEmailRegister.setError(null);
-                                               textLayoutPasswordRegister.setError(null);
-                                               textLayoutConfirmPasswordRegister.setError(null);
+                                                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                                                finish();
                                             }else{
                                                 Toast.makeText(RegisterActivity.this,  task.getException().getMessage(),
                                                         Toast.LENGTH_LONG).show();
