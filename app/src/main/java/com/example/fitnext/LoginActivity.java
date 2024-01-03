@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -38,9 +39,10 @@ public class LoginActivity extends AppCompatActivity {
         callBtn=findViewById(R.id.callBtn);
         progressBar=findViewById(R.id.progressBar);
 
+        //rest of the code below
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         progressBar.setVisibility(View.GONE);
 
-        //rest of the code below
 
         //setting the newUser Textview
         newUserTextview.setOnClickListener(new View.OnClickListener() {
@@ -93,8 +95,20 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+    //items selected on the app bar handled in this method
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        // Handle the Up button press
+        if (item.getItemId() == android.R.id.home) {
+            super.onBackPressed();
+            return true;
+
+            // Other menu item cases can be added here if needed
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

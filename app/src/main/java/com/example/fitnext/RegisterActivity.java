@@ -51,9 +51,9 @@ public class RegisterActivity extends AppCompatActivity {
         goToLoginBtn=findViewById(R.id.goToLoginBtn);
         progressBar=findViewById(R.id.progressBar);
 
+        //rest of the code
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //rest of the code
 
         progressBar.setVisibility(View.GONE);
 
@@ -228,17 +228,20 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+
+    //items selected on the app bar handled in this method
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // Handle the Up button press
-                super.onBackPressed();
-                return true;
+
+            // Handle the Up button press
+        if (item.getItemId() == android.R.id.home) {
+            super.onBackPressed();
+            return true;
             // Other menu item cases can be added here if needed
-            default:
-                return super.onOptionsItemSelected(item);
+
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }
