@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView goToSigninTextview;
     private Button registerBtn;
     private Button goToLoginBtn;
+    ProgressBar progressBar;
 
     String email="";
     String password="";
@@ -45,8 +47,12 @@ public class RegisterActivity extends AppCompatActivity {
         goToSigninTextview=findViewById(R.id.goToSigninTextview);
         registerBtn=findViewById(R.id.registerBtn);
         goToLoginBtn=findViewById(R.id.goToLoginBtn);
+        progressBar=findViewById(R.id.progressBar);
+
 
         //rest of the code
+
+        progressBar.setVisibility(View.GONE);
 
         //setting the login button
         goToLoginBtn.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +141,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void validateConfirmPassword(String confirmPassword) {
         if (confirmPassword.isEmpty()) {
-            textLayoutConfirmPasswordRegister.setError("Confirm Your Password");
+            textLayoutConfirmPasswordRegister.setError("confirm your password");
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
         }
@@ -143,7 +149,7 @@ public class RegisterActivity extends AppCompatActivity {
         String password=textInputPasswordRegister.getText().toString().trim();
 
         if (!password.equals(confirmPassword)) {
-            textLayoutConfirmPasswordRegister.setError("Passwords Do not Match");
+            textLayoutConfirmPasswordRegister.setError("passwords do not match");
             textLayoutConfirmPasswordRegister.requestFocus();
             return;
         }
@@ -207,6 +213,10 @@ public class RegisterActivity extends AppCompatActivity {
            textLayoutConfirmPasswordRegister.requestFocus();
            return;
        }
+
+
+       progressBar.setVisibility(View.VISIBLE);
+
 
 
 
