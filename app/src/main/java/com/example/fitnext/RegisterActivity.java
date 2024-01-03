@@ -191,9 +191,7 @@ public class RegisterActivity extends AppCompatActivity {
          password = textInputPasswordRegister.getText().toString().trim();
          confirmPassword = textConfirmPasswordRegister.getText().toString().trim();
 
-
-
-
+        Toast.makeText(this, "Button is clicked", Toast.LENGTH_SHORT).show();
 
 
 
