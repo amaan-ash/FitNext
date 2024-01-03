@@ -363,7 +363,7 @@ public class RegisterActivity extends AppCompatActivity {
         //the below code is used if all the inputs are given correctly by the user
 
 
-        Toast.makeText(this, "Registration in Progress", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Registration in Process", Toast.LENGTH_SHORT).show();
         progressBar.setVisibility(View.VISIBLE);
 
 
