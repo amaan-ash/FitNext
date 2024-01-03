@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         //if the user is already logged in then destroy this activity and go to dashboard screen
         if(user != null){
-            finish();
+            finishAffinity();
             startActivity(new Intent(MainActivity.this, DashBoard.class));
         }
 
