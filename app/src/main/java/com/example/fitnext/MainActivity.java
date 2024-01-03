@@ -8,10 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
     private Button loginBtnMain;
     private Button registerBtnMain;
 
+    private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +32,22 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+
         //rest of the code below
         loginBtnMain=findViewById(R.id.loginBtnMain);
         registerBtnMain=findViewById(R.id.registerBtnMain);
+
+        //first get the object of the FireBaseAuth Class
+        auth = FirebaseAuth.getInstance();
+
+        //get the current user
+        FirebaseUser user = auth.getCurrentUser();
+
+        //if the user is already logged in then destroy this activity and go to dashboard screen
+        if(user != null){
+            finish();
+            startActivity(new Intent(MainActivity.this, DashBoard.class));
+        }
 
         loginBtnMain.setOnClickListener(new View.OnClickListener() {
             @Override
