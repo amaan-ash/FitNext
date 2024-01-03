@@ -128,7 +128,7 @@
                             android:drawablePadding="10dp"
                             android:drawableTint="@color/black"
                             android:fontFamily="@font/muli_black"
-                            android:inputType="textPassword"
+                            android:inputType="textPassword|textVisiblePassword"
                             android:textColor="@color/black"
 
                             />
@@ -169,7 +169,7 @@
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/black"
                 android:text="Login here"
                 android:textAllCaps="true"

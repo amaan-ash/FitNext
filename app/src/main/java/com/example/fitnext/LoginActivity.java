@@ -33,8 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView callBtn;
     ProgressBar progressBar;
 
-    String email="";
-    String password="";
+    String email;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

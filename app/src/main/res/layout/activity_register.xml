@@ -100,7 +100,7 @@
                         android:layout_marginStart="0dp"
                         android:drawableStart="@drawable/ic_password"
                         android:drawablePadding="10dp"
-                        android:inputType="textPassword"
+                        android:inputType="textPassword|textVisiblePassword"
                         android:autofillHints="password"
                         android:drawableTint="@color/black"
 
@@ -131,7 +131,7 @@
                         android:layout_marginStart="0dp"
                         android:drawableStart="@drawable/ic_password"
                         android:drawablePadding="10dp"
-                        android:inputType="textPassword"
+                        android:inputType="textPassword|textVisiblePassword"
                         android:autofillHints="password"
                         android:drawableTint="@color/black"
 

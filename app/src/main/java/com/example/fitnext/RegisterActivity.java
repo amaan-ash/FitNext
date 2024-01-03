@@ -34,9 +34,9 @@ public class RegisterActivity extends AppCompatActivity {
     private Button goToLoginBtn;
     ProgressBar progressBar;
 
-    String email="";
-    String password="";
-    String confirmPassword="";
+    String email;
+    String password;
+    String confirmPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
