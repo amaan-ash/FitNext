@@ -218,7 +218,7 @@ public class RegisterActivity extends AppCompatActivity {
        }
 
 
-       progressBar.setVisibility(View.VISIBLE);
+
 
 
 
