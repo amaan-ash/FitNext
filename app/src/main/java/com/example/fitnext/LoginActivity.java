@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -13,10 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
     private TextInputEditText textInputEmailLogin;
     private TextInputEditText textInputPasswordLogin;
+    private TextInputLayout textLayoutEmailLogin;
+    private TextInputLayout textLayoutPasswordLogin;
     private TextView newUserTextview;
     private TextView forgotPasswordTextview;
     private Button loginBtn;
@@ -24,12 +30,17 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView callBtn;
     ProgressBar progressBar;
 
+    String email="";
+    String password="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         //getting views
+        textLayoutEmailLogin=findViewById(R.id.textLayoutEmailLogin);
+        textLayoutPasswordLogin=findViewById(R.id.textLayoutPasswordLogin);
         textInputEmailLogin=findViewById(R.id.textInputEmailLogin);
         textInputPasswordLogin=findViewById(R.id.textInputPasswordLogin);
         newUserTextview=findViewById(R.id.newUserTextview);
@@ -44,6 +55,44 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
 
 
+
+        //TextWatcher implementation for Email Field
+        textInputEmailLogin.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                validateEmail(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
+
+        //TextWatcher implementation for Password Field
+        textInputPasswordLogin.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                validatePassword(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
         //setting the newUser Textview
         newUserTextview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,10 +114,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent=new Intent(getApplicationContext(), DashBoard.class);
-//                startActivity(intent);
-//                finish();
-                progressBar.setVisibility(View.VISIBLE);
+                loginUser();
 
             }
         });
@@ -95,6 +141,27 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    private void loginUser() {
+        email = textInputEmailLogin.getText().toString().trim();
+        password = textInputPasswordLogin.getText().toString().trim();
+
+
+        if(email.isEmpty()){
+            textLayoutEmailLogin.setError("email is required");
+            textLayoutEmailLogin.requestFocus();
+            return;
+        }
+        if(password.isEmpty()){
+            textLayoutPasswordLogin.setError("please enter password");
+            textLayoutPasswordLogin.requestFocus();
+            return;
+        }
+
+        progressBar.setVisibility(View.VISIBLE);
+
+
+    }
+
 
     //items selected on the app bar handled in this method
     @Override
@@ -110,5 +177,41 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    //the below method is used for validating the email
+    private void validateEmail(String email) {
+        if (email.isEmpty()) {
+            textLayoutEmailLogin.setError("email is required");
+            textLayoutEmailLogin.requestFocus();
+            return;
+        } else {
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                textLayoutEmailLogin.setError("not a valid email address");
+                textLayoutEmailLogin.requestFocus();
+                return;
+            }
+        }
+
+        // Clear the error if the email is valid
+        textLayoutEmailLogin.setError(null);
+    }
+
+
+    //the below method is used for validating the password
+    private void validatePassword(String password) {
+        if (password.length() < 1) {
+            textLayoutPasswordLogin.setError("please enter password");
+            textLayoutPasswordLogin.requestFocus();
+            return;
+        } else if (password.length() < 8) {
+            textLayoutPasswordLogin.setError("minimum 8 characters required");
+            textLayoutPasswordLogin.requestFocus();
+            return;
+
+        }
+        //clear the error if the password is valid
+        textLayoutPasswordLogin.setError(null);
     }
 }
