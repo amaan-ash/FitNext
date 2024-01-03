@@ -191,7 +191,25 @@ public class RegisterActivity extends AppCompatActivity {
          password = textInputPasswordRegister.getText().toString().trim();
          confirmPassword = textConfirmPasswordRegister.getText().toString().trim();
 
-        Toast.makeText(this, "Button is clicked", Toast.LENGTH_SHORT).show();
+      if(email.isEmpty()){
+          textLayoutEmailRegister.setError("email is required");
+          textLayoutEmailRegister.requestFocus();
+          return;
+      }
+       if(password.isEmpty()){
+          textLayoutPasswordRegister.setError("please enter password");
+          textLayoutPasswordRegister.requestFocus();
+          return;
+      }
+
+       if(confirmPassword.isEmpty()){
+           textLayoutConfirmPasswordRegister.setError("confirm your password");
+           textLayoutConfirmPasswordRegister.requestFocus();
+           return;
+       }
+
+
+
 
 
 
