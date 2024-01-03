@@ -182,11 +182,10 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        else{
-            Toast.makeText(this, "shit", Toast.LENGTH_SHORT).show();
-        }
+        else {
+            Toast.makeText(this, "rest code here", Toast.LENGTH_SHORT).show();
 
-        Toast.makeText(this, "testing", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
