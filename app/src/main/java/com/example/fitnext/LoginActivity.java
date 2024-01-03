@@ -1,5 +1,6 @@
 package com.example.fitnext;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,8 +19,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private TextInputEditText textInputEmailLogin;
@@ -35,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
     String email;
     String password;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +59,11 @@ public class LoginActivity extends AppCompatActivity {
         googleBtn=findViewById(R.id.googleBtn);
         callBtn=findViewById(R.id.callBtn);
         progressBar=findViewById(R.id.progressBar);
-
+        progressBar.setVisibility(View.GONE);
         //rest of the code below
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        progressBar.setVisibility(View.GONE);
+
+        auth = FirebaseAuth.getInstance();
 
 
 
@@ -196,14 +203,36 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-
-            Toast.makeText(this, "login code here", Toast.LENGTH_SHORT).show();
+        if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+            validate(email, password);
+        }
 
 
 
 
     }
 
+    public void validate(String userEmail, String userPassword){
+
+       progressBar.setVisibility(View.VISIBLE);
+
+        //using the firebase code to sign in with email and password
+        auth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                  progressBar.setVisibility(View.GONE);
+                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginActivity.this, DashBoard.class));
+                    finish();
+                }
+                else{
+                    Toast.makeText(LoginActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
 
     //items selected on the app bar handled in this method
     @Override
