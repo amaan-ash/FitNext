@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
     String password;
     String confirmPassword;
 
-    FirebaseAuth auth;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar=findViewById(R.id.progressBar);
 
         //getting the instance of the FireBaseAuth class
-        auth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //rest of the code
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -275,13 +275,13 @@ public class RegisterActivity extends AppCompatActivity {
     //  this method for email validation
     private void validateEmail(String email) {
         if (TextUtils.isEmpty(email)) {
-            textLayoutEmailRegister.setError("email is required");
+            textLayoutEmailRegister.setError("Email is required");
             textLayoutEmailRegister.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                textLayoutEmailRegister.setError("not a valid email address");
+                textLayoutEmailRegister.setError("Not a valid email address");
                 textLayoutEmailRegister.requestFocus();
                 return;
         }
@@ -298,7 +298,7 @@ public class RegisterActivity extends AppCompatActivity {
          confirmPassword = textConfirmPasswordRegister.getText().toString().trim();
 
       if(TextUtils.isEmpty(email)){
-          textLayoutEmailRegister.setError("email is required");
+          textLayoutEmailRegister.setError("Email is required");
           textLayoutEmailRegister.requestFocus();
           return;
       }
@@ -340,56 +340,43 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-        //to register the user
-        auth.createUserWithEmailAndPassword(email, password)
+
+
+
+        firebaseAuth.createUserWithEmailAndPassword(email,
+                        confirmPassword)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
+                        progressBar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
-                            final User user = new User(
-                                    email,
-                                    password
-
-                            );
-
-                            //important to retrieve data and send data based on user email
-                            FirebaseUser userNameInFirebase = auth.getCurrentUser();
-                            String UserID=userNameInFirebase.getEmail();
-                            String resultEmail = UserID.replace(".","");
-
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(resultEmail).child("UserDetails")
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            firebaseAuth.getCurrentUser().sendEmailVerification()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
-                                            progressBar.setVisibility(View.GONE);
-                                            if (task.isSuccessful()) {
-                                                Log.d("final","the user is registered");
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(RegisterActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(RegisterActivity.this, "Please check your email for verification", Toast.LENGTH_LONG).show();
+                                               textInputEmailRegister.setText("");
+                                               textInputPasswordRegister.setText("");
+                                               textConfirmPasswordRegister.setText("");
 
-                                                Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
-                                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                                                finish();
-
+                                               textLayoutEmailRegister.setError(null);
+                                               textLayoutPasswordRegister.setError(null);
+                                               textLayoutConfirmPasswordRegister.setError(null);
+                                            }else{
+                                                Toast.makeText(RegisterActivity.this,  task.getException().getMessage(),
+                                                        Toast.LENGTH_LONG).show();
                                             }
 
-                                            else {
-                                                Log.d("registration failed","task is successful but registration is failed");
-                                                Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
-                                            }
                                         }
                                     });
-
-                        }
-
-                        else {
-                            Log.d("task no successful","the task is not successful");
-                            progressBar.setVisibility(View.GONE);
-                            Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(RegisterActivity.this, task.getException().getMessage(),
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });
-
 
 
 

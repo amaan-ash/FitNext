@@ -203,6 +203,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        //the below method is invoked to make the user logged in
         if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             validate(email, password);
         }
@@ -217,23 +218,25 @@ public class LoginActivity extends AppCompatActivity {
        progressBar.setVisibility(View.VISIBLE);
 
         //using the firebase code to sign in with email and password
-        auth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                  progressBar.setVisibility(View.GONE);
-                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-
-                    Intent intent=new Intent(LoginActivity.this,DashBoard.class);
-                    startActivity(intent);
-                    finish();
-                }
-                else{
-                    Toast.makeText(LoginActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE);
-                }
-            }
-        });
+        auth.signInWithEmailAndPassword(userEmail,
+                        userPassword)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressBar.setVisibility(View.GONE);
+                        if(task.isSuccessful()){
+                            if(auth.getCurrentUser().isEmailVerified()){
+                                startActivity(new Intent(LoginActivity.this, DashBoard.class));
+                            }else{
+                                Toast.makeText(LoginActivity.this, "Please verify your email address"
+                                        , Toast.LENGTH_LONG).show();
+                            }
+                        }else{
+                            Toast.makeText(LoginActivity.this, task.getException().getMessage()
+                                    , Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 
     //items selected on the app bar handled in this method
