@@ -228,7 +228,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //the below method is used for validating the password
     private void validatePassword(String password) {
-        if (password.length() < 1) {
+        if (password.isEmpty()) {
             textLayoutPasswordLogin.setError("password is required");
             textLayoutPasswordLogin.requestFocus();
             return;
@@ -236,9 +236,16 @@ public class LoginActivity extends AppCompatActivity {
             textLayoutPasswordLogin.setError("minimum 8 characters required");
             textLayoutPasswordLogin.requestFocus();
             return;
-
         }
-        //clear the error if the password is valid
-        textLayoutPasswordLogin.setError(null);
+            // Check if the password contains any blank spaces
+            else if (password.contains(" ")) {
+                // Password contains blank spaces, show an error message
+                textLayoutPasswordLogin.setError("password cannot contain blank spaces");
+                textLayoutPasswordLogin.requestFocus();
+                return;
+            }
+
+            textLayoutPasswordLogin.setError(null);
+        }
     }
-}
+
