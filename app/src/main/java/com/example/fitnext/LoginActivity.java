@@ -184,7 +184,7 @@ public class LoginActivity extends AppCompatActivity {
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(LoginActivity.this, PhoneCallLogin.class));
             }
         });
 
