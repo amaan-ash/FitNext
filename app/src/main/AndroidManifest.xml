@@ -13,21 +13,24 @@
         android:theme="@style/Theme.FitNext"
         tools:targetApi="34">
         <activity
-            android:name=".PhoneCallLogin"
-            android:screenOrientation="nosensor"
+            android:name=".OtpVerify"
             android:exported="false" />
+        <activity
+            android:name=".PhoneCallLogin"
+            android:exported="false"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".DashBoard"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".RegisterActivity"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="nosensor"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
