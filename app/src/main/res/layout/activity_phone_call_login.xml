@@ -49,13 +49,56 @@
                     android:layout_marginEnd="40dp"
                     android:layout_marginTop="5dp"
                     android:textAlignment="center"
-                    android:text="Please confirm your country code and enter your phone number."
+                    android:text="Please confirm your country code and enter your phone number."/>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            >
 
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="true"
+                app:ccp_showPhoneCode="true"
+                app:ccp_showArrow="true"
+                app:ccp_arrowColor="@color/black"
+                app:ccp_showFullName="true"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNumberLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:paddingTop="10dp"
+                android:hint="Enter Phone Number"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneNumberInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/muli_black"
+                    android:inputType="phone"
+                    android:drawableStart="@drawable/baseline_add_call_24"
+                    android:textColor="@color/black"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </LinearLayout>
