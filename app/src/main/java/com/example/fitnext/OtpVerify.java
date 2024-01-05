@@ -42,7 +42,7 @@ public class OtpVerify extends AppCompatActivity {
         otpinput=findViewById(R.id.otpinput);
         phoneNumber = getIntent().getStringExtra("phoneNo");
 
-        initiateotp();
+        initiateOtp();
 
         verifyCodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,32 +52,32 @@ public class OtpVerify extends AppCompatActivity {
             }
         });
     }
-    private void initiateotp()
+    private void initiateOtp()
     {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                phoneNumber,        // Phone number to verify
-                60,                 // Timeout duration
-                TimeUnit.SECONDS,   // Unit of timeout
-                this,               // Activity (for callback binding)
-                new PhoneAuthProvider.OnVerificationStateChangedCallbacks()
-                {
+
+        PhoneAuthOptions options = PhoneAuthOptions.newBuilder(auth)
+                .setPhoneNumber(phoneNumber)
+                .setTimeout(60L, TimeUnit.SECONDS)
+                .setActivity(this)
+                .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                     @Override
-                    public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken)
-                    {
-                        otpid=s;
+                    public void onCodeSent(@NonNull String verificationId,
+                                           @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                        otpid=verificationId;
                     }
 
                     @Override
-                    public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential)
-                    {
+                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                         signInWithPhoneAuthCredential(phoneAuthCredential);
                     }
 
                     @Override
-                    public void onVerificationFailed(FirebaseException e) {
+                    public void onVerificationFailed(@NonNull FirebaseException e) {
                         Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
                     }
-                });        // OnVerificationStateChangedCallbacks
+                })
+                .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
 
     }
 
