@@ -9,6 +9,7 @@ import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class PhoneCallLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_call_login);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //getting views
         phoneNumberInput=findViewById(R.id.phoneNumberInput);
@@ -78,6 +80,21 @@ public class PhoneCallLogin extends AppCompatActivity {
         intent.putExtra("phoneNo",countryCodePicker.getFullNumberWithPlus().replace(" ",""));
 
         startActivity(intent);
+    }
+
+    //items selected on the app bar handled in this method
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        // Handle the Up button press
+        if (item.getItemId() == android.R.id.home) {
+            super.onBackPressed();
+            return true;
+            // Other menu item cases can be added here if needed
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

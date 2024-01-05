@@ -71,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         callBtn=findViewById(R.id.callBtn);
         progressBar=findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
+
         //rest of the code below
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

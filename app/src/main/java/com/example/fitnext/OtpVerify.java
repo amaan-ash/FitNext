@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +37,7 @@ public class OtpVerify extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verify);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         auth = FirebaseAuth.getInstance();
 
@@ -108,4 +110,19 @@ public class OtpVerify extends AppCompatActivity {
                 });
     }
 
+    //items selected on the app bar handled in this method
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        // Handle the Up arrow button of the app bar
+        if (item.getItemId() == android.R.id.home) {
+            super.onBackPressed();
+            return true;
+
+            // Other menu item cases can be added here if needed
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
