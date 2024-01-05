@@ -53,4 +53,5 @@ dependencies {
     implementation ("com.hbb20:ccp:2.6.0")
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
 }
