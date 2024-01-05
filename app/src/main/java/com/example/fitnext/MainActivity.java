@@ -1,6 +1,7 @@
 package com.example.fitnext;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.splashscreen.SplashScreen;
 
 import android.content.Intent;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        //to disable the dark mode in the app, the below line is used
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         //rest of the code below
         loginBtnMain=findViewById(R.id.loginBtnMain);
