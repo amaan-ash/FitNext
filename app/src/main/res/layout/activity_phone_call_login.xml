@@ -53,6 +53,7 @@
 
 
         <LinearLayout
+            android:id="@+id/inputLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -105,6 +106,18 @@
 
         </LinearLayout>
 
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:backgroundTint="@color/black"
+                    android:tint="@color/white"
+                    android:contentDescription="next navigation" />
+
             </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
