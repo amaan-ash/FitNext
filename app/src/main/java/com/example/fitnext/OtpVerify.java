@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,6 +48,15 @@ public class OtpVerify extends AppCompatActivity {
         verifyCodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String otp=otpInput.getText().toString();
+                if(TextUtils.isEmpty(otp)){
+                    Toast.makeText(OtpVerify.this, "Enter OTP", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(otp.length()<6){
+                    Toast.makeText(OtpVerify.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpId, otpInput.getText().toString());
                 signInWithPhoneAuthCredential(credential);
             }
@@ -54,7 +64,6 @@ public class OtpVerify extends AppCompatActivity {
     }
     private void initiateOtp()
     {
-
         PhoneAuthOptions options = PhoneAuthOptions.newBuilder(auth)
                 .setPhoneNumber(phoneNumber)
                 .setTimeout(60L, TimeUnit.SECONDS)
@@ -93,7 +102,7 @@ public class OtpVerify extends AppCompatActivity {
                             finish();
 
                         } else {
-                            Toast.makeText(getApplicationContext(),"Signin Code Error",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Incorrect OTP",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
