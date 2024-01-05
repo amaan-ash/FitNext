@@ -49,22 +49,12 @@
                 android:textSize="16sp"/>
 
 
-            <com.chaos.view.PinView
-                android:id="@+id/pinView"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/otpinput"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:itemCount="6"
-                app:itemWidth="50dp"
-                app:itemHeight="50dp"
-                android:layout_marginTop="30dp"
-                app:lineColor="@color/black"
-                app:lineWidth="1dp"
-                android:inputType="number"
-                android:cursorVisible="true"
-                app:hideLineWhenFilled="true"
-                app:itemRadius="3dp"
-                android:itemBackground="#65EAEAEA"
-                app:cursorColor="@color/black"/>
+                android:inputType="number"/>
+
 
                 <Button
                     android:id="@+id/verifyCodeBtn"
