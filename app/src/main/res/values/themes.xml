@@ -20,6 +20,7 @@
     </style>
 
 
+    <!--the below code is for setting the splash screen-->
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/fitnextapplogo</item>
