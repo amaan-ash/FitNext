@@ -48,8 +48,10 @@ public class OtpVerify extends AppCompatActivity {
         verifyCodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(OtpVerify.this, "otp 1", Toast.LENGTH_SHORT).show();
                 sendVerificationCode(phoneNumber);
 
+                Toast.makeText(OtpVerify.this, "otp 2", Toast.LENGTH_SHORT).show();
                 String code=pinView.getText().toString();
 
                 if(!TextUtils.isEmpty(code)){
@@ -70,6 +72,7 @@ public class OtpVerify extends AppCompatActivity {
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                 String code=phoneAuthCredential.getSmsCode();
                 if(code!=null){
+                    Toast.makeText(OtpVerify.this, "code pasted", Toast.LENGTH_SHORT).show();
                     pinView.setText(code);
                     verifyCode(code);
                 }
