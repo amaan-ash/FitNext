@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,5 +7,75 @@
     android:layout_height="match_parent"
     tools:context=".OtpVerify">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verification"
+                android:textSize="24sp"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:fontFamily="@font/muli_black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/muli"
+                android:text="Enter one time password sent to "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:itemCount="6"
+                app:itemWidth="50dp"
+                app:itemHeight="50dp"
+                android:layout_marginTop="30dp"
+                app:lineColor="@color/black"
+                app:lineWidth="1dp"
+                android:inputType="number"
+                android:cursorVisible="true"
+                app:hideLineWhenFilled="true"
+                app:itemRadius="3dp"
+                android:itemBackground="#65EAEAEA"
+                app:cursorColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/verifyCodeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@color/material_dynamic_primary0"
+                    android:text="Verify code"
+                    android:layout_marginTop="30dp"/>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
