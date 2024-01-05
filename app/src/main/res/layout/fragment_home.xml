@@ -60,7 +60,7 @@ FITNESS"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="80dp"
+                    android:layout_marginStart="70dp"
                     />
             </LinearLayout>
 
@@ -93,7 +93,7 @@ FITNESS"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="80dp" />
+                    android:layout_marginStart="70dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,7 +125,7 @@ FITNESS"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="80dp"
+                    android:layout_marginStart="70dp"
                     />
             </LinearLayout>
 
