@@ -43,20 +43,34 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/muli"
-                android:text="Enter one time password sent to "
+                android:text="Enter one time password sent to your number "
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="18sp"/>
 
 
-            <EditText
-                android:id="@+id/otpinput"
-                android:layout_width="match_parent"
+            <com.chaos.view.PinView
+                android:id="@+id/otpInput"
+                app:itemCount="6"
+                app:itemWidth="50dp"
+                app:itemHeight="50dp"
+                android:gravity="center"
+                android:layout_marginTop="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:itemBackground="@color/white"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:cursorVisible="true"
+                app:hideLineWhenFilled="false"
+                app:itemRadius="10dp"
+                style="@style/PinWidget.PinView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
-
-                <Button
+            <Button
                     android:id="@+id/verifyCodeBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

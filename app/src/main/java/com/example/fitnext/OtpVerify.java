@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -31,7 +32,7 @@ public class OtpVerify extends AppCompatActivity {
  FirebaseAuth auth;
     String otpId;
    String phoneNumber;
-   EditText otpInput;
+   PinView otpInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class OtpVerify extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         verifyCodeBtn = findViewById(R.id.verifyCodeBtn);
-        otpInput =findViewById(R.id.otpinput);
+        otpInput =findViewById(R.id.otpInput);
         phoneNumber = getIntent().getStringExtra("phoneNo");
 
         initiateOtp();
