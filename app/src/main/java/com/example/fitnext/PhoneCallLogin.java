@@ -77,15 +77,16 @@ public class PhoneCallLogin extends AppCompatActivity {
 
         String userEnteredNumber = phoneNumberLayout.getEditText().toString().trim();
         Toast.makeText(this, "reached", Toast.LENGTH_SHORT).show();
-//        String phoneNumber="+"+countryCodePicker.getFullNumber()+userEnteredNumber;
-
+//
         Toast.makeText(this, " second reached", Toast.LENGTH_SHORT).show();
 
         Toast.makeText(this, "third reach", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(PhoneCallLogin.this, OtpVerify.class);
         intent.putExtra("phoneNo",countryCodePicker.getFullNumberWithPlus().replace(" ",""));
+
         Toast.makeText(this, "fourth reach", Toast.LENGTH_SHORT).show();
+
         startActivity(intent);
     }
 

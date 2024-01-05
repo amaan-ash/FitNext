@@ -48,6 +48,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"/>
 
+
             <com.chaos.view.PinView
                 android:id="@+id/pinView"
                 android:layout_width="wrap_content"
