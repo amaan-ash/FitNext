@@ -27,9 +27,9 @@ public class OtpVerify extends AppCompatActivity {
 
     Button verifyCodeBtn;
  FirebaseAuth auth;
-    String otpid;
+    String otpId;
    String phoneNumber;
-   EditText otpinput;
+   EditText otpInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class OtpVerify extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         verifyCodeBtn = findViewById(R.id.verifyCodeBtn);
-        otpinput=findViewById(R.id.otpinput);
+        otpInput =findViewById(R.id.otpinput);
         phoneNumber = getIntent().getStringExtra("phoneNo");
 
         initiateOtp();
@@ -47,7 +47,7 @@ public class OtpVerify extends AppCompatActivity {
         verifyCodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpid,otpinput.getText().toString());
+                PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpId, otpInput.getText().toString());
                 signInWithPhoneAuthCredential(credential);
             }
         });
@@ -63,7 +63,7 @@ public class OtpVerify extends AppCompatActivity {
                     @Override
                     public void onCodeSent(@NonNull String verificationId,
                                            @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                        otpid=verificationId;
+                        otpId =verificationId;
                     }
 
                     @Override
