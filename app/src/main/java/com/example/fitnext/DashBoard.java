@@ -7,20 +7,23 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class DashBoard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DashBoard extends AppCompatActivity {
     FirebaseAuth auth;
     private DrawerLayout drawerLayout;
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,24 +32,12 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         auth= FirebaseAuth.getInstance();
 
 
-        //the below is the replacement of the onBackPressed() method
-        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                showExitConfirmationDialog();
-            }
-        };
-
-        // Registering the callback
-        getOnBackPressedDispatcher().addCallback(this, callback);
-
         //rest code of the onCreate() method
 
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+      navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
                 R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
@@ -57,41 +48,102 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId=item.getItemId();
+
+                if(itemId==R.id.nav_home){
+                    FragmentManager fragmentManager =getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new HomeFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+                if(itemId==R.id.nav_about){
+                    FragmentManager fragmentManager =getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new AboutFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+                if(itemId==R.id.nav_logout){
+                    logout();
+                }
+                if(itemId==R.id.nav_diet){
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new DietPlanFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+                if(itemId==R.id.nav_physical){
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new PhysicalFitness());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+                if(itemId==R.id.nav_share){
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new ShareFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+                if(itemId==R.id.nav_exit){
+                    showExitConfirmationDialog();
+                }
+                if(itemId==R.id.nav_mental){
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new MentalFitness());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int itemId=item.getItemId();
-
-        if(itemId==R.id.nav_home){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-        }
-        if(itemId==R.id.nav_about){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
-        }
-        if(itemId==R.id.nav_logout){
-           logout();
-        }
-        if(itemId==R.id.nav_settings){
-
-        }
-        if(itemId==R.id.nav_physical){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PhysicalFitness()).commit();
-        }
-        if(itemId==R.id.nav_share){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
-        }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }
 
     @Override
     public void onBackPressed() {
+        Toast.makeText(this, "one", Toast.LENGTH_SHORT).show();
+        updateSelectedNavItemBasedOnCurrentFragment();
+        Toast.makeText(this, "two", Toast.LENGTH_SHORT).show();
+        //if the drawer layout is open and the user click back so the drawer layout is closed
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
         }
+        Toast.makeText(this, "three", Toast.LENGTH_SHORT).show();
+            super.onBackPressed();
+        Toast.makeText(this, "four", Toast.LENGTH_SHORT).show();
+
+    }
+    // Method to update selected item in the navigation drawer based on the current fragment
+    private void updateSelectedNavItemBasedOnCurrentFragment() {
+        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+
+        if (currentFragment instanceof HomeFragment) {
+            navigationView.setCheckedItem(R.id.nav_home);
+        } else if (currentFragment instanceof AboutFragment) {
+            navigationView.setCheckedItem(R.id.nav_about);
+        } else if (currentFragment instanceof DietPlanFragment) {
+            navigationView.setCheckedItem(R.id.nav_diet);
+        } else if (currentFragment instanceof PhysicalFitness) {
+            navigationView.setCheckedItem(R.id.nav_physical);
+        } else if (currentFragment instanceof ShareFragment) {
+            navigationView.setCheckedItem(R.id.nav_share);
+        } else if (currentFragment instanceof MentalFitness) {
+            navigationView.setCheckedItem(R.id.nav_mental);
+        }
+
+        // Add more conditions based on your fragment classes
     }
 
     private void logout() {

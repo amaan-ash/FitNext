@@ -9,31 +9,31 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/home2"
+            android:icon="@drawable/nav_home"
             android:title="Home"/>
 
         <item
             android:id="@+id/nav_physical"
-            android:icon="@drawable/muscle"
+            android:icon="@drawable/nav_physical"
             android:title="Physical Fitness"/>
 
         <item
             android:id="@+id/nav_mental"
-            android:icon="@drawable/brain"
+            android:icon="@drawable/nav_mental"
             android:title="Mental Fitness"/>
         <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/setting"
-            android:title="Settings"/>
+            android:id="@+id/nav_diet"
+            android:icon="@drawable/nav_diet"
+            android:title="Diet Plan"/>
 
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/share"
+            android:icon="@drawable/nav_share"
             android:title="Share"/>
 
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/info"
+            android:icon="@drawable/nav_about"
             android:title="About Us"/>
     </group>
     <item
@@ -44,6 +44,11 @@
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/nav_logout"
                 android:title="Logout"/>
+
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/nav_exit"
+                android:title="Exit"/>
         </menu>
 
     </item>
