@@ -73,7 +73,10 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
            logout();
         }
         if(itemId==R.id.nav_settings){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+
+        }
+        if(itemId==R.id.nav_physical){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PhysicalFitness()).commit();
         }
         if(itemId==R.id.nav_share){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
