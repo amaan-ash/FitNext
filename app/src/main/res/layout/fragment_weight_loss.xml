@@ -39,11 +39,13 @@
                 android:text="After starting your day with cucumber water, have oats porridge and mixed nuts for breakfast.\nNext, have a roti with dal and gajar matar sabzi for lunch.\nFollow that up with dal and lauki sabzi along with a roti for dinner.
 "               android:textColor="@color/black"
                 android:fontFamily="@font/muli"
+                android:layout_marginBottom="10dp"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:text="6:30 AM
 \nCucumber Detox Water (1 glass)
 
@@ -91,12 +93,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:text="On the second day, eat a mixed vegetable stuffed roti along with curd for breakfast.
 \nFor lunch, have half a katori of methi rice along with lentil curry.
-\nNext, end your day with sautéed vegetables and green chutney.
-"
+\nNext, end your day with sautéed vegetables and green chutney."
                 android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/muli"
                 android:textSize="18sp"/>
 
@@ -145,7 +146,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:layout_marginBottom="10dp"
                 android:text="Breakfast on day 3 would include Multigrain Toast and Skim Milk Yogurt.
 \nIn the afternoon, have sauteed vegetables along with paneer and some green chutney.
 \nHalf a katori of methi rice and some lentil curry to make sure you end the day on a healthy note.
@@ -200,13 +201,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:text="Start Day 4 with a Fruit and Nuts Yogurt Smoothie and Egg Omelette
 \nFollow that up with Moong Dal, Bhindi Sabzi, and roti.
 \nComplete the day’s food intake with steamed rice and palak chole.
 
 "
                 android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
@@ -258,12 +259,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:text="Have a glass of skimmed milk and peas poha for breakfast on the fifth day.
 \nEat a missi roti with low fat paneer curry in the afternoon.
 \nEnd the day with roti, curd and aloo baingan tamatar ki sabzi.
 "
                 android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
@@ -312,13 +313,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:text="On Day 6, have idli with sambar for breakfast
 \nFor lunch, roti with curd and aloo baingan tamatar ki sabzi
 \nTo end Day 6, eat green gram with roti and bhindi sabzi
 "
                 android:textColor="@color/black"
                 android:fontFamily="@font/muli"
+                android:layout_marginBottom="10dp"
                 android:textSize="18sp" />
 
             <TextView
@@ -371,13 +372,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:text="On the seventh day, start with besan chilla and green garlic chutney.
 \nHave steamed rice and palak chole for lunch.
 \nEnd the week on a healthy note with low fat paneer curry and missi roti.
 "
                 android:textColor="@color/black"
                 android:fontFamily="@font/muli"
+                android:layout_marginBottom="10dp"
                 android:textSize="18sp" />
 
             <TextView
