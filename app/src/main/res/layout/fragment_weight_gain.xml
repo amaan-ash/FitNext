@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,35 +9,41 @@
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:background="@color/lavender"
-                android:text="DAY-1"
                 android:fontFamily="@font/muli_bold"
-                android:textAlignment="center"
                 android:textColor="@color/white"
+                android:text="DAY-1"
+                android:textAlignment="center"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -45,17 +51,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Peanut Butter on Wholegrain Toast: Toasted wholegrain bread+ 2 tbsp peanut butter. Drizzle with honey to taste. Serve with 1 hot chocolate, made with milk + 1 serve of fruit (eg. 1 medium pear or orange)."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="LUNCH"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -64,17 +70,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Chicken and Pasta Salad: Cooked chicken + pasta + 1 cup leafy green vegetables (eg. spinach, rocket) + tomato + avocado + crumbled feta cheese + olive oil/vinegar dressing."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -83,18 +89,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Lamb Chops and Vegetables: Lamb chop, trimmed and shallow fried in olive oil. Serve with sweet potato mash made with milk and olive oil + 2 cups cooked vegetables."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -102,27 +108,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Fresh Fruit and Cheese Platter: Slice and serve a variety of fresh fruits in season and cheese."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:fontFamily="@font/muli_black"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A handful of mixed nuts and/or seeds."
                 android:fontFamily="@font/muli"
+                android:text="A handful of mixed nuts and/or seeds."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -130,21 +136,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:background="@color/lavender"
-                android:text="DAY-2"
                 android:fontFamily="@font/muli_bold"
+                android:text="DAY-2"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
-                android:layout_marginTop="30dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -153,16 +159,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Chia Porridge with Fruit: 2 tbsp chia seeds + rolled oats + 1.5 cup full cream milk + 1 serve of fruit (eg. 1 medium banana or 6 dried prunes)."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:fontFamily="@font/muli_black"
+                android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -172,37 +178,37 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Egg, Cheese and Salad Wrap: 2 boiled and mashed eggs + 2 cheese slices + avocado + 1 cup salad vegetables (eg. lettuce, cucumber, carrot, capsicum) rolled up in tortilla bread (make 2 wraps) + 1 cup fruit juice."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Baked Salmon, Cous and Vegetables: Oven baked salmon fillet, sprinkled with sesame oil and sesame seeds + wholemeal cous cous + 2 cups cooked vegetables. Serve with hommus."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -210,17 +216,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Fruit Salad Dessert: Fresh fruit salad with ice cream."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -229,20 +235,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="A handful of mixed nuts and/or seeds. Fruit toast with butter and/or jam."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
-
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-3"
                 android:layout_marginTop="30dp"
+                android:background="@color/lavender"
                 android:fontFamily="@font/muli_bold"
+                android:text="DAY-3"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
@@ -251,48 +256,48 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Sweet Potato Spanish Omelette (1 serve): Serve with 1 cafe latte or hot chocolate made with full cream milk."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Lentil, Vegetables and Barley Soup: Lentils with 1 cup chopped vegetables (eg. carrot, pumpkin, celery, onion), vegetable stock and barley. Serve with dollop of natural yoghurt. + 1 serve of fruit."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -308,10 +313,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -327,10 +332,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -347,11 +352,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:background="@color/lavender"
+                android:fontFamily="@font/muli_bold"
                 android:text="DAY-4"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_bold"
-                android:layout_marginTop="30dp"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -359,9 +364,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -378,10 +383,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -397,9 +402,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -416,10 +421,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -435,9 +440,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -455,10 +460,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-5"
                 android:layout_marginTop="30dp"
+                android:background="@color/lavender"
                 android:fontFamily="@font/muli_bold"
+                android:text="DAY-5"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
@@ -467,10 +472,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -486,10 +491,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -505,11 +510,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -524,9 +529,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -543,10 +548,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -554,22 +559,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Banana slices + ricotta cheese + nut butter on toast."
                 android:fontFamily="@font/muli"
+                android:text="Banana slices + ricotta cheese + nut butter on toast."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
-
-
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-6"
-                android:fontFamily="@font/muli_bold"
-                android:textAlignment="center"
                 android:layout_marginTop="30dp"
+                android:background="@color/lavender"
+                android:fontFamily="@font/muli_bold"
+                android:text="DAY-6"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -577,9 +580,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -596,10 +599,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -615,10 +618,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -626,36 +629,36 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Easy Fish Pie: Serve with 2 cup mixed salad vegetables."
                 android:fontFamily="@font/muli"
+                android:text="Easy Fish Pie: Serve with 2 cup mixed salad vegetables."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:fontFamily="@font/muli_black"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pavlova and Fruit: Pavlova topped with fresh fruit salad. Serve with custard."
                 android:fontFamily="@font/muli"
+                android:text="Pavlova and Fruit: Pavlova topped with fresh fruit salad. Serve with custard."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
-                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -664,8 +667,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 tub yoghurt. 3 wholegrain crackers with hummus."
                 android:fontFamily="@font/muli"
+                android:text="1 tub yoghurt. 3 wholegrain crackers with hummus."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -685,10 +688,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -704,10 +707,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -723,10 +726,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -742,29 +745,29 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="DESSERT"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fruit Crepe: Sliced fruit and ricotta cheese wrapped in crepe. Drizzle with syrup or honey to taste"
                 android:fontFamily="@font/muli"
+                android:text="Fruit Crepe: Sliced fruit and ricotta cheese wrapped in crepe. Drizzle with syrup or honey to taste"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -772,14 +775,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/muli"
                 android:text="1 tub yoghurt. A handful of mixed nuts and/or seeds."
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
-                android:layout_marginBottom="30dp"
                 android:textSize="18sp" />
 
 
-       </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

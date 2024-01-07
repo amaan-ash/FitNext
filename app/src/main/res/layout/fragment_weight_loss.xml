@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,15 +9,21 @@
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -25,9 +31,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@color/lavender"
+                android:fontFamily="@font/muli_bold"
                 android:text="DAY-1"
                 android:textAlignment="center"
-                android:fontFamily="@font/muli_bold"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -36,16 +42,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="After starting your day with cucumber water, have oats porridge and mixed nuts for breakfast.\nNext, have a roti with dal and gajar matar sabzi for lunch.\nFollow that up with dal and lauki sabzi along with a roti for dinner.
-"               android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
+                android:text="After starting your day with cucumber water, have oats porridge and mixed nuts for breakfast.\nNext, have a roti with dal and gajar matar sabzi for lunch.\nFollow that up with dal and lauki sabzi along with a roti for dinner.
+"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
+                android:fontFamily="@font/muli"
                 android:text="6:30 AM
 \nCucumber Detox Water (1 glass)
 
@@ -73,37 +81,37 @@
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-2"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/lavender"
                 android:fontFamily="@font/muli_bold"
+                android:text="DAY-2"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="On the second day, eat a mixed vegetable stuffed roti along with curd for breakfast.
 \nFor lunch, have half a katori of methi rice along with lentil curry.
 \nNext, end your day with sautéed vegetables and green chutney."
                 android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/muli"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="6:30 AM
 \nCucumber Detox Water (1 glass)
 \n8:00 AM
@@ -127,38 +135,38 @@
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-3"
-                android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/lavender"
+                android:fontFamily="@font/muli_bold"
+                android:text="DAY-3"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
-                android:fontFamily="@font/muli_bold"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="Breakfast on day 3 would include Multigrain Toast and Skim Milk Yogurt.
 \nIn the afternoon, have sauteed vegetables along with paneer and some green chutney.
 \nHalf a katori of methi rice and some lentil curry to make sure you end the day on a healthy note.
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="6:30 AM
 \nCucumber Detox Water (1 glass)
 \n8:00 AM
@@ -181,19 +189,18 @@
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-4"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:textAlignment="center"
+                android:background="@color/lavender"
                 android:fontFamily="@font/muli_bold"
+                android:text="DAY-4"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -201,19 +208,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="Start Day 4 with a Fruit and Nuts Yogurt Smoothie and Egg Omelette
 \nFollow that up with Moong Dal, Bhindi Sabzi, and roti.
 \nComplete the day’s food intake with steamed rice and palak chole.
 
 "
                 android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="
 6:30 AM
 \nCucumber Detox Water (1 glass)
@@ -239,19 +247,18 @@
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-5"
-                android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/lavender"
                 android:fontFamily="@font/muli_bold"
+                android:text="DAY-5"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -259,18 +266,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="Have a glass of skimmed milk and peas poha for breakfast on the fifth day.
 \nEat a missi roti with low fat paneer curry in the afternoon.
 \nEnd the day with roti, curd and aloo baingan tamatar ki sabzi.
 "
                 android:textColor="@color/black"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="
 6:30 AM
 \nCucumber Detox Water (1 glass)
@@ -293,19 +301,18 @@
 \nRoti (1 roti/chapati)
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-6"
-                android:textAlignment="center"
-                android:fontFamily="@font/muli_bold"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/lavender"
+                android:fontFamily="@font/muli_bold"
+                android:text="DAY-6"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -313,18 +320,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="On Day 6, have idli with sambar for breakfast
 \nFor lunch, roti with curd and aloo baingan tamatar ki sabzi
 \nTo end Day 6, eat green gram with roti and bhindi sabzi
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
-                android:layout_marginBottom="10dp"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="6:30 AM
 \nCucumber Detox Water (1 glass)
 \n8:00 AM
@@ -351,20 +359,18 @@
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
-
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lavender"
-                android:text="DAY-7"
-                android:textAlignment="center"
-                android:fontFamily="@font/muli_bold"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@color/lavender"
+                android:fontFamily="@font/muli_bold"
+                android:text="DAY-7"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -372,18 +378,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="On the seventh day, start with besan chilla and green garlic chutney.
 \nHave steamed rice and palak chole for lunch.
 \nEnd the week on a healthy note with low fat paneer curry and missi roti.
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
-                android:layout_marginBottom="10dp"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muli"
                 android:text="6:30 AM
 \nCucumber Detox Water (1 glass)
 \n8:00 AM
@@ -405,11 +413,7 @@
 
 "
                 android:textColor="@color/black"
-                android:fontFamily="@font/muli"
-                android:layout_marginBottom="10dp"
                 android:textSize="18sp" />
-
-
 
 
         </LinearLayout>
