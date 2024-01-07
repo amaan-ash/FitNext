@@ -26,7 +26,12 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    Button physicalOption,mentalOption,exerciseOption,chatbotOption,pedometerOption,dietPlanOption;
+    Button physicalOption;
+    Button mentalOption;
+        Button meditationOption;
+        Button chatBotOption;
+        Button pedometerOption;
+        Button dietPlanOption;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -68,8 +73,8 @@ public class HomeFragment extends Fragment {
         //getting views
        physicalOption=view.findViewById(R.id.option1);
        mentalOption=view.findViewById(R.id.option2);
-       exerciseOption=view.findViewById(R.id.option3);
-       chatbotOption=view.findViewById(R.id.option4);
+       meditationOption=view.findViewById(R.id.option3);
+       chatBotOption=view.findViewById(R.id.option4);
        pedometerOption=view.findViewById(R.id.option5);
        dietPlanOption=view.findViewById(R.id.option6);
 
@@ -95,18 +100,18 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        exerciseOption.setOnClickListener(new View.OnClickListener() {
+        meditationOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new ExerciseFragment());
+                fragmentTransaction.replace(R.id.fragment_container,new MeditationFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
 
-        chatbotOption.setOnClickListener(new View.OnClickListener() {
+        chatBotOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
