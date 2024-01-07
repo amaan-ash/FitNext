@@ -7,14 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PhysicalFitnessFragment#newInstance} factory method to
+ * Use the {@link ElderlyExercisesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PhysicalFitnessFragment extends Fragment {
+public class ElderlyExercisesFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,13 +24,7 @@ public class PhysicalFitnessFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private Button shortExercisesBtn;
-    private Button lengthyExercisesBtn;
-    private Button bmiCalculatorBtn;
-    private Button elderlyExercisesBtn;
-    private Button stepsCounterBtn;
-
-    public PhysicalFitnessFragment() {
+    public ElderlyExercisesFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +34,11 @@ public class PhysicalFitnessFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PhysicalFitness.
+     * @return A new instance of fragment ElderlyExercisesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PhysicalFitnessFragment newInstance(String param1, String param2) {
-        PhysicalFitnessFragment fragment = new PhysicalFitnessFragment();
+    public static ElderlyExercisesFragment newInstance(String param1, String param2) {
+        ElderlyExercisesFragment fragment = new ElderlyExercisesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,16 +59,6 @@ public class PhysicalFitnessFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_physical_fitness, container, false);
-
-        //finding views
-        shortExercisesBtn=view.findViewById(R.id.shortExercisesBtn);
-        lengthyExercisesBtn=view.findViewById(R.id.lengthyExercisesBtn);
-        bmiCalculatorBtn=view.findViewById(R.id.bmiCalculatorBtn);
-        elderlyExercisesBtn=view.findViewById(R.id.elderlyExerciseBtn);
-        stepsCounterBtn=view.findViewById(R.id.stepsCounterBtn);
-
-
-        return view;
+        return inflater.inflate(R.layout.fragment_elderly_exercises, container, false);
     }
 }

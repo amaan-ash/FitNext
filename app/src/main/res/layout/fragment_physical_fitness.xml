@@ -49,11 +49,11 @@
 
 
             <android.widget.Button
-                android:id="@+id/lessTimeBtn"
+                android:id="@+id/shortExercisesBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:background="@drawable/buttonback"
-                android:text="less time"
+                android:text="Short Exercises"
                 android:layout_marginBottom="20dp"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -63,11 +63,11 @@
 
 
             <android.widget.Button
-                android:id="@+id/haveTimeBtn"
+                android:id="@+id/lengthyExercisesBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:background="@drawable/buttonback"
-                android:text="HAVE TIME"
+                android:text="lengthy exercises"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:layout_marginBottom="20dp"
