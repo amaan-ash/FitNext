@@ -51,11 +51,11 @@
 
 
                 <android.widget.Button
-                    android:id="@+id/meditateBtn"
+                    android:id="@+id/meditationSongsBtn"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="@drawable/buttonback"
-                    android:text="Meditate"
+                    android:text="Meditation Songs"
                     android:layout_marginBottom="20dp"
                     android:textColor="@color/white"
                     android:textSize="24sp"
@@ -65,11 +65,11 @@
 
 
                 <android.widget.Button
-                    android:id="@+id/lengthyExercisesBtn"
+                    android:id="@+id/meditationExercisesBtn"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="@drawable/buttonback"
-                    android:text="lengthy exercises"
+                    android:text="Meditation Exercises"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:layout_marginBottom="20dp"
