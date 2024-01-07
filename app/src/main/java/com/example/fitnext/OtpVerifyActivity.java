@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -26,7 +25,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class OtpVerify extends AppCompatActivity {
+public class OtpVerifyActivity extends AppCompatActivity {
 
     Button verifyCodeBtn;
  FirebaseAuth auth;
@@ -53,11 +52,11 @@ public class OtpVerify extends AppCompatActivity {
             public void onClick(View view) {
                 String otp=otpInput.getText().toString();
                 if(TextUtils.isEmpty(otp)){
-                    Toast.makeText(OtpVerify.this, "Enter OTP", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OtpVerifyActivity.this, "Enter OTP", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(otp.length()<6){
-                    Toast.makeText(OtpVerify.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OtpVerifyActivity.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpId, otpInput.getText().toString());
@@ -101,8 +100,8 @@ public class OtpVerify extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful())
                         {
-                            Toast.makeText(OtpVerify.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),DashBoard.class));
+                            Toast.makeText(OtpVerifyActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), DashBoardActivity.class));
                             finish();
 
                         } else {

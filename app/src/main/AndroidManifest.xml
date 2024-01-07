@@ -14,15 +14,15 @@
         android:theme="@style/Theme.FitNext"
         tools:targetApi="34">
         <activity
-            android:name=".OtpVerify"
+            android:name=".OtpVerifyActivity"
             android:screenOrientation="nosensor"
             android:exported="false" />
         <activity
-            android:name=".PhoneCallLogin"
+            android:name=".PhoneCallLoginActivity"
             android:exported="false"
             android:screenOrientation="nosensor" />
         <activity
-            android:name=".DashBoard"
+            android:name=".DashBoardActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="nosensor" />

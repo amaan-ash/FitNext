@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new PhysicalFitness());
+                fragmentTransaction.replace(R.id.fragment_container,new PhysicalFitnessFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -89,7 +89,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new MentalFitness());
+                fragmentTransaction.replace(R.id.fragment_container,new MentalFitnessFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

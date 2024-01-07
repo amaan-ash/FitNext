@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         //if the user is already logged in then destroy this activity and go to dashboard screen
         if(user != null){
             finishAffinity();
-            startActivity(new Intent(MainActivity.this, DashBoard.class));
+            startActivity(new Intent(MainActivity.this, DashBoardActivity.class));
         }
 
         loginBtnMain.setOnClickListener(new View.OnClickListener() {

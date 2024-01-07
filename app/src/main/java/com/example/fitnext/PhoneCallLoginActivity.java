@@ -4,21 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.hbb20.CountryCodePicker;
 
-public class PhoneCallLogin extends AppCompatActivity {
+public class PhoneCallLoginActivity extends AppCompatActivity {
     TextInputEditText phoneNumberInput;
     TextInputLayout phoneNumberLayout;
     FloatingActionButton nextBtn;
@@ -76,7 +73,7 @@ public class PhoneCallLogin extends AppCompatActivity {
         }
         phoneNumberLayout.setError(null);
 
-        Intent intent = new Intent(PhoneCallLogin.this, OtpVerify.class);
+        Intent intent = new Intent(PhoneCallLoginActivity.this, OtpVerifyActivity.class);
         intent.putExtra("phoneNo",countryCodePicker.getFullNumberWithPlus().replace(" ",""));
 
         startActivity(intent);

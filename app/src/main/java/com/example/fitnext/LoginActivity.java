@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check condition
         if (firebaseUser != null) {
             // When user already sign in redirect to profile activity
-            startActivity(new Intent(LoginActivity.this, DashBoard.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            startActivity(new Intent(LoginActivity.this, DashBoardActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
 
 
@@ -185,7 +185,7 @@ public class LoginActivity extends AppCompatActivity {
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, PhoneCallLogin.class));
+                startActivity(new Intent(LoginActivity.this, PhoneCallLoginActivity.class));
             }
         });
 
@@ -270,7 +270,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(auth.getCurrentUser().isEmailVerified()){
                                 Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
                                 finish();
-                                startActivity(new Intent(LoginActivity.this, DashBoard.class));
+                                startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
                             }else{
                                 Toast.makeText(LoginActivity.this, "Please verify your email address"
                                         , Toast.LENGTH_LONG).show();
@@ -392,7 +392,7 @@ public class LoginActivity extends AppCompatActivity {
                                 // Check condition
                                 if (task.isSuccessful()) {
                                     // When task is successful redirect to profile activity display Toast
-                                    startActivity(new Intent(LoginActivity.this, DashBoard.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                                    startActivity(new Intent(LoginActivity.this, DashBoardActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                                     finish();
 
 //

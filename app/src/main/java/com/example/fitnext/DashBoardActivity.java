@@ -20,7 +20,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class DashBoard extends AppCompatActivity {
+public class DashBoardActivity extends AppCompatActivity {
     FirebaseAuth auth;
     private DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -80,7 +80,7 @@ public class DashBoard extends AppCompatActivity {
                 if(itemId==R.id.nav_physical){
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container,new PhysicalFitness());
+                    fragmentTransaction.replace(R.id.fragment_container,new PhysicalFitnessFragment());
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                 }
@@ -97,7 +97,7 @@ public class DashBoard extends AppCompatActivity {
                 if(itemId==R.id.nav_mental){
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container,new MentalFitness());
+                    fragmentTransaction.replace(R.id.fragment_container,new MentalFitnessFragment());
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                 }
@@ -135,11 +135,11 @@ public class DashBoard extends AppCompatActivity {
             navigationView.setCheckedItem(R.id.nav_about);
         } else if (currentFragment instanceof DietPlanFragment) {
             navigationView.setCheckedItem(R.id.nav_diet);
-        } else if (currentFragment instanceof PhysicalFitness) {
+        } else if (currentFragment instanceof PhysicalFitnessFragment) {
             navigationView.setCheckedItem(R.id.nav_physical);
         } else if (currentFragment instanceof ShareFragment) {
             navigationView.setCheckedItem(R.id.nav_share);
-        } else if (currentFragment instanceof MentalFitness) {
+        } else if (currentFragment instanceof MentalFitnessFragment) {
             navigationView.setCheckedItem(R.id.nav_mental);
         }
 
@@ -155,8 +155,8 @@ public class DashBoard extends AppCompatActivity {
                         // If the user clicks "Yes", perform below operation
                         auth.signOut();
                         finishAffinity();
-                        startActivity(new Intent(DashBoard.this,MainActivity.class));
-                        Toast.makeText(DashBoard.this,"Logout Successful", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(DashBoardActivity.this,MainActivity.class));
+                        Toast.makeText(DashBoardActivity.this,"Logout Successful", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {

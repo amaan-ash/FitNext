@@ -58,7 +58,7 @@
 
 
                 <android.widget.Button
-                    android:id="@+id/musgain"
+                    android:id="@+id/muscleGainBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/optionbuton"
@@ -68,7 +68,7 @@
                     android:textStyle="bold" />
 
                 <android.widget.Button
-                    android:id="@+id/wtgain"
+                    android:id="@+id/weightGainBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -79,7 +79,7 @@
                     android:textStyle="bold" />
 
                 <android.widget.Button
-                    android:id="@+id/wtloss"
+                    android:id="@+id/weightLossBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
@@ -90,7 +90,7 @@
                     android:textStyle="bold" />
 
                 <android.widget.Button
-                    android:id="@+id/inscntrldiet"
+                    android:id="@+id/diabetesPlanBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
