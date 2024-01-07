@@ -1,14 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PhysicalFitnessFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Physical Fitness" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical"
+                >
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+
+            <android.widget.Button
+                android:id="@+id/less_time"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/buttonback"
+                android:text="less time"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+
+
+            <android.widget.Button
+                android:id="@+id/have_time"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/buttonback"
+                android:text="HAVE TIME"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <android.widget.Button
+                android:id="@+id/monthly_plan"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/buttonback"
+                android:text="BMI Calculator"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/elderly_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/buttonback"
+                android:text="Elderly Exercises"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/physical_instructor"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/buttonback"
+                android:padding="20dp"
+                android:text="instructor schedule"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
