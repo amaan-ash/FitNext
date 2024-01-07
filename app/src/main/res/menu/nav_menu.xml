@@ -27,6 +27,11 @@
             android:title="Diet Plan"/>
 
         <item
+            android:id="@+id/nav_meditation"
+            android:icon="@drawable/nav_meditate"
+            android:title="Meditation"/>
+
+        <item
             android:id="@+id/nav_share"
             android:icon="@drawable/nav_share"
             android:title="Share"/>
