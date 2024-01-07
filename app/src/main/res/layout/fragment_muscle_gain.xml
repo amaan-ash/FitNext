@@ -31,6 +31,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@color/lavender"
                 android:text="DAY-1"
+                android:fontFamily="@font/muli_bold"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
@@ -40,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
+                android:fontFamily="@font/muli_black"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -50,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Scrambled eggs, stir-fried veggies, and oatmeal"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -58,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -67,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Whey protein shake"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -75,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="LUNCH"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -84,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grilled chicken breast, mixed greens, and baked sweet potato"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -92,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -101,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hard-boiled egg(s) and carrot sticks"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -110,6 +119,7 @@
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -118,6 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Broiled fish, green beans with brown rice"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -128,6 +139,7 @@
                 android:text="DAY-2"
                 android:layout_marginTop="30dp"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_bold"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -139,6 +151,7 @@
                 android:padding="5dp"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -148,6 +161,7 @@
                 android:layout_height="wrap_content"
                 android:text="Protein pancakes with fresh berries"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
@@ -155,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -165,6 +180,7 @@
                 android:layout_height="wrap_content"
                 android:text="Apple slices and almonds"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
@@ -172,6 +188,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="LUNCH"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -183,6 +200,7 @@
                 android:text="Lean ground beef burger on lettuce with tomato, onion, and
 green beans"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
@@ -190,6 +208,7 @@ green beans"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -199,6 +218,7 @@ green beans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Protein shake"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -207,6 +227,7 @@ green beans"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="DINNER"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -215,6 +236,7 @@ green beans"
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
                 android:text="Shrimp stir-fried with bell pepper and brown rice over spinach"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -226,6 +248,7 @@ green beans"
                 android:background="@color/lavender"
                 android:layout_marginTop="30dp"
                 android:text="DAY-3"
+                android:fontFamily="@font/muli_bold"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
@@ -237,6 +260,7 @@ green beans"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="BREAKFAST"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -247,6 +271,7 @@ green beans"
                 android:layout_height="wrap_content"
                 android:text="Greek yogurt, almonds or walnuts, whole grain granola,
 and fresh berries"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -256,6 +281,7 @@ and fresh berries"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -264,6 +290,7 @@ and fresh berries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Protein shake"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -274,6 +301,7 @@ and fresh berries"
                 android:text="LUNCH"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -281,6 +309,7 @@ and fresh berries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grilled fish with a spinach salad and broccoli"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -290,6 +319,7 @@ and fresh berries"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -298,6 +328,7 @@ and fresh berries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Egg white omelet with bell peppers and mushrooms"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -306,6 +337,7 @@ and fresh berries"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="DINNER"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -317,6 +349,7 @@ and fresh berries"
                 android:text="Chicken breast topped with fresh salsa with a sweet potato
 and a side salad"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
@@ -326,6 +359,7 @@ and a side salad"
                 android:layout_marginTop="30dp"
                 android:text="DAY-4"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_bold"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -336,6 +370,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="BREAKFAST"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -345,6 +380,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Oatmeal with berries and scrambled egg whites"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -355,6 +391,7 @@ and a side salad"
                 android:text="SNACKS"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -362,6 +399,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Turkey breast with carrots and celery"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -371,6 +409,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -379,6 +418,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sirloin steak with broccoli and mushrooms"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -388,6 +428,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -397,6 +438,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:text="Apples with natural nut butter"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli"
                 android:textSize="18sp" />
 
             <TextView
@@ -404,6 +446,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="DINNER"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -413,6 +456,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Broiled fish, brown rice, and a mixed green salad"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -422,6 +466,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:background="@color/lavender"
                 android:text="DAY-5"
+                android:fontFamily="@font/muli_bold"
                 android:layout_marginTop="30dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -435,6 +480,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -443,6 +489,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Protein shake with oatmeal"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -453,6 +500,7 @@ and a side salad"
                 android:text="SNACKS"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -460,6 +508,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hard-boiled egg whites with sliced peppers and cucumbers"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -470,6 +519,7 @@ and a side salad"
                 android:text="LUNCH"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -477,6 +527,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grilled chicken with white bean and tomato salad"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -486,6 +537,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -494,6 +546,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Greek yogurt with berries and nuts"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -503,6 +556,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -511,6 +565,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grilled fish with quinoa and green beans"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -520,6 +575,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:background="@color/lavender"
                 android:text="DAY-6"
+                android:fontFamily="@font/muli_bold"
                 android:layout_marginTop="30dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -534,6 +590,7 @@ and a side salad"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -541,6 +598,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Scrambled egg whites with cheese, peppers, herbs, and Ezekiel bread"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -549,6 +607,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -558,6 +617,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Protein shake"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -566,6 +626,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="LUNCH"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -575,6 +636,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grilled chicken breast with bell peppers, black beans, and onions over romaine lettuce"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -583,6 +645,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -592,6 +655,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Apple and almonds"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -601,6 +665,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -609,6 +674,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sirloin steak with sweet potato and asparagus"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -619,6 +685,7 @@ and a side salad"
                 android:background="@color/lavender"
                 android:text="DAY-7"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/muli_bold"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="26sp"
@@ -632,6 +699,7 @@ and a side salad"
                 android:text="BREAKFAST"
                 android:textAlignment="center"
                 android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -639,6 +707,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Greek yogurt with whole grain granola and berries"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -648,6 +717,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="SNACKS"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -656,6 +726,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Turkey breast with carrots and celery sticks"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -665,6 +736,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="LUNCH"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -673,6 +745,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grilled chicken breast over spinach with sliced strawberries and almonds"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -681,6 +754,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="SNACKS"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -690,6 +764,7 @@ and a side salad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Protein shake"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -699,6 +774,7 @@ and a side salad"
                 android:padding="5dp"
                 android:text="DINNER"
                 android:textAlignment="center"
+                android:fontFamily="@font/muli_black"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -708,6 +784,7 @@ and a side salad"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:text="Shrimp stir-fried with peppers, onions, and broccoli over brown rice"
+                android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
