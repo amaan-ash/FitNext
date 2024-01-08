@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, DashBoardActivity.class));
         }
 
+        //setting the login button
         loginBtnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //setting the register button
 
         registerBtnMain.setOnClickListener(new View.OnClickListener() {
             @Override
