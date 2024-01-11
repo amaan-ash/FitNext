@@ -16,6 +16,7 @@
         <activity
             android:name="com.example.chatgpt.ChatGPT_Dashboard"
             android:screenOrientation="nosensor"
+            android:theme="@style/Base.Theme.FitNext"
             android:exported="false"/>
         <activity
             android:name=".OtpVerifyActivity"
@@ -28,7 +29,7 @@
         <activity
             android:name=".DashBoardActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:screenOrientation="nosensor" />
         <activity
             android:name=".RegisterActivity"
