@@ -1,5 +1,6 @@
 package com.example.fitnext;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.chatgpt.ChatGPT_Dashboard;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -114,11 +117,8 @@ public class HomeFragment extends Fragment {
         chatBotOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new ChatBotFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                Intent intent=new Intent(getContext(), ChatGPT_Dashboard.class);
+                startActivity(intent);
             }
         });
 

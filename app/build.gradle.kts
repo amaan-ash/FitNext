@@ -54,4 +54,6 @@ dependencies {
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
+
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 }
