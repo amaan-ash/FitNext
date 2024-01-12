@@ -128,7 +128,7 @@ public class PhysicalFitnessFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new StepsCounterFragment());
+                fragmentTransaction.replace(R.id.fragment_container,new PedometerFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
