@@ -85,11 +85,13 @@ public class DashBoardActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                 }
                 if(itemId==R.id.nav_share){
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container,new ShareFragment());
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, "Check out our Fitness app!");
+                    sendIntent.setType("text/plain");
+
+                    Intent shareIntent = Intent.createChooser(sendIntent, "Share FitNext App");
+                    startActivity(shareIntent);
                 }
                 if(itemId==R.id.nav_exit){
                     showExitConfirmationDialog();
@@ -120,38 +122,15 @@ public class DashBoardActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "one", Toast.LENGTH_SHORT).show();
-        updateSelectedNavItemBasedOnCurrentFragment();
-        Toast.makeText(this, "two", Toast.LENGTH_SHORT).show();
         //if the drawer layout is open and the user click back so the drawer layout is closed
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         }
-        Toast.makeText(this, "three", Toast.LENGTH_SHORT).show();
             super.onBackPressed();
-        Toast.makeText(this, "four", Toast.LENGTH_SHORT).show();
 
     }
     // Method to update selected item in the navigation drawer based on the current fragment
-    private void updateSelectedNavItemBasedOnCurrentFragment() {
-        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
 
-        if (currentFragment instanceof HomeFragment) {
-            navigationView.setCheckedItem(R.id.nav_home);
-        } else if (currentFragment instanceof AboutFragment) {
-            navigationView.setCheckedItem(R.id.nav_about);
-        } else if (currentFragment instanceof DietPlanFragment) {
-            navigationView.setCheckedItem(R.id.nav_diet);
-        } else if (currentFragment instanceof PhysicalFitnessFragment) {
-            navigationView.setCheckedItem(R.id.nav_physical);
-        } else if (currentFragment instanceof ShareFragment) {
-            navigationView.setCheckedItem(R.id.nav_share);
-        } else if (currentFragment instanceof MentalFitnessFragment) {
-            navigationView.setCheckedItem(R.id.nav_mental);
-        }
-
-        // Add more conditions based on your fragment classes
-    }
 
     private void logout() {
         new AlertDialog.Builder(this)
