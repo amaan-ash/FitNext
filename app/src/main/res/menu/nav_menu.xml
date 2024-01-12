@@ -32,6 +32,11 @@
             android:title="Meditation"/>
 
         <item
+            android:id="@+id/nav_pedometer"
+            android:icon="@drawable/nav_walk"
+            android:title="Pedometer"/>
+
+        <item
             android:id="@+id/nav_share"
             android:icon="@drawable/nav_share"
             android:title="Share"/>
