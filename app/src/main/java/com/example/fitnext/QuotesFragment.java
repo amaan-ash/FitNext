@@ -114,15 +114,16 @@ public class QuotesFragment extends Fragment {
 
         textMotivationalQuote = view.findViewById(R.id.textMotivationalQuote);
 
-        // Initial quote update
+        // to display the quote for the first time when the fragment is opened for first time
         updateQuote();
 
-        // Schedule periodic quote updates
+        // periodically update the quote
         scheduleQuoteUpdates();
 
 
         return view;
     }
+    //the below method is used to update the quotes periodically
     private void scheduleQuoteUpdates() {
         handler.postDelayed(new Runnable() {
             @Override
@@ -133,11 +134,14 @@ public class QuotesFragment extends Fragment {
             }
         }, QUOTE_UPDATE_INTERVAL);
     }
+    //the below method is used to make the quotes appear for the first time when the fragment is opened
     private void updateQuote() {
         // Get a random quote
         String randomQuote = getRandomQuote();
         textMotivationalQuote.setText(randomQuote);
     }
+
+    //the below method is used to select the random quotes from the string array
     private String getRandomQuote() {
         Random random = new Random();
         int index = random.nextInt(motivationalQuotes.length);
