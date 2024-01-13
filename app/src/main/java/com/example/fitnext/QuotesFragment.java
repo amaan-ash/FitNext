@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +28,10 @@ public class QuotesFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Handler handler = new Handler(Looper.getMainLooper());
+    private static final long QUOTE_UPDATE_INTERVAL = 5000; // Update every 5 seconds
 
+    TextView textMotivationalQuote;
     private String[] motivationalQuotes = {
             "The only way to do great work is to love what you do. - Steve Jobs",
             "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
@@ -107,13 +112,31 @@ public class QuotesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_quotes, container, false);
 
-        TextView textMotivationalQuote = view.findViewById(R.id.textMotivationalQuote);
+        textMotivationalQuote = view.findViewById(R.id.textMotivationalQuote);
 
+        // Initial quote update
+        updateQuote();
+
+        // Schedule periodic quote updates
+        scheduleQuoteUpdates();
+
+
+        return view;
+    }
+    private void scheduleQuoteUpdates() {
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                updateQuote();
+                // Schedule the next update
+                handler.postDelayed(this, QUOTE_UPDATE_INTERVAL);
+            }
+        }, QUOTE_UPDATE_INTERVAL);
+    }
+    private void updateQuote() {
         // Get a random quote
         String randomQuote = getRandomQuote();
         textMotivationalQuote.setText(randomQuote);
-
-        return view;
     }
     private String getRandomQuote() {
         Random random = new Random();
