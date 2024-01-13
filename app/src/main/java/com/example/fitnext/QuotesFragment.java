@@ -49,7 +49,25 @@ public class QuotesFragment extends Fragment {
             "Success is stumbling from failure to failure with no loss of enthusiasm. - Winston S. Churchill",
 
             "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+            "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
 
+            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+
+            "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+
+            "Do not wait to strike till the iron is hot, but make it hot by striking. - William Butler Yeats",
+
+            "The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it. - Jordan Belfort",
+
+            "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+
+            "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. - Steve Jobs",
+
+            "It's not about how bad you want it, it's about how hard you're willing to work for it. - Unknown",
+
+            "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
+
+            "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack in will. - Vince Lombardi",
     };
 
     public QuotesFragment() {
