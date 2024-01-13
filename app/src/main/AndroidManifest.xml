@@ -16,7 +16,7 @@
         <activity
             android:name="com.example.chatgpt.ChatGPT_Dashboard"
             android:screenOrientation="nosensor"
-            android:theme="@style/Base.Theme.FitNext"
+            android:theme="@style/Theme.ChatBot"
             android:exported="false"/>
         <activity
             android:name=".OtpVerifyActivity"
