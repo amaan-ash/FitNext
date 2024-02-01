@@ -235,7 +235,7 @@
                     android:contentDescription="call icon" />
 
             </LinearLayout>
-            <!-- Your remaining layout code -->
+
 
         </LinearLayout>
 
