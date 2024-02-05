@@ -119,6 +119,13 @@ public class DashBoardActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                 }
 
+                if(itemId==R.id.nav_articles){
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container,new ArticleFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
