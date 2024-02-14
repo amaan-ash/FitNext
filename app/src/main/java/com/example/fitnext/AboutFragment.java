@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,6 +68,23 @@ public class AboutFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_about, container, false);
 
         TextView githublink;
+        ImageView amanImg,jdImg;
+        amanImg=view.findViewById(R.id.amanImg);
+        jdImg=view.findViewById(R.id.jdImg);
+
+        amanImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Amaan Ali", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        jdImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Junaid Momin", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         githublink=view.findViewById(R.id.githublink);
         githublink.setPaintFlags(githublink.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
