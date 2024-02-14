@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             //to make the splash screen visible for 3 seconds
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
          throw new RuntimeException();
         }
