@@ -42,6 +42,10 @@
             android:title="Health Articles"/>
 
         <item
+            android:id="@+id/nav_supplements"
+            android:icon="@drawable/nav_supplements"
+            android:title="Health Supplements"/>
+        <item
             android:id="@+id/nav_share"
             android:icon="@drawable/nav_share"
             android:title="Share"/>
