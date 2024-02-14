@@ -12,7 +12,8 @@
     <color name="lavender">#8692f7</color>
     <color name="yellow">#fffc00</color>
     <color name="red">#FF0000</color>
-
+    <color name="textColor">#E4E8C0</color>
+    <color name="green_bg">#031513</color>
 
 
 </resources>
