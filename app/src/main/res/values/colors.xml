@@ -16,4 +16,8 @@
     <color name="green_bg">#031513</color>
 
 
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="bl">#08186A</color>
+
 </resources>
