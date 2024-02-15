@@ -53,7 +53,7 @@ dependencies {
     implementation ("com.hbb20:ccp:2.6.0")
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
-    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
 
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
 }
