@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,12 +11,24 @@
     tools:context=".LengthyExercisesFragment">
 
     <!-- TODO: Update blank fragment layout -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
 
 
     <TextView
         android:id="@+id/texthavetime"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="@color/black"
         android:padding="15dp"
         android:text="Click below according to your time!"
@@ -27,40 +40,35 @@
         android:id="@+id/imageView13"
         android:layout_width="180dp"
         android:layout_height="230dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/corridanike"
-        android:translationX="0dp"
-        android:translationY="60dp" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/corridanike" />
 
     <TextView
         android:id="@+id/hvt1"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:text="Duration: 30min - 45min\n Exercise type: Cardio, Aerobics."
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textStyle="italic"
-        android:translationX="0dp"
-        android:translationY="290dp" />
+        />
 
     <View
         android:id="@+id/ud1"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@color/black"
-        android:translationX="0dp"
-        android:translationY="360dp" />
+        android:layout_marginTop="20dp"
+        android:background="@color/black" />
 
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView14"
         android:layout_width="290dp"
         android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/yoga"
-        android:translationX="0dp"
-        android:translationY="380dp" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yoga" />
 
     <TextView
         android:id="@+id/hvt2"
@@ -69,11 +77,10 @@
         android:text="Duration: 45min - 60min\n Exercise type: Yoga"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:layout_marginTop="20dp"
         android:textSize="18sp"
-        android:textStyle="italic"
-        android:translationX="0dp"
-        android:translationY="630dp" />
+        android:textStyle="italic" />
+    </LinearLayout>
 
-
-
-</RelativeLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
