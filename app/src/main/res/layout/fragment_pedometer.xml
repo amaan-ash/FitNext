@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:background="#55AAFF"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#55AAFF"
     tools:context=".PedometerFragment">
 
+    <TextView
+        android:id="@+id/textsecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:fontFamily="@font/muli_black"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="STEPS COUNTER"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <!--Text View for the "Steps" displayed-->
     <TextView
         android:id="@+id/steps"
@@ -18,8 +33,8 @@
         android:layout_marginEnd="8dp"
         android:text="Steps"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="45sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,8 +49,8 @@
         android:layout_marginEnd="8dp"
         android:text="0"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="37sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/steps" />
@@ -53,17 +68,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset Steps"
         android:background="@color/black"
-        android:textStyle="bold"
         android:padding="10dp"
-        android:textSize="20sp"
+        android:text="Reset Steps"
         android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
