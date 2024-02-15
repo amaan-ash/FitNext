@@ -50,7 +50,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
     implementation ("com.google.firebase:firebase-database:20.3.0")
-    implementation ("com.hbb20:ccp:2.6.0")
+    implementation ("com.hbb20:ccp:2.7.1")
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
