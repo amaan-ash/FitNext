@@ -6,5 +6,37 @@
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv1"></string>
+    <string name="tv2"></string>
+    <string name="tv3"></string>
+    <string name="tv4"></string>
+    <string name="tv5"></string>
+    <string name="calorie"></string>
+    <string name="max">TOTAL STEPS: </string>
+    <string-array name="dropdown">
+        <item>Exercise Duration :</item>
+        <item>30min - 45min</item>
+        <item>45min - 60min</item>
+    </string-array>
+
+    <string name="ex1">Frequency: </string>
+    <string name="ex2">Time in seconds: </string>
+    <string name="ex3">Frequency: </string>
+    <string name="ex4">Frequency: </string>
+    <string name="ex5">Frequency: </string>
+    <string name="ex6">Frequency: </string>
+    <string name="ex7">Frequency: </string>
+    <string name="ex8">Frequency: </string>
+    <string name="ex9">Frequency: </string>
+    <string name="ex10">Frequency: </string>
+    <string name="daytext">Frequency: </string>
+    <string name="tt1">MODERATE EXERCISES</string>
+    <string name="tt2">YOGA</string>
+    <string name="tt3">ELDERLY EXERCISES</string>
+    <string name="tt4"></string>
+    <string name="tt5"></string>
 </resources>
