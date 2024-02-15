@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,10 +16,10 @@
         android:id="@+id/texthavetime"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/teal_200"
+        android:background="@color/black"
         android:padding="15dp"
         android:text="Click below according to your time!"
-        android:textColor="@color/bl"
+        android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="italic" />
 
@@ -38,7 +39,7 @@
         android:text="Duration: 30min - 45min\n Exercise type: Cardio, Aerobics."
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="italic"
         android:translationX="0dp"
         android:translationY="290dp" />
@@ -68,7 +69,7 @@
         android:text="Duration: 45min - 60min\n Exercise type: Yoga"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="italic"
         android:translationX="0dp"
         android:translationY="630dp" />

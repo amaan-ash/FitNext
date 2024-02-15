@@ -24,6 +24,7 @@
                 android:background="@color/black"
                 android:gravity="center"
                 android:padding="10dp"
+                android:fontFamily="@font/muli_black"
                 android:text="QUICK EXERCISES"
                 android:textColor="@color/white"
                 android:textSize="28sp"

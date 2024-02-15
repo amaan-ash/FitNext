@@ -107,7 +107,7 @@ public class LengthyExercisesFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,f);
+                fragmentTransaction.replace(R.id.fragment_container,s);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
