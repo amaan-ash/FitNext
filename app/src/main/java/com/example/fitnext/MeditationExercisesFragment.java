@@ -14,11 +14,7 @@ import android.widget.Button;
 
 import com.example.fitnext.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link meditation#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MeditationExercisesFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
