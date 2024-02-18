@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,23 +74,8 @@ public class amazonFragment extends Fragment {
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String amazonUrl = "https://www.amazon.in/s?k=whey+protein&crid=2Z8RBK42KSOJY&sprefix=whey+protein%2Caps%2C246&ref=nb_sb_noss_1";
-                Uri uri = Uri.parse(amazonUrl);
-
-                // Create an intent with the ACTION_VIEW action and the Amazon URL
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-
-                // Set the package name of the Amazon app
-                intent.setPackage("com.amazon.android");
-
-                // Check if the Amazon app is installed on the device
-                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    // If the Amazon app is not installed, you can open the URL in a web browser
-                    intent.setPackage(null); // Clear the package name
-                    startActivity(intent);
-                }
+                String amazonUrl="https://www.amazon.in/s?k=whey+protein&crid=2Z8RBK42KSOJY&sprefix=whey+protein%2Caps%2C246&ref=nb_sb_noss_1";
+               openWebViewFragment(amazonUrl);
             }
 
         });
@@ -98,22 +84,7 @@ public class amazonFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String amazonUrl = "https://www.amazon.in/s?k=creatine+monohydrate&crid=JC69GKG7T7ZX&sprefix=cre%2Caps%2C190&ref=nb_sb_ss_ts-doa-p_1_3";
-                Uri uri = Uri.parse(amazonUrl);
-
-                // Create an intent with the ACTION_VIEW action and the Amazon URL
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-
-                // Set the package name of the Amazon app
-                intent.setPackage("com.amazon.android");
-
-                // Check if the Amazon app is installed on the device
-                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    // If the Amazon app is not installed, you can open the URL in a web browser
-                    intent.setPackage(null); // Clear the package name
-                    startActivity(intent);
-                }
+               openWebViewFragment(amazonUrl);
             }
 
         });
@@ -122,22 +93,7 @@ public class amazonFragment extends Fragment {
             @Override
             public void onClick(View view) {
             String amazonUrl = "https://www.amazon.in/s?k=vitamins&crid=31B7IYHEIW32P&sprefix=vitamins%2Caps%2C198&ref=nb_sb_noss_1";
-            Uri uri = Uri.parse(amazonUrl);
-
-            // Create an intent with the ACTION_VIEW action and the Amazon URL
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-
-            // Set the package name of the Amazon app
-            intent.setPackage("com.amazon.android");
-
-            // Check if the Amazon app is installed on the device
-            if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                // If the Amazon app is not installed, you can open the URL in a web browser
-                intent.setPackage(null); // Clear the package name
-                startActivity(intent);
-            }
+            openWebViewFragment(amazonUrl);
 
             }
         });
@@ -146,25 +102,23 @@ public class amazonFragment extends Fragment {
             @Override
             public void onClick(View view) {
         String amazonUrl = "https://www.amazon.in/s?k=fish+oil+capsules&crid=3R9OJERWRBOD1&sprefix=fish+%2Caps%2C208&ref=nb_sb_ss_ts-doa-p_1_5";
-        Uri uri = Uri.parse(amazonUrl);
-
-        // Create an intent with the ACTION_VIEW action and the Amazon URL
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-
-        // Set the package name of the Amazon app
-        intent.setPackage("com.amazon.android");
-
-        // Check if the Amazon app is installed on the device
-        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-        startActivity(intent);
-        } else {
-        // If the Amazon app is not installed, you can open the URL in a web browser
-        intent.setPackage(null); // Clear the package name
-        startActivity(intent);
-        }
+        openWebViewFragment(amazonUrl);
 
             }
         });
         return view;
+    }
+
+    private void openWebViewFragment(String url) {
+        Bundle bundle = new Bundle();
+        bundle.putString("url", url);
+
+        WebViewFragment webViewFragment = new WebViewFragment();
+        webViewFragment.setArguments(bundle);
+
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, webViewFragment);
+        transaction.addToBackStack(null); // Optional, to allow back navigation
+        transaction.commit();
     }
 }
