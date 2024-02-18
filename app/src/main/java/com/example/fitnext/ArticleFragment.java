@@ -1,7 +1,5 @@
 package com.example.fitnext;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +27,6 @@ public class ArticleFragment extends Fragment {
 
         listView = rootView.findViewById(R.id.listView);
 
-        // Sample data for the ListView
         // Sample data for the ListView
         String[] items = {
                 "How to Prevent Diabetes?",
@@ -87,23 +84,27 @@ public class ArticleFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = adapter.getItem(position);
                 if (selectedItem != null) {
-                    // Retrieve the link corresponding to the selected item
                     String link = itemToLinkMap.get(selectedItem);
                     if (link != null) {
-                        // Open the link in the web browser
-                        openBlog(link);
+
+                        // Create a new instance of WebViewFragment
+                        WebViewFragment webViewFragment = new WebViewFragment();
+
+                        // Pass the URL to WebViewFragment
+                        Bundle args = new Bundle();
+                        args.putString("url", link);
+                        webViewFragment.setArguments(args);
+
+                        // Replace the current fragment with WebViewFragment
+                        getParentFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, webViewFragment)
+                                .addToBackStack(null)
+                                .commit();
                     }
                 }
             }
         });
 
         return rootView;
-    }
-
-    private void openBlog(String blogUrl) {
-        // Create and start intent to open the blog URL in a web browser
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(blogUrl));
-        startActivity(intent);
     }
 }
