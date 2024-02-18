@@ -17,6 +17,7 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/muli_black"
         android:text="HEALTH ARTICLES"
+        android:padding="10dp"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:textColor="@color/white"
