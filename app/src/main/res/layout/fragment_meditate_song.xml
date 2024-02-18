@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/play4"
                 android:background="@color/underline"
-                android:text="Whale:"
+                android:text="Awake:"
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -205,6 +205,185 @@
                 android:layout_toEndOf="@id/pause4"
                 android:text="Stop"/>
 
+            <TextView
+                android:id="@+id/body37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play5"
+                android:background="@color/underline"
+                android:text="Child Dreams:"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
+            <Button
+                android:id="@+id/play6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body37"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body37"
+                android:translationX="50dp"
+                android:layout_toEndOf="@id/play5"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body37"
+                android:translationX="100dp"
+                android:layout_toEndOf="@id/pause5"
+                android:text="Stop"/>
+
+
+            <TextView
+                android:id="@+id/body38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play6"
+                android:background="@color/underline"
+                android:text="Day Dreaming:"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/play7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body38"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body38"
+                android:translationX="50dp"
+                android:layout_toEndOf="@id/play6"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body38"
+                android:translationX="100dp"
+                android:layout_toEndOf="@id/pause6"
+                android:text="Stop"/>
+
+            <TextView
+                android:id="@+id/body39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play6"
+                android:background="@color/underline"
+                android:text="Forest Walk:"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/play8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body38"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body38"
+                android:translationX="50dp"
+                android:layout_toEndOf="@id/play7"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body38"
+                android:translationX="100dp"
+                android:layout_toEndOf="@id/pause7"
+                android:text="Stop"/>
+
+            <TextView
+                android:id="@+id/body40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play7"
+                android:background="@color/underline"
+                android:text="Lullaby:"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/play9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body40"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body40"
+                android:translationX="50dp"
+                android:layout_toEndOf="@id/play8"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body40"
+                android:translationX="100dp"
+                android:layout_toEndOf="@id/pause8"
+                android:text="Stop"/>
+
+            <TextView
+                android:id="@+id/body41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play8"
+                android:background="@color/underline"
+                android:text="Melody:"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/play10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body41"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body41"
+                android:translationX="50dp"
+                android:layout_toEndOf="@id/play9"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body41"
+                android:translationX="100dp"
+                android:layout_toEndOf="@id/pause9"
+                android:text="Stop"/>
         </RelativeLayout>
     </ScrollView>
