@@ -40,6 +40,12 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
 
             <Button
                 android:id="@+id/play1"
@@ -51,14 +57,18 @@
                 android:id="@+id/pause1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
+
         </LinearLayout>
+
 
         <!-- Fire -->
         <LinearLayout
@@ -77,6 +87,13 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
 
             <Button
                 android:id="@+id/play2"
@@ -88,12 +105,14 @@
                 android:id="@+id/pause2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
 
@@ -114,6 +133,10 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/play3"
@@ -125,12 +148,14 @@
                 android:id="@+id/pause3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
 
@@ -151,6 +176,10 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/play4"
@@ -162,12 +191,14 @@
                 android:id="@+id/pause4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
 
@@ -188,6 +219,10 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/play5"
@@ -199,12 +234,14 @@
                 android:id="@+id/pause5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
 
@@ -225,6 +262,10 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/play6"
@@ -236,55 +277,19 @@
                 android:id="@+id/pause6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
-
-        <!-- Fire -->
-        <LinearLayout
-            android:id="@+id/seventhSongLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/body38"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@color/underline"
-                android:text="Fire:"
-                android:fontFamily="@font/muli"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/play7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Play"/>
-
-            <Button
-                android:id="@+id/pause7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pause"/>
-
-            <Button
-                android:id="@+id/stop7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stop"/>
-        </LinearLayout>
-
         <!-- Forest Walk -->
         <LinearLayout
-            android:id="@+id/eighthSongLayout"
+            android:id="@+id/seventhSongLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -299,29 +304,35 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/play8"
+                android:id="@+id/play7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Play"/>
 
             <Button
-                android:id="@+id/pause8"
+                android:id="@+id/pause7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
-                android:id="@+id/stop8"
+                android:id="@+id/stop7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
 
         <!-- Lullaby -->
         <LinearLayout
-            android:id="@+id/ninthSongLayout"
+            android:id="@+id/eightSongLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -336,29 +347,35 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/play9"
+                android:id="@+id/play8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Play"/>
 
             <Button
-                android:id="@+id/pause9"
+                android:id="@+id/pause8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
-                android:id="@+id/stop9"
+                android:id="@+id/stop8"
                 android:layout_width="wrap_content"
+                android:layout_marginStart="70dp"
                 android:layout_height="wrap_content"
                 android:text="Stop"/>
         </LinearLayout>
 
         <!-- Melody -->
         <LinearLayout
-            android:id="@+id/tenthSongLayout"
+            android:id="@+id/ninthSongLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -373,6 +390,53 @@
                 android:fontFamily="@font/muli"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/play9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="Stop"/>
+        </LinearLayout>
+
+        <!-- Sakura-->
+        <LinearLayout
+            android:id="@+id/tenthSongLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/body42"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@color/underline"
+                android:text="Sakura:"
+                android:fontFamily="@font/muli"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/play10"
@@ -384,14 +448,15 @@
                 android:id="@+id/pause10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Pause"/>
 
             <Button
                 android:id="@+id/stop10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
                 android:text="Stop"/>
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

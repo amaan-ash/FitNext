@@ -6,14 +6,15 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 public class MeditateSongFragment extends Fragment {
-    MediaPlayer music1=null,music2=null,music3=null,music4=null,music5=null,music6=null,music7=null,music8=null,music9=null;
-    Button b1,p1,s1,b2,p2,s2,b3,p3,s3,b4,p4,s4,b5,p5,s5,b6,p6,s6,b7,p7,s7,b8,p8,s8,b9,p9,s9;
+    MediaPlayer music1=null,music2=null,music3=null,music4=null,music5=null,music6=null,music7=null,music8=null,music9=null,music10=null;
+    Button b1,p1,s1,b2,p2,s2,b3,p3,s3,b4,p4,s4,b5,p5,s5,b6,p6,s6,b7,p7,s7,b8,p8,s8,b9,p9,s9,b10,p10,s10;
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -55,11 +56,12 @@ public class MeditateSongFragment extends Fragment {
         music2= MediaPlayer.create(getContext(),R.raw.fire);
         music3=MediaPlayer.create(getContext(),R.raw.waterfall);
         music4= MediaPlayer.create(getContext(),R.raw.whale);
-        music5=MediaPlayer.create(getContext(),R.raw.awake);
-        music6=MediaPlayer.create(getContext(),R.raw.childdreams);
+        music5=MediaPlayer.create(getContext(),R.raw.childdreams);
+        music6=MediaPlayer.create(getContext(),R.raw.awake);
         music7=MediaPlayer.create(getContext(),R.raw.forestwalk);
         music8=MediaPlayer.create(getContext(),R.raw.lullaby);
         music9=MediaPlayer.create(getContext(),R.raw.melody);
+        music10= MediaPlayer.create(getContext(),R.raw.sakura);
 
         b1 = view.findViewById(R.id.play1);
         p1 = view.findViewById(R.id.pause1);
@@ -96,6 +98,10 @@ public class MeditateSongFragment extends Fragment {
         b9=view.findViewById(R.id.play9);
         p9=view.findViewById(R.id.pause9);
         s9=view.findViewById(R.id.stop9);
+
+        b10=view.findViewById(R.id.play10);
+        p10=view.findViewById(R.id.pause10);
+        s10=view.findViewById(R.id.stop10);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -329,6 +335,171 @@ public class MeditateSongFragment extends Fragment {
             }
         });
 
+        b10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopAllSongsExcept(music10);
+                music10.start();
+            }
+        });
+
+        p10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music10!=null){
+                    music10.pause();
+                }
+            }
+        });
+
+        s10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music10.stop();
+                music10=MediaPlayer.create(getContext(),R.raw.sakura);
+            }
+        });
+
+        music1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music1.stop();
+                // Prepare the next song
+                music2.prepareAsync();
+                // Start playing the next song
+                music2.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music2.stop();
+                // Prepare the next song
+                music3.prepareAsync();
+                // Start playing the next song
+                music3.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music3.stop();
+                // Prepare the next song
+                music4.prepareAsync();
+                // Start playing the next song
+                music4.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music5.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music5.stop();
+                // Prepare the next song
+                music6.prepareAsync();
+                // Start playing the next song
+                music6.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music6.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music6.stop();
+                // Prepare the next song
+                music7.prepareAsync();
+                // Start playing the next song
+                music7.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music7.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music7.stop();
+                // Prepare the next song
+                music8.prepareAsync();
+                // Start playing the next song
+                music8.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music8.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music8.stop();
+                // Prepare the next song
+                music9.prepareAsync();
+                // Start playing the next song
+                music9.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+        music9.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Stop the current song
+                music9.stop();
+                // Prepare the next song
+                music10.prepareAsync();
+                // Start playing the next song
+                music10.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.start();
+                    }
+                });
+            }
+        });
+
+
+
+
+
         return view;
     }
     private void stopAllSongsExcept(MediaPlayer mediaPlayerToKeepPlaying) {
@@ -367,6 +538,10 @@ public class MeditateSongFragment extends Fragment {
         if (music9 != mediaPlayerToKeepPlaying && music9.isPlaying()) {
             music9.stop();
             music9.prepareAsync();
+        }
+        if (music10!=mediaPlayerToKeepPlaying && music10.isPlaying()){
+            music10.stop();
+            music10.prepareAsync();
         }
     }
 }
