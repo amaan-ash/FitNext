@@ -69,22 +69,9 @@ public class AboutFragment extends Fragment {
 
         TextView githublink;
         ImageView amanImg,jdImg;
-        amanImg=view.findViewById(R.id.amanImg);
-        jdImg=view.findViewById(R.id.jdImg);
 
-        amanImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Amaan Ali", Toast.LENGTH_SHORT).show();
-            }
-        });
 
-        jdImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Junaid Momin", Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
         githublink=view.findViewById(R.id.githublink);
         githublink.setPaintFlags(githublink.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);

@@ -127,7 +127,7 @@
             android:id="@+id/imageView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/giphy" />
+            android:src="@drawable/diet" />
             </LinearLayout>
         </LinearLayout>
 
