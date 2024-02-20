@@ -100,9 +100,8 @@ public class MeditateSongFragment extends Fragment {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music2.isPlaying() && !music3.isPlaying() && !music4.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music1.start();
-                }
+              stopAllSongsExcept(music1);
+              music1.start();
 
 
             }
@@ -131,9 +130,8 @@ public class MeditateSongFragment extends Fragment {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music3.isPlaying() && !music4.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music2.start();
-                }
+               stopAllSongsExcept(music2);
+               music2.start();
             }
         });
 
@@ -158,9 +156,8 @@ public class MeditateSongFragment extends Fragment {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music3.start();
-                }
+                stopAllSongsExcept(music3);
+                music3.start();
             }
         });
 
@@ -184,9 +181,8 @@ public class MeditateSongFragment extends Fragment {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music4.start();
-                }
+                stopAllSongsExcept(music4);
+                music4.start();
             }
         });
 
@@ -210,9 +206,8 @@ public class MeditateSongFragment extends Fragment {
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music5.start();
-                }
+               stopAllSongsExcept(music5);
+                music5.start();
             }
         });
 
@@ -237,9 +232,8 @@ public class MeditateSongFragment extends Fragment {
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music6.start();
-                }
+               stopAllSongsExcept(music6);
+               music6.start();
             }
         });
 
@@ -263,9 +257,8 @@ public class MeditateSongFragment extends Fragment {
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
-                    music7.start();
-                }
+                stopAllSongsExcept(music7);
+                music7.start();
             }
         });
 
@@ -289,9 +282,8 @@ public class MeditateSongFragment extends Fragment {
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music9.isPlaying()){
-                    music8.start();
-                }
+               stopAllSongsExcept(music8);
+                music8.start();
             }
         });
 
@@ -315,9 +307,8 @@ public class MeditateSongFragment extends Fragment {
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying()){
-                    music9.start();
-                }
+               stopAllSongsExcept(music9);
+                music9.start();
             }
         });
 
@@ -339,5 +330,43 @@ public class MeditateSongFragment extends Fragment {
         });
 
         return view;
+    }
+    private void stopAllSongsExcept(MediaPlayer mediaPlayerToKeepPlaying) {
+        if (music1 != mediaPlayerToKeepPlaying && music1.isPlaying()) {
+            music1.stop();
+            music1.prepareAsync(); // Resets the MediaPlayer to its uninitialized state
+        }
+        if (music2 != mediaPlayerToKeepPlaying && music2.isPlaying()) {
+            music2.stop();
+            music2.prepareAsync();
+        }
+        if (music3 != mediaPlayerToKeepPlaying && music3.isPlaying()) {
+            music3.stop();
+            music3.prepareAsync();
+        }
+        if (music4 != mediaPlayerToKeepPlaying && music4.isPlaying()) {
+            music4.stop();
+            music4.prepareAsync();
+        }
+        if (music5 != mediaPlayerToKeepPlaying && music5.isPlaying()) {
+            music5.stop();
+            music5.prepareAsync();
+        }
+        if (music6 != mediaPlayerToKeepPlaying && music6.isPlaying()) {
+            music6.stop();
+            music6.prepareAsync();
+        }
+        if (music7 != mediaPlayerToKeepPlaying && music7.isPlaying()) {
+            music7.stop();
+            music7.prepareAsync();
+        }
+        if (music8 != mediaPlayerToKeepPlaying && music8.isPlaying()) {
+            music8.stop();
+            music8.prepareAsync();
+        }
+        if (music9 != mediaPlayerToKeepPlaying && music9.isPlaying()) {
+            music9.stop();
+            music9.prepareAsync();
+        }
     }
 }
