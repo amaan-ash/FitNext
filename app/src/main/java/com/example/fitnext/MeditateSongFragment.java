@@ -1,22 +1,21 @@
 package com.example.fitnext;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MeditateSongFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MeditateSongFragment extends Fragment {
+    MediaPlayer music1=null,music2=null,music3=null,music4=null,music5=null,music6=null,music7=null,music8=null,music9=null;
+    Button b1,p1,s1,b2,p2,s2,b3,p3,s3,b4,p4,s4,b5,p5,s5,b6,p6,s6,b7,p7,s7,b8,p8,s8,b9,p9,s9;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -28,15 +27,6 @@ public class MeditateSongFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MediateSongFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static MeditateSongFragment newInstance(String param1, String param2) {
         MeditateSongFragment fragment = new MeditateSongFragment();
         Bundle args = new Bundle();
@@ -58,8 +48,295 @@ public class MeditateSongFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_meditate_song, container, false);
+
+
+        music1=MediaPlayer.create(getContext(),R.raw.acoustic_guitar);
+        music2= MediaPlayer.create(getContext(),R.raw.fire);
+        music3=MediaPlayer.create(getContext(),R.raw.waterfall);
+        music4= MediaPlayer.create(getContext(),R.raw.whale);
+        music5=MediaPlayer.create(getContext(),R.raw.awake);
+        music6=MediaPlayer.create(getContext(),R.raw.childdreams);
+        music7=MediaPlayer.create(getContext(),R.raw.forestwalk);
+        music8=MediaPlayer.create(getContext(),R.raw.lullaby);
+        music9=MediaPlayer.create(getContext(),R.raw.melody);
+
+        b1 = view.findViewById(R.id.play1);
+        p1 = view.findViewById(R.id.pause1);
+        s1 = view.findViewById(R.id.stop1);
+
+        b2 = view.findViewById(R.id.play2);
+        p2 = view.findViewById(R.id.pause2);
+        s2 = view.findViewById(R.id.stop2);
+
+        b3 = view.findViewById(R.id.play3);
+        p3 = view.findViewById(R.id.pause3);
+        s3 = view.findViewById(R.id.stop3);
+
+        b4 = view.findViewById(R.id.play4);
+        p4 = view.findViewById(R.id.pause4);
+        s4 = view.findViewById(R.id.stop4);
+
+        b5 = view.findViewById(R.id.play5);
+        p5 = view.findViewById(R.id.pause5);
+        s5 = view.findViewById(R.id.stop5);
+
+        b6 = view.findViewById(R.id.play6);
+        p6 = view.findViewById(R.id.pause6);
+        s6 = view.findViewById(R.id.stop6);
+
+        b7 = view.findViewById(R.id.play7);
+        p7 = view.findViewById(R.id.pause7);
+        s7 = view.findViewById(R.id.stop7);
+
+        b8 = view.findViewById(R.id.play8);
+        p8 = view.findViewById(R.id.pause8);
+        s8 = view.findViewById(R.id.stop8);
+
+        b9=view.findViewById(R.id.play9);
+        p9=view.findViewById(R.id.pause9);
+        s9=view.findViewById(R.id.stop9);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music2.isPlaying() && !music3.isPlaying() && !music4.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music1.start();
+                }
+
+
+            }
+        });
+
+
+        p1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music1!=null)
+                    music1.pause();
+
+            }
+        });
+
+
+        s1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music1.stop();
+                music1=MediaPlayer.create(getContext(), R.raw.acoustic_guitar);
+
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music3.isPlaying() && !music4.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music2.start();
+                }
+            }
+        });
+
+        p2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music2!=null)
+                    music2.pause();
+
+            }
+        });
+
+        s2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music2.stop();
+                music2=MediaPlayer.create(getContext(), R.raw.fire);
+
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music3.start();
+                }
+            }
+        });
+
+        p3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music3!=null)
+                    music3.pause();
+
+            }
+        });
+
+        s3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music3.stop();
+                music3=MediaPlayer.create(getContext(),R.raw.waterfall);
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music4.start();
+                }
+            }
+        });
+
+        p4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music4!=null)
+                    music4.pause();
+
+            }
+        });
+
+        s4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music4.stop();
+                music4=MediaPlayer.create(getContext(),R.raw.whale);
+            }
+        });
+
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music5.start();
+                }
+            }
+        });
+
+        p5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music5!=null)
+                    music5.pause();
+
+            }
+        });
+
+        s5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music5.stop();
+                music5=MediaPlayer.create(getContext(),R.raw.awake);
+            }
+        });
+
+
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music7.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music6.start();
+                }
+            }
+        });
+
+        p6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music6!=null)
+                    music6.pause();
+
+            }
+        });
+
+        s6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music6.stop();
+                music6=MediaPlayer.create(getContext(),R.raw.childdreams);
+            }
+        });
+
+        b7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music8.isPlaying() && !music9.isPlaying()){
+                    music7.start();
+                }
+            }
+        });
+
+        p7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music7!=null)
+                    music7.pause();
+
+            }
+        });
+
+        s7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music7.stop();
+                music7=MediaPlayer.create(getContext(),R.raw.forestwalk);
+            }
+        });
+
+        b8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music9.isPlaying()){
+                    music8.start();
+                }
+            }
+        });
+
+        p8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music8!=null)
+                    music8.pause();
+
+            }
+        });
+
+        s8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music8.stop();
+                music8=MediaPlayer.create(getContext(),R.raw.lullaby);
+            }
+        });
+
+        b9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!music1.isPlaying() && !music2.isPlaying() && !music4.isPlaying() && !music3.isPlaying() && !music5.isPlaying() && !music6.isPlaying() && !music7.isPlaying() && !music8.isPlaying()){
+                    music9.start();
+                }
+            }
+        });
+
+        p9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music9!=null){
+                    music9.pause();
+                }
+            }
+        });
+
+        s9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music9.stop();
+                music9=MediaPlayer.create(getContext(),R.raw.melody);
+            }
+        });
 
         return view;
     }
