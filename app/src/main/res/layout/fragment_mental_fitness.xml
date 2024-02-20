@@ -81,7 +81,7 @@
                     android:layout_height="70dp"
                     android:background="@drawable/buttonback"
                     android:text="Meditation Songs"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -97,7 +97,7 @@
                     android:text="Meditation Exercises"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -109,7 +109,7 @@
                     android:background="@drawable/buttonback"
                     android:text="Manage Stress "
                     android:textColor="@color/white"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 

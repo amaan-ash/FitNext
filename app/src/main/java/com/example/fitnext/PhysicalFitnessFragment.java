@@ -30,7 +30,6 @@ public class PhysicalFitnessFragment extends Fragment {
     private Button shortExercisesBtn;
     private Button lengthyExercisesBtn;
     private Button bmiCalculatorBtn;
-    private Button elderlyExercisesBtn;
     private Button stepsCounterBtn;
 
     public PhysicalFitnessFragment() {
@@ -74,7 +73,6 @@ public class PhysicalFitnessFragment extends Fragment {
         shortExercisesBtn=view.findViewById(R.id.shortExercisesBtn);
         lengthyExercisesBtn=view.findViewById(R.id.lengthyExercisesBtn);
         bmiCalculatorBtn=view.findViewById(R.id.bmiCalculatorBtn);
-        elderlyExercisesBtn=view.findViewById(R.id.elderlyExerciseBtn);
         stepsCounterBtn=view.findViewById(R.id.stepsCounterBtn);
 
 
@@ -111,16 +109,6 @@ public class PhysicalFitnessFragment extends Fragment {
             }
         });
 
-        elderlyExercisesBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new ElderlyExercisesFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
 
 
         stepsCounterBtn.setOnClickListener(new View.OnClickListener() {
