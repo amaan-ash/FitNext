@@ -1,8 +1,13 @@
 package com.example.fitnext;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
 
@@ -15,7 +20,6 @@ import android.widget.Button;
 public class MeditateSongFragment extends Fragment {
     MediaPlayer music1=null,music2=null,music3=null,music4=null,music5=null,music6=null,music7=null,music8=null,music9=null,music10=null;
     Button b1,p1,s1,b2,p2,s2,b3,p3,s3,b4,p4,s4,b5,p5,s5,b6,p6,s6,b7,p7,s7,b8,p8,s8,b9,p9,s9,b10,p10,s10;
-
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -543,5 +547,10 @@ public class MeditateSongFragment extends Fragment {
             music10.stop();
             music10.prepareAsync();
         }
+
+
     }
+
+
+
 }
