@@ -19,7 +19,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            isShrinkResources=true
+            isShrinkResources= true
         }
     }
     compileOptions {
