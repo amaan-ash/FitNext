@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
@@ -7,7 +8,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="AboutFragment"
-    android:background="@color/lavender">
+    android:layout_margin="10dp"
+    android:background="@color/white">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:text="About Us"
-                android:textColor="#F0F3DD"
+                android:textColor="@color/black"
+                android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textSize="37sp" />
 
@@ -37,7 +40,8 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/textColor"
+                android:textColor="@color/black"
+                android:fontFamily="@font/muli"
                 android:text="We are a group of two Android developers currently pursuing diploma in Computer Engineering. This is our Capstone project made to be presented in our final semester. Following the current trend in Mental Health and Physical Health, our team decided to develop an app on Fitness  . We have compiled and researched ways that may help a person to assist with Fitness and this app is its final product. "
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -47,7 +51,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:textColor="#F0F3DD"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:text="Development Team"
                 android:textAlignment="center"
                 android:textSize="30sp" />
@@ -64,6 +69,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
@@ -74,28 +80,27 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:layout_marginStart="55dp"/>
+                  />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Team Leader"
                     android:gravity="start"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:textSize="17sp"
-                    android:layout_marginStart="50dp"/>
+                    android:textSize="17sp" />
                 <TextView
                     android:id="@+id/githublink"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Github.com"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="60dp"
                     />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
