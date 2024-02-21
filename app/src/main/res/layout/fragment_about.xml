@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="AboutFragment"
-    android:layout_margin="10dp"
     android:background="@color/white">
     <ScrollView
         android:layout_width="match_parent"
@@ -18,13 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="155dp"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/about_us" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
@@ -36,6 +28,13 @@
                 android:fontFamily="@font/muli_black"
                 android:textAlignment="center"
                 android:textSize="37sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/about_us" />
+
 
             <TextView
                 android:id="@+id/textView1"
