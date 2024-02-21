@@ -36,28 +36,20 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
-    private TextInputEditText textInputEmailLogin;
-    private TextInputEditText textInputPasswordLogin;
-    private TextInputLayout textLayoutEmailLogin;
-    private TextInputLayout textLayoutPasswordLogin;
-    private TextView newUserTextview;
-    private TextView forgotPasswordTextview;
+    private TextInputEditText textInputEmailLogin,textInputPasswordLogin;
+    private TextInputLayout textLayoutEmailLogin,textLayoutPasswordLogin;
+    private TextView newUserTextview,forgotPasswordTextview;
     private Button loginBtn;
-    private ImageView googleBtn;
-    private ImageView callBtn;
+    private ImageView googleBtn,callBtn;
     ProgressBar progressBar;
-
-    String email;
-    String password;
+    String email,password;
     FirebaseAuth auth;
-
     GoogleSignInClient googleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         //getting views
         textLayoutEmailLogin=findViewById(R.id.textLayoutEmailLogin);

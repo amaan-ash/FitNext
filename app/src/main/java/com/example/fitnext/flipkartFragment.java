@@ -1,4 +1,4 @@
-// flipkartFragment.java
+
 package com.example.fitnext;
 
 import android.os.Bundle;

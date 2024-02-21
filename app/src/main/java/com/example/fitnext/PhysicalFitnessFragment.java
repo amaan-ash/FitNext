@@ -11,15 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PhysicalFitnessFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PhysicalFitnessFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -31,20 +24,12 @@ public class PhysicalFitnessFragment extends Fragment {
     private Button lengthyExercisesBtn;
     private Button bmiCalculatorBtn;
     private Button stepsCounterBtn;
+    private Button elderlyExerciseBtn;
 
     public PhysicalFitnessFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PhysicalFitness.
-     */
-    // TODO: Rename and change types and number of parameters
     public static PhysicalFitnessFragment newInstance(String param1, String param2) {
         PhysicalFitnessFragment fragment = new PhysicalFitnessFragment();
         Bundle args = new Bundle();
@@ -74,6 +59,7 @@ public class PhysicalFitnessFragment extends Fragment {
         lengthyExercisesBtn=view.findViewById(R.id.lengthyExercisesBtn);
         bmiCalculatorBtn=view.findViewById(R.id.bmiCalculatorBtn);
         stepsCounterBtn=view.findViewById(R.id.stepsCounterBtn);
+        elderlyExerciseBtn=view.findViewById(R.id.elderlyExerciseBtn);
 
 
         shortExercisesBtn.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +103,17 @@ public class PhysicalFitnessFragment extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container,new PedometerFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        elderlyExerciseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container,new third());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

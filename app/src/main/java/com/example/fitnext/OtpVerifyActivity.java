@@ -29,8 +29,8 @@ public class OtpVerifyActivity extends AppCompatActivity {
 
     Button verifyCodeBtn;
  FirebaseAuth auth;
-    String otpId;
-   String phoneNumber;
+    String otpId,phoneNumber;
+
    PinView otpInput;
 
     @Override

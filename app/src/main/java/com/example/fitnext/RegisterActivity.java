@@ -29,20 +29,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
-    private TextInputLayout textLayoutPasswordRegister;
-    private TextInputLayout textLayoutEmailRegister;
-    private TextInputLayout textLayoutConfirmPasswordRegister;
-    private TextInputEditText textInputEmailRegister;
-    private TextInputEditText textInputPasswordRegister;
-    private TextInputEditText textConfirmPasswordRegister;
+    private TextInputLayout textLayoutPasswordRegister,textLayoutEmailRegister,textLayoutConfirmPasswordRegister;
+    private TextInputEditText textInputEmailRegister,textInputPasswordRegister,textConfirmPasswordRegister;
     private TextView goToSigninTextview;
-    private Button registerBtn;
-    private Button goToLoginBtn;
+    private Button registerBtn,goToLoginBtn;
     ProgressBar progressBar;
 
-    String email;
-    String password;
-    String confirmPassword;
+    String email,password,confirmPassword;
 
     FirebaseAuth firebaseAuth;
     @Override

@@ -114,10 +114,21 @@
                 android:background="@drawable/buttonback"
                 android:text="Steps Counter"
                 android:textColor="@color/white"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 />
+
+                <android.widget.Button
+                    android:id="@+id/elderlyExerciseBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/buttonback"
+                    android:text="Elderly Exercises"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
 
             </LinearLayout>
             </LinearLayout>
