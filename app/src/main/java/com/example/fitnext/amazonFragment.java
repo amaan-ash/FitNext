@@ -18,13 +18,6 @@ public class amazonFragment extends Fragment {
         // Required empty public constructor
     }
 
-
-
-    public static amazonFragment newInstance(String param1, String param2) {
-           return new amazonFragment();
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

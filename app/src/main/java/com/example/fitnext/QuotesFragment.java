@@ -16,13 +16,6 @@ import java.util.Random;
 
 public class QuotesFragment extends Fragment {
 
-
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
     private Handler handler = new Handler(Looper.getMainLooper());
     private static final long QUOTE_UPDATE_INTERVAL = 5000; // Update every 5 seconds
 
@@ -74,23 +67,6 @@ public class QuotesFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static QuotesFragment newInstance(String param1, String param2) {
-        QuotesFragment fragment = new QuotesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -15,38 +15,10 @@ import android.widget.TextView;
 
 public class LengthyExercisesFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public LengthyExercisesFragment() {
         // Required empty public constructor
     }
-
-    public static LengthyExercisesFragment newInstance(String param1, String param2) {
-        LengthyExercisesFragment fragment = new LengthyExercisesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    first f=new first();
-    second s=new second();
-    third t=new third();
     ImageView ig1,ig2;
     TextView tv1,tv2;
     @Override
@@ -63,7 +35,7 @@ public class LengthyExercisesFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,f);
+                fragmentTransaction.replace(R.id.fragment_container,new first());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -73,7 +45,7 @@ public class LengthyExercisesFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,f);
+                fragmentTransaction.replace(R.id.fragment_container,new first());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -85,7 +57,7 @@ public class LengthyExercisesFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,s);
+                fragmentTransaction.replace(R.id.fragment_container,new second());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -95,7 +67,7 @@ public class LengthyExercisesFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,s);
+                fragmentTransaction.replace(R.id.fragment_container,new second());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

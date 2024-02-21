@@ -21,34 +21,10 @@ public class MeditateSongFragment extends Fragment {
     MediaPlayer music1=null,music2=null,music3=null,music4=null,music5=null,music6=null,music7=null,music8=null,music9=null,music10=null;
     Button b1,p1,s1,b2,p2,s2,b3,p3,s3,b4,p4,s4,b5,p5,s5,b6,p6,s6,b7,p7,s7,b8,p8,s8,b9,p9,s9,b10,p10,s10;
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public MeditateSongFragment() {
         // Required empty public constructor
     }
 
-    public static MeditateSongFragment newInstance(String param1, String param2) {
-        MeditateSongFragment fragment = new MeditateSongFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
