@@ -75,7 +75,7 @@ public class ArticleFragment extends Fragment {
 
         // Add other items and their corresponding links
 
-        adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, items);
+        adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_expandable_list_item_1, items);
         listView.setAdapter(adapter);
 
         // Set click listener for each item in the ListView
