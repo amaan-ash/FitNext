@@ -18,8 +18,8 @@ import com.example.fitnext.R;
 public class MeditationExercisesFragment extends Fragment {
 
 
-    Button b1,b2,b3,b4,b41,b51,b61, p1,p2,p3,p4,p41,p51,p61, s1,s2,s3,s4,s41,s51,s61;
-    MediaPlayer music1 = null,music2 = null,music3 = null,music4 = null,music41 = null,music51 = null,music61 = null;
+    Button b1,b2,b3,b4,b5,b6,b7, p1,p2,p3,p4,p5,p6,p7, s1,s2,s3,s4,s5,s6,s7;
+    MediaPlayer music1 = null,music2 = null,music3 = null,music4 = null,music5 = null,music6 = null,music7 = null;
     public MeditationExercisesFragment() {
         // Required empty public constructor
     }
@@ -37,9 +37,9 @@ public class MeditationExercisesFragment extends Fragment {
         music2=MediaPlayer.create(getActivity(), R.raw.four_min);
         music3=MediaPlayer.create(getActivity(), R.raw.ten_min);
         music4=MediaPlayer.create(getActivity(), R.raw.fifteen_min);
-        music41=MediaPlayer.create(getActivity(), R.raw.body_scan);
-        music51=MediaPlayer.create(getActivity(), R.raw.fifteen_min_rebounce);
-        music61=MediaPlayer.create(getActivity(), R.raw.mindful_eating);
+        music5=MediaPlayer.create(getActivity(), R.raw.body_scan);
+        music6=MediaPlayer.create(getActivity(), R.raw.fifteen_min_rebounce);
+        music7=MediaPlayer.create(getActivity(), R.raw.mindful_eating);
 
         b1=view.findViewById(R.id.play1);
         p1=view.findViewById(R.id.pause1);
@@ -57,17 +57,17 @@ public class MeditationExercisesFragment extends Fragment {
         p4=view.findViewById(R.id.pause4);
         s4=view.findViewById(R.id.stop4);
 
-        b41=view.findViewById(R.id.play41);
-        p41=view.findViewById(R.id.pause41);
-        s41=view.findViewById(R.id.stop41);
+        b5=view.findViewById(R.id.play5);
+        p5=view.findViewById(R.id.pause5);
+        s5=view.findViewById(R.id.stop5);
 
-        b51=view.findViewById(R.id.play51);
-        p51=view.findViewById(R.id.pause51);
-        s51=view.findViewById(R.id.stop51);
+        b6=view.findViewById(R.id.play6);
+        p6=view.findViewById(R.id.pause6);
+        s6=view.findViewById(R.id.stop6);
 
-        b61=view.findViewById(R.id.play61);
-        p61=view.findViewById(R.id.pause61);
-        s61=view.findViewById(R.id.stop61);
+        b7=view.findViewById(R.id.play7);
+        p7=view.findViewById(R.id.pause7);
+        s7=view.findViewById(R.id.stop7);
 
 
 
@@ -76,6 +76,7 @@ public class MeditationExercisesFragment extends Fragment {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopAllSongsExcept(music1);
                 music1.start();
 
             }
@@ -105,6 +106,7 @@ public class MeditationExercisesFragment extends Fragment {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopAllSongsExcept(music2);
                 music2.start();
 
             }
@@ -135,6 +137,7 @@ public class MeditationExercisesFragment extends Fragment {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopAllSongsExcept(music3);
                 music3.start();
 
             }
@@ -167,6 +170,7 @@ public class MeditationExercisesFragment extends Fragment {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopAllSongsExcept(music4);
                 music4.start();
 
             }
@@ -195,97 +199,134 @@ public class MeditationExercisesFragment extends Fragment {
 
 
 
-        b41.setOnClickListener(new View.OnClickListener() {
+        b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                music41.start();
+                stopAllSongsExcept(music5);
+                music5.start();
 
 
             }
         });
 
 
-        p41.setOnClickListener(new View.OnClickListener() {
+        p5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(music41!=null)
-                    music41.pause();
+                if(music5!=null)
+                    music5.pause();
 
             }
         });
 
 
-        s41.setOnClickListener(new View.OnClickListener() {
+        s5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                music41.stop();
-                music41=MediaPlayer.create(getActivity(), R.raw.body_scan);
+                music5.stop();
+                music5=MediaPlayer.create(getActivity(), R.raw.body_scan);
 
             }
         });
 
 
-        b51.setOnClickListener(new View.OnClickListener() {
+        b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                music51.start();
-
-
-            }
-        });
-
-
-        p51.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(music51!=null)
-                    music51.pause();
-
-            }
-        });
-
-
-        s51.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                music51.stop();
-                music51=MediaPlayer.create(getActivity(), R.raw.fifteen_min_rebounce);
+                stopAllSongsExcept(music6);
+                music6.start();
 
 
             }
         });
 
 
-        b61.setOnClickListener(new View.OnClickListener() {
+        p6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                music61.start();
+                if(music6!=null)
+                    music6.pause();
+
+            }
+        });
+
+
+        s6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                music6.stop();
+                music6=MediaPlayer.create(getActivity(), R.raw.fifteen_min_rebounce);
 
 
             }
         });
 
 
-        p61.setOnClickListener(new View.OnClickListener() {
+        b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(music61!=null)
-                    music61.pause();
+                stopAllSongsExcept(music7);
+                music7.start();
+
 
             }
         });
 
 
-        s61.setOnClickListener(new View.OnClickListener() {
+        p7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(music7!=null)
+                    music7.pause();
+
+            }
+        });
+
+
+        s7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                music61.stop();
-                music61=MediaPlayer.create(getActivity(), R.raw.mindful_eating);
+                music7.stop();
+                music7=MediaPlayer.create(getActivity(), R.raw.mindful_eating);
 
             }
         });
 
         return view;
     }
+    private void stopAllSongsExcept(MediaPlayer mediaPlayerToKeepPlaying) {
+        if (music1 != mediaPlayerToKeepPlaying && music1.isPlaying()) {
+            music1.stop();
+            music1.prepareAsync(); // Resets the MediaPlayer to its uninitialized state
+        }
+        if (music2 != mediaPlayerToKeepPlaying && music2.isPlaying()) {
+            music2.stop();
+            music2.prepareAsync();
+        }
+        if (music3 != mediaPlayerToKeepPlaying && music3.isPlaying()) {
+            music3.stop();
+            music3.prepareAsync();
+        }
+        if (music4 != mediaPlayerToKeepPlaying && music4.isPlaying()) {
+            music4.stop();
+            music4.prepareAsync();
+        }
+        if (music5 != mediaPlayerToKeepPlaying && music5.isPlaying()) {
+            music5.stop();
+            music5.prepareAsync();
+        }
+        if (music6 != mediaPlayerToKeepPlaying && music6.isPlaying()) {
+            music6.stop();
+            music6.prepareAsync();
+        }
+        if (music7 != mediaPlayerToKeepPlaying && music7.isPlaying()) {
+            music7.stop();
+            music7.prepareAsync();
+        }
+
+
+
+    }
+
 }

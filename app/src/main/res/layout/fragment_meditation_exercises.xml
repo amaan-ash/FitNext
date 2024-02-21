@@ -330,7 +330,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body32"
-                android:translationX="50dp"
+                android:translationX="70dp"
                 android:layout_toEndOf="@id/play1"
                 android:text="Pause"/>
 
@@ -339,7 +339,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body32"
-                android:translationX="100dp"
+                android:translationX="140dp"
                 android:layout_toEndOf="@id/pause1"
                 android:text="Stop"/>
 
@@ -366,7 +366,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body33"
-                android:translationX="50dp"
+                android:translationX="70dp"
                 android:layout_toEndOf="@id/play2"
                 android:text="Pause"/>
 
@@ -375,7 +375,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body33"
-                android:translationX="100dp"
+                android:translationX="140dp"
                 android:layout_toEndOf="@id/pause2"
                 android:text="Stop"/>
 
@@ -402,7 +402,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body34"
-                android:translationX="50dp"
+                android:translationX="70dp"
                 android:layout_toEndOf="@id/play3"
                 android:text="Pause"/>
 
@@ -411,7 +411,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body34"
-                android:translationX="100dp"
+                android:translationX="140dp"
                 android:layout_toEndOf="@id/pause3"
                 android:text="Stop"/>
 
@@ -438,7 +438,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body35"
-                android:translationX="50dp"
+                android:translationX="70dp"
                 android:layout_toEndOf="@id/play4"
                 android:text="Pause"/>
 
@@ -447,7 +447,7 @@ again."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body35"
-                android:translationX="100dp"
+                android:translationX="140dp"
                 android:layout_toEndOf="@id/pause4"
                 android:text="Stop"/>
 
@@ -506,35 +506,35 @@ head to the toes."
                 android:textStyle="italic" />
 
             <Button
-                android:id="@+id/play41"
+                android:id="@+id/play5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/aud2"
                 android:text="Play"/>
 
             <Button
-                android:id="@+id/pause41"
+                android:id="@+id/pause5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/aud2"
-                android:translationX="50dp"
-                android:layout_toEndOf="@id/play41"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play5"
                 android:text="Pause"/>
 
             <Button
-                android:id="@+id/stop41"
+                android:id="@+id/stop5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/aud2"
-                android:translationX="100dp"
-                android:layout_toEndOf="@id/pause41"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause5"
                 android:text="Stop"/>
 
             <View
                 android:id="@+id/u4"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_below="@id/play41"
+                android:layout_below="@id/play5"
                 android:background="@color/teal_200" />
 
             <TextView
@@ -586,35 +586,35 @@ before you try to walk and meditate at the same time."
                 android:textStyle="italic" />
 
             <Button
-                android:id="@+id/play51"
+                android:id="@+id/play6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/aud3"
                 android:text="Play"/>
 
             <Button
-                android:id="@+id/pause51"
+                android:id="@+id/pause6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/aud3"
-                android:translationX="50dp"
-                android:layout_toEndOf="@id/play51"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play6"
                 android:text="Pause"/>
 
             <Button
-                android:id="@+id/stop51"
+                android:id="@+id/stop6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/aud3"
-                android:translationX="100dp"
-                android:layout_toEndOf="@id/pause51"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause6"
                 android:text="Stop"/>
 
             <View
                 android:id="@+id/u5"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_below="@id/play51"
+                android:layout_below="@id/play6"
                 android:background="@color/teal_200" />
 
             <TextView
@@ -665,28 +665,28 @@ attention."
                 android:textStyle="italic" />
 
             <Button
-                android:id="@+id/play61"
+                android:id="@+id/play7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body62"
                 android:text="Play"/>
 
             <Button
-                android:id="@+id/pause61"
+                android:id="@+id/pause7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body62"
-                android:translationX="50dp"
-                android:layout_toEndOf="@id/play61"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play7"
                 android:text="Pause"/>
 
             <Button
-                android:id="@+id/stop61"
+                android:id="@+id/stop7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/body62"
-                android:translationX="100dp"
-                android:layout_toEndOf="@id/pause61"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause7"
                 android:text="Stop"/>
 
 
