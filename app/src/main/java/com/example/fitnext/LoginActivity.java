@@ -74,7 +74,9 @@ public class LoginActivity extends AppCompatActivity {
         // Check condition
         if (firebaseUser != null) {
             // When user already sign in redirect to profile activity
-            startActivity(new Intent(LoginActivity.this, DashBoardActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            if(firebaseUser.isEmailVerified()) {
+                startActivity(new Intent(LoginActivity.this, DashBoardActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            }
         }
 
 
