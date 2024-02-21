@@ -379,7 +379,6 @@ public class RegisterActivity extends AppCompatActivity {
                                                 Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
                                                 Toast.makeText(RegisterActivity.this, "Please check your email for verification", Toast.LENGTH_LONG).show();
                                                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                                                finish();
                                             }else{
                                                 Toast.makeText(RegisterActivity.this,  task.getException().getMessage(),
                                                         Toast.LENGTH_LONG).show();

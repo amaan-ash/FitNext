@@ -101,8 +101,9 @@ public class OtpVerifyActivity extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             Toast.makeText(OtpVerifyActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), DashBoardActivity.class));
-                            finish();
+                            startActivity(new Intent(OtpVerifyActivity.this, DashBoardActivity.class)
+                                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+
 
                         } else {
                             Toast.makeText(getApplicationContext(),"Incorrect OTP",Toast.LENGTH_LONG).show();

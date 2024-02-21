@@ -149,6 +149,7 @@ public class DashBoardActivity extends AppCompatActivity {
         }
             super.onBackPressed();
 
+
     }
     // Method to update selected item in the navigation drawer based on the current fragment
 
