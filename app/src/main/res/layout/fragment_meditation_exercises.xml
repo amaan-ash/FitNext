@@ -168,7 +168,7 @@ awareness can continue throughout the day."
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_below="@id/img6"
-                android:background="@color/teal_200" />
+                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/head2"
@@ -281,7 +281,7 @@ again."
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_below="@id/body25"
-                android:background="@color/teal_200" />
+                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/head3"
@@ -456,7 +456,7 @@ again."
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_below="@id/play4"
-                android:background="@color/teal_200" />
+                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/head4"
@@ -535,7 +535,7 @@ head to the toes."
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_below="@id/play5"
-                android:background="@color/teal_200" />
+                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/head5"
@@ -615,7 +615,7 @@ before you try to walk and meditate at the same time."
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_below="@id/play6"
-                android:background="@color/teal_200" />
+                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/head6"
