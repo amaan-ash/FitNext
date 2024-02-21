@@ -53,4 +53,7 @@ dependencies {
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
 
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
+
+    implementation("com.google.firebase:firebase-inappmessaging-display")
+    implementation("com.google.firebase:firebase-analytics")
 }
