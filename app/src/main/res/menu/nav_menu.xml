@@ -40,6 +40,10 @@
             android:id="@+id/nav_articles"
             android:icon="@drawable/nav_article"
             android:title="Health Articles"/>
+        <item
+            android:id="@+id/nav_goals"
+            android:icon="@drawable/goal"
+            android:title="Set Goals"/>
 
         <item
             android:id="@+id/nav_supplements"
