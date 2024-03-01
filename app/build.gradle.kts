@@ -46,7 +46,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
-    implementation ("com.google.firebase:firebase-database:20.3.0")
+    implementation ("com.google.firebase:firebase-database:20.3.1")
     implementation ("com.hbb20:ccp:2.7.1")
 
     implementation ("io.github.chaosleung:pinview:1.4.4")
