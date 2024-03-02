@@ -19,7 +19,7 @@ public class HomeFragment extends Fragment {
     Button mentalOption;
         Button meditationOption;
         Button chatBotOption;
-        Button pedometerOption;
+        Button symptomsOption;
         Button dietPlanOption;
 
     public HomeFragment() {
@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
        mentalOption=view.findViewById(R.id.option2);
        meditationOption=view.findViewById(R.id.option3);
        chatBotOption=view.findViewById(R.id.option4);
-       pedometerOption=view.findViewById(R.id.option5);
+       symptomsOption=view.findViewById(R.id.option5);
        dietPlanOption=view.findViewById(R.id.option6);
 
        //rest of the code
@@ -81,12 +81,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        pedometerOption.setOnClickListener(new View.OnClickListener() {
+        symptomsOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new PedometerFragment());
+                fragmentTransaction.replace(R.id.fragment_container,new QuizFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

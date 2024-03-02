@@ -20,4 +20,9 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="bl">#08186A</color>
 
+    <color name="colorDayT">#ffff7a</color>
+    <color name="colorDayB">#a0e6ff</color>
+    <color name="upArrow">#ddffca</color>
+    <color name="downArrow">#ffbdff</color>
+
 </resources>
