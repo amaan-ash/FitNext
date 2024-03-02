@@ -12,17 +12,18 @@
         android:id="@+id/add_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/light_green"
+        android:backgroundTint="@color/black"
         android:clickable="true"
         app:fabCustomSize="60dp"
         app:tint="@color/white"
 
-        app:backgroundTint="@color/light_green"
+        app:backgroundTint="@color/black"
         app:rippleColor="@color/white"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@drawable/add_user"
+        android:contentDescription="add user" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/user_list"

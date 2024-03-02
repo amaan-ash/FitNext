@@ -14,8 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-import com.example.fitnext.R;
-import com.example.fitnext.UserListAdapter;
+
 
 import com.example.fitnext.mydatabase.MedicalDB;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/dark_green"
+        android:background="@color/lavender"
         >
 
         <androidx.cardview.widget.CardView
@@ -59,9 +59,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/light_green"
+            android:backgroundTint="@color/black"
             android:clickable="true"
             app:fabCustomSize="60dp"
             app:tint="@color/white"
