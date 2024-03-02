@@ -204,4 +204,7 @@
 
     <!-- Strings related to ambient noises -->
     <string name="ambient_sounds">Ambient Sounds</string>
+
+    <string name="medicine_page">medicine page</string>
+    <string name="empty_users">No users, Click (+) to add one.</string>
 </resources>

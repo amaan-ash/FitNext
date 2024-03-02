@@ -25,4 +25,8 @@
     <color name="upArrow">#ddffca</color>
     <color name="downArrow">#ffbdff</color>
 
+
+    <color name="light_green">#45BD45</color>
+    <color name="dark_green">#227E28</color>
+
 </resources>
