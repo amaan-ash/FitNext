@@ -19,12 +19,24 @@
         android:theme="@style/Theme.FitNext"
         tools:targetApi="34">
         <activity
+            android:name=".Medicine"
+            android:exported="false" />
+        <activity
+            android:name=".BuyMedicineActivity"
+            android:parentActivityName=".DashBoardActivity"
+            android:label="Buy Medicine"
+            android:exported="false" />
+        <activity
             android:name=".FirstActivity"
+            android:parentActivityName=".DashBoardActivity"
+            android:label="Medicine Reminder"
             android:exported="false" />
         <activity
             android:name="com.example.chatgpt.ChatGPT_Dashboard"
             android:exported="false"
             android:screenOrientation="nosensor"
+            android:label="ChatBot"
+            android:parentActivityName=".DashBoardActivity"
             android:theme="@style/Theme.ChatBot" />
         <activity
             android:name=".OtpVerifyActivity"
@@ -66,13 +78,16 @@
             android:parentActivityName=".anxietyActivity" />
         <activity android:name=".depressionActivity" />
         <activity android:name=".depressionResultActivity" />
-<activity android:name=".AlarmActivity"/>
-        <activity android:name=".MedicineActivity"/>
+        <activity android:name=".AlarmActivity"
+            android:parentActivityName=".DashBoardActivity"
+            />
+
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <receiver android:name=".AlarmBroadcastReceiver"/>
+        <receiver android:name=".AlarmBroadcastReceiver" />
     </application>
 
 </manifest>

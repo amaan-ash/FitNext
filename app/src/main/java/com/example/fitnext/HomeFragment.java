@@ -20,7 +20,7 @@ public class HomeFragment extends Fragment {
         Button medicineReminderOption;
         Button chatBotOption;
         Button anxietyOption;
-        Button depressionCheckerOption;
+        Button buyMedicineOption;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
        medicineReminderOption=view.findViewById(R.id.option3);
        chatBotOption=view.findViewById(R.id.option4);
       anxietyOption=view.findViewById(R.id.option5);
-      depressionCheckerOption=view.findViewById(R.id.option6);
+      buyMedicineOption=view.findViewById(R.id.option6);
 
        //rest of the code
         physicalOption.setOnClickListener(new View.OnClickListener() {
@@ -84,10 +84,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-       depressionCheckerOption.setOnClickListener(new View.OnClickListener() {
+       buyMedicineOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), depressionActivity.class));
+                startActivity(new Intent(getContext(), BuyMedicineActivity.class));
             }
         });
         return view;
