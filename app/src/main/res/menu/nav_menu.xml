@@ -55,7 +55,7 @@
             android:title="Share"/>
         <item
             android:id="@+id/nav_helpline"
-            android:icon="@drawable/emergency_call"
+            android:icon="@drawable/phone_call"
             android:title="Helpline Numbers"/>
 
         <item
