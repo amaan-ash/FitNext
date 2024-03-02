@@ -19,8 +19,8 @@ public class HomeFragment extends Fragment {
     Button mentalOption;
         Button meditationOption;
         Button chatBotOption;
-        Button symptomsOption;
-        Button dietPlanOption;
+        Button anxietyOption;
+        Button depressionCheckerOption;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -37,8 +37,8 @@ public class HomeFragment extends Fragment {
        mentalOption=view.findViewById(R.id.option2);
        meditationOption=view.findViewById(R.id.option3);
        chatBotOption=view.findViewById(R.id.option4);
-       symptomsOption=view.findViewById(R.id.option5);
-       dietPlanOption=view.findViewById(R.id.option6);
+      anxietyOption=view.findViewById(R.id.option5);
+      depressionCheckerOption=view.findViewById(R.id.option6);
 
        //rest of the code
         physicalOption.setOnClickListener(new View.OnClickListener() {
@@ -81,25 +81,17 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        symptomsOption.setOnClickListener(new View.OnClickListener() {
+        anxietyOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new QuizFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+           startActivity(new Intent(getContext(), anxietyActivity.class));
             }
         });
 
-        dietPlanOption.setOnClickListener(new View.OnClickListener() {
+       depressionCheckerOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new DietPlanFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                startActivity(new Intent(getContext(), depressionActivity.class));
             }
         });
         return view;
