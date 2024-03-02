@@ -53,6 +53,10 @@
             android:id="@+id/nav_share"
             android:icon="@drawable/nav_share"
             android:title="Share"/>
+        <item
+            android:id="@+id/nav_helpline"
+            android:icon="@drawable/emergency_call"
+            android:title="Helpline Numbers"/>
 
         <item
             android:id="@+id/nav_about"
