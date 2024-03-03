@@ -37,7 +37,7 @@ public class AlarmActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         Toast.makeText(AlarmActivity.this, "Good", Toast.LENGTH_SHORT).show();
-        finish();
+        finishAndRemoveTask();
       }
     });
 
@@ -45,7 +45,7 @@ public class AlarmActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         Toast.makeText(getApplicationContext(),"Reminder set after 10 minutes.",Toast.LENGTH_LONG).show();
-        finish();
+        finishAndRemoveTask();
       }
     });
 
