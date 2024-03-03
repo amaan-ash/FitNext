@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,50 +24,42 @@ import java.util.Random;
 public class QuotesFragment extends Fragment {
 
     private Handler handler = new Handler(Looper.getMainLooper());
-    private static final long QUOTE_UPDATE_INTERVAL = 10000; // Update every 10 seconds
+    private static final long QUOTE_UPDATE_INTERVAL = 10800000 ; // Update every 3 hours
 
     TextView textMotivationalQuote;
     private String[] motivationalQuotes = {
-            "The only way to do great work is to love what you do. - Steve Jobs",
-            "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
-            "The only way to do great work is to love what you do. - Steve Jobs",
+            "The only way to do great work is to love what you do.",
+            "Don't watch the clock; do what it does. Keep going.",
+            "The only way to do great work is to love what you do.",
 
-            "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+            "Don't watch the clock; do what it does. Keep going.",
 
-            "Believe you can and you're halfway there. - Theodore Roosevelt",
+            "Believe you can and you're halfway there.",
 
-            "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+            "Your time is limited, don't waste it living someone else's life.",
 
-            "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+            "Strive not to be a success, but rather to be of value.",
 
-            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+            "Success is stumbling from failure to failure with no loss of enthusiasm.",
 
-            "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "You are never too old to set another goal or to dream a new dream.",
 
-            "Strive not to be a success, but rather to be of value. - Albert Einstein",
 
-            "Success is stumbling from failure to failure with no loss of enthusiasm. - Winston S. Churchill",
+            "Success usually comes to those who are too busy to be looking for it.",
 
-            "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
-            "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
+            "Do not wait to strike till the iron is hot, but make it hot by striking.",
 
-            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
 
-            "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+            "I find that the harder I work, the more luck I seem to have.",
 
-            "Do not wait to strike till the iron is hot, but make it hot by striking. - William Butler Yeats",
 
-            "The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it. - Jordan Belfort",
 
-            "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+            "It's not about how bad you want it, it's about how hard you're willing to work for it.",
 
-            "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. - Steve Jobs",
+            "The only person you are destined to become is the person you decide to be.",
 
-            "It's not about how bad you want it, it's about how hard you're willing to work for it. - Unknown",
 
-            "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
-
-            "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack in will. - Vince Lombardi",
     };
 
     // Notification channel ID
@@ -98,22 +91,20 @@ public class QuotesFragment extends Fragment {
 
         // periodically update the quote
         scheduleQuoteUpdates();
-        Toast.makeText(getContext(), "6", Toast.LENGTH_SHORT).show();
+        Log.d("6","6");
         return view;
     }
 
     // Create notification channel
     private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = getString(R.string.channel_name);
-            String description = getString(R.string.channel_description);
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
-            channel.setDescription(description);
-            // Register the channel with the system
-            notificationManager.createNotificationChannel(channel);
-            Toast.makeText(getContext(), "1", Toast.LENGTH_SHORT).show();
-        }
+        CharSequence name = getString(R.string.channel_name);
+        String description = getString(R.string.channel_description);
+        int importance = NotificationManager.IMPORTANCE_DEFAULT;
+        NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+        channel.setDescription(description);
+        // Register the channel with the system
+        notificationManager.createNotificationChannel(channel);
+     Log.d("1","1");
     }
 
     // Method to send notification
@@ -126,7 +117,7 @@ public class QuotesFragment extends Fragment {
 
         // Show the notification
         notificationManager.notify(NOTIFICATION_ID, builder.build());
-        Toast.makeText(getContext(), "2", Toast.LENGTH_SHORT).show();
+       Log.d("2","2");
     }
 
     // Method to update quote and send notification
@@ -145,7 +136,7 @@ public class QuotesFragment extends Fragment {
                 handler.postDelayed(this, QUOTE_UPDATE_INTERVAL);
             }
         }, QUOTE_UPDATE_INTERVAL);
-        Toast.makeText(getContext(), "3", Toast.LENGTH_SHORT).show();
+      Log.d("3","3");
     }
 
     // Update the quote
@@ -153,12 +144,12 @@ public class QuotesFragment extends Fragment {
         // Get a random quote
         String randomQuote = getRandomQuote();
         textMotivationalQuote.setText(randomQuote);
-        Toast.makeText(getContext(), "4", Toast.LENGTH_SHORT).show();
+     Log.d("4","4");
     }
 
     // Select a random quote from the array
     private String getRandomQuote() {
-        Toast.makeText(getContext(), "5", Toast.LENGTH_SHORT).show();
+     Log.d("5","5");
         Random random = new Random();
         int index = random.nextInt(motivationalQuotes.length);
         return motivationalQuotes[index];
