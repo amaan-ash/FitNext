@@ -1,23 +1,29 @@
 package com.example.fitnext;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
 import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.core.app.NotificationCompat;
+import androidx.fragment.app.Fragment;
+
+import com.example.fitnext.R;
 
 import java.util.Random;
-
 
 public class QuotesFragment extends Fragment {
 
     private Handler handler = new Handler(Looper.getMainLooper());
-    private static final long QUOTE_UPDATE_INTERVAL = 5000; // Update every 5 seconds
+    private static final long QUOTE_UPDATE_INTERVAL = 10000; // Update every 10 seconds
 
     TextView textMotivationalQuote;
     private String[] motivationalQuotes = {
@@ -63,50 +69,99 @@ public class QuotesFragment extends Fragment {
             "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack in will. - Vince Lombardi",
     };
 
+    // Notification channel ID
+    private static final String CHANNEL_ID = "motivational_quotes_channel";
+
+    // Notification ID
+    private static final int NOTIFICATION_ID = 1;
+
+    // Notification manager
+    private NotificationManager notificationManager;
+
     public QuotesFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_quotes, container, false);
-
         textMotivationalQuote = view.findViewById(R.id.textMotivationalQuote);
 
-        // to display the quote for the first time when the fragment is opened for first time
+        // Initialize notification manager
+        notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        createNotificationChannel();
+
+        // to display the quote for the first time when the fragment is opened for the first time
         updateQuote();
 
         // periodically update the quote
         scheduleQuoteUpdates();
-
-
+        Toast.makeText(getContext(), "6", Toast.LENGTH_SHORT).show();
         return view;
     }
-    //the below method is used to update the quotes periodically
+
+    // Create notification channel
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = getString(R.string.channel_name);
+            String description = getString(R.string.channel_description);
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system
+            notificationManager.createNotificationChannel(channel);
+            Toast.makeText(getContext(), "1", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // Method to send notification
+    private void sendNotification(String quote) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.fitnextapplogo)
+                .setContentTitle(getString(R.string.notification_title))
+                .setContentText(quote)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        // Show the notification
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+        Toast.makeText(getContext(), "2", Toast.LENGTH_SHORT).show();
+    }
+
+    // Method to update quote and send notification
+    private void updateQuoteAndSendNotification() {
+        String randomQuote = getRandomQuote();
+        sendNotification(randomQuote);
+    }
+
+    // Periodically update the quote
     private void scheduleQuoteUpdates() {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                updateQuote();
+                updateQuoteAndSendNotification();
                 // Schedule the next update
                 handler.postDelayed(this, QUOTE_UPDATE_INTERVAL);
             }
         }, QUOTE_UPDATE_INTERVAL);
+        Toast.makeText(getContext(), "3", Toast.LENGTH_SHORT).show();
     }
-    //the below method is used to make the quotes appear for the first time when the fragment is opened
+
+    // Update the quote
     private void updateQuote() {
         // Get a random quote
         String randomQuote = getRandomQuote();
         textMotivationalQuote.setText(randomQuote);
+        Toast.makeText(getContext(), "4", Toast.LENGTH_SHORT).show();
     }
 
-    //the below method is used to select the random quotes from the string array
+    // Select a random quote from the array
     private String getRandomQuote() {
+        Toast.makeText(getContext(), "5", Toast.LENGTH_SHORT).show();
         Random random = new Random();
         int index = random.nextInt(motivationalQuotes.length);
         return motivationalQuotes[index];
+
     }
 }
