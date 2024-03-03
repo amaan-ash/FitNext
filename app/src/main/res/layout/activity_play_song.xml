@@ -27,6 +27,7 @@
         android:textColor="@color/black"
         android:ellipsize="marquee"
         android:fadingEdge="horizontal"
+        android:fontFamily="@font/muli_bold"
         android:scrollHorizontally="true"
         android:gravity="center"
         android:marqueeRepeatLimit="marquee_forever"
