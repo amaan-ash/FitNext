@@ -24,7 +24,7 @@ import java.util.Random;
 public class QuotesFragment extends Fragment {
 
     private Handler handler = new Handler(Looper.getMainLooper());
-    private static final long QUOTE_UPDATE_INTERVAL = 10800000 ; // Update every 3 hours
+    private static final long QUOTE_UPDATE_INTERVAL = 10000 ; // Update every 3 hours
 
     TextView textMotivationalQuote;
     private String[] motivationalQuotes = {
@@ -58,6 +58,31 @@ public class QuotesFragment extends Fragment {
             "It's not about how bad you want it, it's about how hard you're willing to work for it.",
 
             "The only person you are destined to become is the person you decide to be.",
+            "महान कार्य करने का एकमात्र तरीका यह है कि आप जो करते हैं उससे प्यार करें।",
+            "घड़ी मत देखो; वही करो जो यह करता है. जाता रहना।",
+            "महान कार्य करने का एकमात्र तरीका यह है कि आप जो करते हैं उससे प्यार करें।",
+            "अगर मन में ठान लिया तो आधी जीत हो गई।",
+            "आपका समय सीमित है, इसे किसी और का जीवन जीकर बर्बाद न करें।",
+            "सफल होने के लिए नहीं, बल्कि मूल्यवान बनने के लिए प्रयास करें।",
+            "बिना उत्साह खोए असफलता से असफलता की ओर ठोकर खाना ही सफलता है।",
+            "भविष्य उनका है जो अपने सपनों की सुंदरता में विश्वास करते हैं।",
+            "आप कोई दूसरा लक्ष्य निर्धारित करने या नया सपना देखने के लिए कभी भी बूढ़े नहीं होते।",
+            "सफलता आमतौर पर उन लोगों को मिलती है जो इसकी तलाश में इतने व्यस्त होते हैं।",
+            "लोहे के गर्म होने तक प्रहार करने की प्रतीक्षा मत करो, बल्कि प्रहार करके उसे गर्म करो।",
+            "मुझे लगता है कि मैं जितनी अधिक मेहनत करता हूं, मुझे भाग्य का उतना ही अधिक साथ मिलता है।",
+            "यह इस बारे में नहीं है कि आप इसे कितना बुरा चाहते हैं, यह इस बारे में है कि आप इसके लिए कितनी मेहनत करने को तैयार हैं।",
+            "केवल वही व्यक्ति बनना आपके भाग्य में लिखा है, जो आप बनने का निर्णय लेते हैं।"
+
+
+
+
+
+
+
+
+
+
+
 
 
     };
@@ -110,7 +135,7 @@ public class QuotesFragment extends Fragment {
     // Method to send notification
     private void sendNotification(String quote) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID)
-                .setSmallIcon(R.drawable.fitnextapplogo)
+                .setSmallIcon(R.drawable.leadership)
                 .setContentTitle(getString(R.string.notification_title))
                 .setContentText(quote)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
