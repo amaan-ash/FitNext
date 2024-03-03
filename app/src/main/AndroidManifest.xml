@@ -86,10 +86,14 @@
         <activity android:name=".depressionActivity" />
         <activity android:name=".depressionResultActivity" />
         <activity android:name=".AlarmActivity"
-            android:parentActivityName=".DashBoardActivity"
+            android:parentActivityName=".MedicineActivity"
+            android:label="Medicine Reminder"
             />
 
-<activity android:name=".MedicineActivity"/>
+<activity android:name=".MedicineActivity"
+    android:label="Medicine Reminder"
+    android:parentActivityName=".FirstActivity"
+    />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
