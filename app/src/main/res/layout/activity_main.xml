@@ -15,7 +15,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/muli_black"
-        android:text="Welcome to HealthMate"
+        android:text="Welcome to FitNext"
         android:textColor="#E8E8E8"
         android:textSize="30dp" />
 

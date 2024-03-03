@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -18,12 +21,31 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class HelpLine extends Fragment {
-    Button kidsHelpCall;
-    Button safeHavenCall;
-    Button translifelinecall;
-    Button suicideHelpCall;
-    Button ambulanceCall;
     private static final int REQUEST_CALL = 1;
+
+    private Button kidsHelpCall;
+    private Button safeHavenCall;
+    private Button translifelinecall;
+    private Button suicideHelpCall;
+    private Button ambulanceCall;
+
+    private ActivityResultLauncher<String> requestPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+                    // Permission granted, make the call
+                    Toast.makeText(requireContext(), "Permission granted. Click again to make the call.", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Permission denied, check if "Don't ask again" is checked
+                    if (!ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.CALL_PHONE)) {
+                        // User selected "Don't ask again", show guidance to app settings
+                        Toast.makeText(requireContext(), "Please enable phone permission.", Toast.LENGTH_SHORT).show();
+                        openAppSettings();
+                    } else {
+                        // Permission denied, but can be requested again
+                        Toast.makeText(requireContext(), "Permission denied", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
     public HelpLine() {
         // Required empty public constructor
@@ -41,47 +63,22 @@ public class HelpLine extends Fragment {
         suicideHelpCall = view.findViewById(R.id.suicideHelpCall);
         ambulanceCall = view.findViewById(R.id.ambulanceCall);
 
-        kidsHelpCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                call("tel:1098");
-            }
-        });
+        kidsHelpCall.setOnClickListener(v -> call("tel:1098"));
 
-        safeHavenCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                call("tel:1091");
-            }
-        });
+        safeHavenCall.setOnClickListener(v -> call("tel:1091"));
 
-        translifelinecall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                call("tel:1097");
-            }
-        });
+        translifelinecall.setOnClickListener(v -> call("tel:1097"));
 
-        suicideHelpCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                call("tel:9152987821");
-            }
-        });
+        suicideHelpCall.setOnClickListener(v -> call("tel:9152987821"));
 
-        ambulanceCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                call("tel:108");
-            }
-        });
+        ambulanceCall.setOnClickListener(v -> call("tel:108"));
 
         return view;
     }
 
     public void call(String phone) {
         if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+            requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE);
         } else {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse(phone));
@@ -89,17 +86,10 @@ public class HelpLine extends Fragment {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CALL) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permission granted, make the call
-                Toast.makeText(requireContext(), "Permission granted. Click again to make the call.", Toast.LENGTH_SHORT).show();
-            } else {
-                // Permission denied
-                Toast.makeText(requireContext(), "Permission denied", Toast.LENGTH_SHORT).show();
-            }
-        }
+    private void openAppSettings() {
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        Uri uri = Uri.fromParts("package", requireActivity().getPackageName(), null);
+        intent.setData(uri);
+        startActivity(intent);
     }
 }

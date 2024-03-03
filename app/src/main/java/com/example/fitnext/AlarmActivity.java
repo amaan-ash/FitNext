@@ -36,6 +36,7 @@ public class AlarmActivity extends AppCompatActivity {
     tookMed.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        Toast.makeText(AlarmActivity.this, "Good", Toast.LENGTH_SHORT).show();
         finish();
       }
     });
