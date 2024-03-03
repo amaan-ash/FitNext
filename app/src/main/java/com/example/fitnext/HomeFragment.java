@@ -16,7 +16,7 @@ import com.example.chatgpt.ChatGPT_Dashboard;
 
 public class HomeFragment extends Fragment {
     Button physicalOption;
-    Button mentalOption;
+    Button meditationMusicOption;
         Button medicineReminderOption;
         Button chatBotOption;
         Button anxietyOption;
@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment {
 
         //getting views
        physicalOption=view.findViewById(R.id.option1);
-       mentalOption=view.findViewById(R.id.option2);
+       meditationMusicOption=view.findViewById(R.id.option2);
        medicineReminderOption=view.findViewById(R.id.option3);
        chatBotOption=view.findViewById(R.id.option4);
       anxietyOption=view.findViewById(R.id.option5);
@@ -51,14 +51,10 @@ public class HomeFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-        mentalOption.setOnClickListener(new View.OnClickListener() {
+        meditationMusicOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new MentalFitnessFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+             startActivity(new Intent(getContext(),SongActivity.class));
             }
         });
 

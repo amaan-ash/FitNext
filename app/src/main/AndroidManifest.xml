@@ -89,6 +89,14 @@
             android:parentActivityName=".MedicineActivity"
             android:label="Medicine Reminder"
             />
+        <activity android:name=".SongActivity"
+            android:parentActivityName=".DashBoardActivity"
+            android:label="Meditation Music"
+            />
+        <activity android:name=".PlaySong"
+            android:parentActivityName=".SongActivity"
+            android:label="Meditation Music"
+            />
 
 <activity android:name=".MedicineActivity"
     android:label="Medicine Reminder"
