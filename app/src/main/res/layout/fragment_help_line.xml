@@ -4,141 +4,176 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
     tools:context=".HelpLine">
 
-    <LinearLayout
-        android:id="@+id/l1"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        android:fontFamily="@font/muli_black"
+        android:padding="10dp"
+        android:text="HELPLINE NUMBERS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001">
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/kidsHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/muli_bold"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="Kids Help Phone" />
-
-        <Button
-            android:id="@+id/kidsHelpCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="0dp"
-            android:text="Call" />
-    </LinearLayout>
     <LinearLayout
-        android:id="@+id/l2"
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/l1"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/safeHaven"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/muli_bold"
-            android:layout_marginTop="0dp"
-            android:text="Women HelpLine" />
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
-        <Button
-            android:id="@+id/safeHavenCall"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="0dp"
-            android:text="Call" />
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.001">
+
+            <TextView
+                android:id="@+id/kidsHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/muli_bold"
+                android:text="Kids Help Phone"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/kidsHelpCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="0dp"
+                android:text="Call" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/l1">
+
+            <TextView
+                android:id="@+id/safeHaven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/muli_bold"
+                android:text="Women HelpLine"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/safeHavenCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="95dp"
+                android:layout_marginTop="0dp"
+                android:text="Call" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/l2">
+
+            <TextView
+                android:id="@+id/transLifeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/muli_bold"
+                android:text="AIDS Helpline"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/transLifelineCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="0dp"
+                android:text="Call" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/l3">
+
+            <TextView
+                android:id="@+id/chimoHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/muli_bold"
+                android:text="Suicide Helpline"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/suicideHelpCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="0dp"
+                android:text="Call" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/l4">
+
+            <TextView
+                android:id="@+id/someOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/muli_bold"
+                android:text="Ambulance Call"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/ambulanceCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="107dp"
+                android:layout_marginTop="0dp"
+                android:text="Call" />
+        </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/l3"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/l2"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/transLifeline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/muli_bold"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="AIDS Helpline" />
-
-        <Button
-            android:id="@+id/transLifelineCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="125dp"
-            android:layout_marginTop="0dp"
-            android:text="Call" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/l4"
-        app:layout_constraintTop_toBottomOf="@+id/l3"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/chimoHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/muli_bold"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="Suicide Helpline" />
-
-        <Button
-            android:id="@+id/suicideHelpCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="0dp"
-            android:text="Call" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/l5"
-        app:layout_constraintTop_toBottomOf="@+id/l4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/someOther"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/muli_bold"
-            android:textSize="20sp"
-            android:text="Ambulance Call" />
-
-        <Button
-            android:id="@+id/ambulanceCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="107dp"
-            android:layout_marginTop="0dp"
-            android:text="Call" />
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
