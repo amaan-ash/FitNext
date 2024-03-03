@@ -53,6 +53,12 @@ public class PlaySong extends AppCompatActivity {
         mediaPlayer.start();
         seekBar.setMax(mediaPlayer.getDuration());
 
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                changeSong(1); // Move to the next song when the current one completes
+            }
+        });
         // Set up SeekBar change listener
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
