@@ -24,7 +24,7 @@ import java.util.Random;
 public class QuotesFragment extends Fragment {
 
     private Handler handler = new Handler(Looper.getMainLooper());
-    private static final long QUOTE_UPDATE_INTERVAL = 10000 ; // Update every 3 hours
+    private static final long QUOTE_UPDATE_INTERVAL = 10800000 ; // Update every 3 hours
 
     TextView textMotivationalQuote;
     private String[] motivationalQuotes = {
