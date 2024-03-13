@@ -83,8 +83,6 @@
         <activity
             android:name=".anxietyResultActivity"
             android:parentActivityName=".anxietyActivity" />
-        <activity android:name=".depressionActivity" />
-        <activity android:name=".depressionResultActivity" />
         <activity android:name=".AlarmActivity"
             android:parentActivityName=".MedicineActivity"
             android:label="Medicine Reminder"
