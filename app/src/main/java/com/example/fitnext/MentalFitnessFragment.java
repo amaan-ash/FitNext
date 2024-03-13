@@ -1,5 +1,6 @@
 package com.example.fitnext;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -39,11 +40,7 @@ public class MentalFitnessFragment extends Fragment {
         meditationSongsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new MeditateSongFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+              startActivity(new Intent(getContext(),SongActivity.class));
             }
         });
 

@@ -25,7 +25,9 @@
             android:layout_margin="20dp"
             android:padding="10dp"
             android:layout_below="@+id/textView2"
-            android:dividerHeight="15.0sp" />
+            android:divider="@color/white"
+            android:dividerHeight="15dp"
+           />
 
 
 
