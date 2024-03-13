@@ -52,7 +52,7 @@
             android:layout_height="70dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/buttonback"
-            android:text="Meditate By song"
+            android:text="Meditation music"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -64,7 +64,7 @@
             android:layout_height="70dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/buttonback"
-            android:text="meditate by exercise"
+            android:text="meditation exercise"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp"
