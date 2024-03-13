@@ -43,7 +43,7 @@ dependencies {
     implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
     implementation ("com.firebaseui:firebase-ui-auth:8.0.2")
     implementation ("com.firebaseui:firebase-ui-storage:8.0.2")
-    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
     implementation ("com.google.firebase:firebase-database:20.3.1")
