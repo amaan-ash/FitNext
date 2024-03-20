@@ -16,10 +16,10 @@ import com.example.chatgpt.ChatGPT_Dashboard;
 
 public class HomeFragment extends Fragment {
     Button physicalOption;
-    Button meditationMusicOption;
+    Button mentalFitnessOption;
         Button medicineReminderOption;
         Button chatBotOption;
-        Button anxietyOption;
+        Button meditationMusicOption;
         Button buyMedicineOption;
 
     public HomeFragment() {
@@ -34,10 +34,10 @@ public class HomeFragment extends Fragment {
 
         //getting views
        physicalOption=view.findViewById(R.id.option1);
-       meditationMusicOption=view.findViewById(R.id.option2);
+       mentalFitnessOption=view.findViewById(R.id.option2);
        medicineReminderOption=view.findViewById(R.id.option3);
        chatBotOption=view.findViewById(R.id.option4);
-      anxietyOption=view.findViewById(R.id.option5);
+      meditationMusicOption=view.findViewById(R.id.option5);
       buyMedicineOption=view.findViewById(R.id.option6);
 
        //rest of the code
@@ -51,10 +51,14 @@ public class HomeFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-        meditationMusicOption.setOnClickListener(new View.OnClickListener() {
+        mentalFitnessOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             startActivity(new Intent(getContext(),SongActivity.class));
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container,new MentalFitnessFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -73,10 +77,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        anxietyOption.setOnClickListener(new View.OnClickListener() {
+        meditationMusicOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-           startActivity(new Intent(getContext(), anxietyActivity.class));
+           startActivity(new Intent(getContext(), SongActivity.class));
             }
         });
 
