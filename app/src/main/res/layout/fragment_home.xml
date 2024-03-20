@@ -40,30 +40,32 @@
 
                 <android.widget.Button
                     android:id="@+id/option1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:layout_weight="1"
                     android:background="@drawable/optionbuton"
                     android:text="PHYSICAL
-        FITNESS"
+                     FITNESS"
                     android:textColor="@color/white"
-                    android:layout_marginStart="10dp"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
 
                 <android.widget.Button
                     android:id="@+id/option2"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:layout_weight="1"
                     android:background="@drawable/optionbuton"
-                    android:text="Mental Fitness"
+                    android:text="Mental
+                     Fitness"
                     android:padding="0dp"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_gravity="end"
-                    android:layout_marginStart="70dp"
-                    />
+                    android:layout_marginStart="10dp" />
             </LinearLayout>
+
 
 
             <LinearLayout
@@ -74,26 +76,30 @@
 
                 <android.widget.Button
                     android:id="@+id/option3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@drawable/optionbuton"
                     android:text="Medicine reminder"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:layout_marginStart="10dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                  />
 
                 <android.widget.Button
                     android:id="@+id/option4"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:layout_weight="1"
                     android:background="@drawable/optionbuton"
                     android:text="ChatBot"
+                    android:layout_marginStart="10dp"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="70dp" />
+                    />
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,25 +110,29 @@
 
                 <android.widget.Button
                     android:id="@+id/option5"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:layout_weight="1"
                     android:background="@drawable/optionbuton"
-                    android:text="Meditation Music"
+                    android:text="Meditation
+                    Music"
                     android:textColor="@color/white"
-                    android:layout_marginStart="10dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <android.widget.Button
                     android:id="@+id/option6"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:background="@drawable/optionbuton"
-                    android:text="BUY Medicine"
+                    android:text="BUY
+                     Medicine"
                     android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
                     android:textSize="19sp"
                     android:textStyle="bold"
-                    android:layout_marginStart="70dp"
+
                     />
             </LinearLayout>
 
