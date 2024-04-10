@@ -17,10 +17,10 @@ import com.example.chatgpt.ChatGPT_Dashboard;
 public class HomeFragment extends Fragment {
     Button physicalOption;
     Button mentalFitnessOption;
-        Button medicineReminderOption;
-        Button chatBotOption;
-        Button meditationMusicOption;
-        Button buyMedicineOption;
+    Button medicineReminderOption;
+    Button chatBotOption;
+    Button meditationMusicOption;
+    Button buyMedicineOption;
 
     public HomeFragment() {
         // Required empty public constructor
