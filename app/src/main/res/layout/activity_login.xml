@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/muli_black"
-                    android:text="Hello There Welcome"
+                    android:text="Hello There, Welcome"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="40sp"

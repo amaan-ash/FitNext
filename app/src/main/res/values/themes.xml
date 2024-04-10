@@ -47,10 +47,11 @@
     </style>
 
     <!--the below code is for setting the splash screen-->
+<!--    we are using the splash api-->
     <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/fitnextapplogo</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.FitNext</item>
-        <item name="android:windowSplashScreenBrandingImage" tools:targetApi="s">@drawable/fit1</item>
+        <item name="android:windowSplashScreenBrandingImage" >@drawable/fit1</item>
     </style>
 </resources>
