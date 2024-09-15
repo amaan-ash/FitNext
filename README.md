@@ -52,27 +52,27 @@
 
 | Feature | Screenshot |
 |---------|------------|
-| **Splash Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/splash-screen.png" width="250"/>|
-| **Welcome Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/welcome-screen.png" width="250"/>|
-| **Login Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/login-screen.png" width="250"/>|
-| **Registration Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/registration-screen.png" width="250"/>|
-| **OTP Login Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/otp-login-screen.png" width="250"/>|
-| **OTP Input Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/otp-input-screen.png" width="250"/>|
-| **Physical Fitness** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/physical-fitness.png" width="250"/>|
-| **Mental Fitness** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/mental-fitness.png" width="250"/>|
-| **Medicine Reminder** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/medicine-reminder-screen.png" width="250"/>|
-| **Medicine Notification** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/medicine-reminder-notification.png" width="250"/>|
-| **Reminder Add User** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/reminder-add-user.png" width="250"/>|
-| **Reminder Add Medicine** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/reminder-add-medicine.png" width="250"/>|
-| **Meditation Music** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/music-list.png" width="250"/>|
-| **Music List** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/meditation-music.png" width="250"/>|
-| **Chatbot** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/chatbot-screen.png" width="250"/>|
-| **Diet Plan** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/diet-plan.png" width="250"/>|
-| **Firebase Notification** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/firebase-notifications.png" width="250"/>|
-| **Health Articles** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/health-articles.png" width="250"/>|
-| **Motivation** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/motivation-screen.png" width="250"/>|
-| **Navigation Drawer** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/navigation-drawer.png" width="250"/>|
-| **Pedometer** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/pedometer-screen.png" width="250"/>|
+| **Splash Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/splash-screen.png" width="200"/>|
+| **Welcome Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/welcome-screen.png" width="200"/>|
+| **Login Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/login-screen.png" width="200"/>|
+| **Registration Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/registration-screen.png" width="200"/>|
+| **OTP Login Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/otp-login-screen.png" width="200"/>|
+| **OTP Input Screen** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/otp-input-screen.png" width="200"/>|
+| **Physical Fitness** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/physical-fitness.png" width="200"/>|
+| **Mental Fitness** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/mental-fitness.png" width="200"/>|
+| **Medicine Reminder** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/medicine-reminder-screen.png" width="200"/>|
+| **Medicine Notification** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/medicine-reminder-notification.png" width="200"/>|
+| **Reminder Add User** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/reminder-add-user.png" width="200"/>|
+| **Reminder Add Medicine** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/reminder-add-medicine.png" width="200"/>|
+| **Meditation Music** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/music-list.png" width="200"/>|
+| **Music List** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/meditation-music.png" width="200"/>|
+| **Chatbot** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/chatbot-screen.png" width="200"/>|
+| **Diet Plan** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/diet-plan.png" width="200"/>|
+| **Firebase Notification** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/firebase-notifications.png" width="200"/>|
+| **Health Articles** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/health-articles.png" width="200"/>|
+| **Motivation** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/motivation-screen.png" width="200"/>|
+| **Navigation Drawer** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/navigation-drawer.png" width="200"/>|
+| **Pedometer** |<img src="https://github.com/amaan-ash/FitNext/blob/main/screenshots/pedometer-screen.png" width="200"/>|
 
 ## Getting Started 🚀
 
