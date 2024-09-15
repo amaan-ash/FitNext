@@ -183,7 +183,7 @@ public class ChatGPT_Dashboard extends AppCompatActivity {
 
     public AlertDialog.Builder buildDialog(Context context){
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("No Internet Connection");
+        builder.setTitle("Noo Internet Connection");
         builder.setMessage("Please check your internet connection.");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
