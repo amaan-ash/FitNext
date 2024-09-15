@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FitNext" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+                <!-- Primary brand color. -->
+                <item name="colorPrimary">@color/black</item>
+                <item name="colorPrimaryVariant">@color/black</item>
+                <item name="android:windowBackground">@color/white</item>
+                <!-- Secondary brand color. -->
+                <item name="colorSecondary">@color/teal_200</item>
+                <item name="colorSecondaryVariant">@color/teal_700</item>
+                <item name="colorOnSecondary">@color/white</item>
+
+                <!-- Status bar color. -->
+                <item name="android:statusBarColor" >@color/black</item>
+            </style>
+
+
+    <style name="Theme.FitNext" parent="Base.Theme.FitNext" >
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.ChatBot" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/lavender</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/black</item>
+    </style>
+    <style name="Theme.SpecialTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lavender</item>
+        <item name="colorPrimaryVariant">@color/lavender</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/black</item>
+    </style>
+
+    <!--the below code is for setting the splash screen-->
+<!--    we are using the splash api-->
+    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/fitnextapplogo</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.FitNext</item>
+        <item name="android:windowSplashScreenBrandingImage" >@drawable/fit1</item>
+    </style>
+</resources>

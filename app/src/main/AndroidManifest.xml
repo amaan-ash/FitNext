@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitNext"
+        tools:targetApi="35">
+        <activity
+            android:name=".Medicine"
+            android:exported="false" />
+        <activity
+            android:name=".BuyMedicineActivity"
+            android:parentActivityName=".DashBoardActivity"
+            android:label="Buy Medicine"
+            android:exported="false" />
+        <activity
+            android:name=".FirstActivity"
+            android:parentActivityName=".DashBoardActivity"
+            android:label="Medicine Reminder"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chatgpt.ChatGPT_Dashboard"
+            android:exported="false"
+            android:screenOrientation="nosensor"
+            android:label="ChatBot"
+            android:parentActivityName=".DashBoardActivity"
+            android:theme="@style/Theme.ChatBot" />
+        <activity
+            android:name=".OtpVerifyActivity"
+            android:exported="false"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".PhoneCallLoginActivity"
+            android:exported="false"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".DashBoardActivity"
+            android:exported="false"
+            android:screenOrientation="nosensor"
+            android:theme="@style/Theme.SpecialTheme" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="Register"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="Login"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:theme="@style/Theme.App.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AlarmActivity"
+            android:parentActivityName=".MedicineActivity"
+            android:label="Medicine Reminder"
+            />
+        <activity android:name=".SongActivity"
+            android:parentActivityName=".DashBoardActivity"
+            android:label="Meditation Music"
+            />
+        <activity android:name=".PlaySong"
+            android:parentActivityName=".SongActivity"
+            android:label="Meditation Music"
+            />
+
+<activity android:name=".MedicineActivity"
+    android:label="Medicine Reminder"
+    android:parentActivityName=".FirstActivity"
+    />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <receiver android:name=".AlarmBroadcastReceiver" />
+    </application>
+
+</manifest>

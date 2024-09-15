@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MeditationExercisesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/muli_black"
+                android:text="MEDITATION EXERCISES"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/head1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Basic Mindfulness Meditation"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head1"
+                android:background="@color/underline"
+                android:text="STEP 1:\nFind a comfortable place to sit, and a posture that is both alert and relaxed at the
+same time. See if you can make the spine erect, without being too rigid."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body1"
+                android:background="@drawable/meditation1" />
+
+            <TextView
+                android:id="@+id/body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img1"
+                android:background="@color/underline"
+                android:text="STEP 2\nClose your eyes (or leave them slightly open if you prefer), and take a few slow
+breaths. Take a few moments to loosen your body from your head to your toes, and
+take a few more deep breaths."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body2"
+                android:background="@drawable/meditation2"/>
+
+            <TextView
+                android:id="@+id/body3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img2"
+                android:background="@color/underline"
+                android:text="STEP 3\nStop to notice the sensations throughout your body — the warmth, the coolness or
+any discomfort. Be aware of them, but try not to fidget too much."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body3"
+                android:background="@drawable/meditation3"/>
+
+            <TextView
+                android:id="@+id/body4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img3"
+                android:background="@color/underline"
+                android:text="STEP 4\nPick one sensation — such as the feeling of your breath going in and out — and
+devote your attention to it. Just focus on that."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body4"
+                android:background="@drawable/meditation4"
+                />
+
+            <TextView
+                android:id="@+id/body5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img4"
+                android:background="@color/underline"
+                android:text="STEP 5\nWhen your mind wanders, bring your attention back to the breath. After a few
+moments, your mind may wander again. Once again, notice that and simply return
+your attention back to the present moment."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body5"
+                android:background="@drawable/meditation5"
+                />
+
+            <TextView
+                android:id="@+id/body6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img5"
+                android:background="@color/underline"
+                android:text="STEP 6\nWhen you’re ready — after one minute, 10 minutes or 30 minutes — open your
+eyes. Though your formal meditation practice may have ended, your mindful
+awareness can continue throughout the day."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body6"
+                android:background="@drawable/meditation6"
+                />
+
+
+            <View
+                android:id="@+id/u1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/img6"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/head2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/u1"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="When the Mind Wanders"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/body21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head2"
+                android:background="@color/underline"
+                android:text="STEP 1\nDuring a meditation session, your mind will inevitably wander off."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img21"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body21"
+                android:background="@drawable/meditation12"
+                />
+
+            <TextView
+                android:id="@+id/body22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img21"
+                android:background="@color/underline"
+                android:text="STEP 2\nWhen it does, notice what was distracting you, then take a moment and pause. Let go of the
+thought, and gently return your awareness to the breath, being present for each inhalation and
+exhalation."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img22"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body22"
+                android:background="@drawable/meditation13"
+                />
+
+            <TextView
+                android:id="@+id/body23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img22"
+                android:background="@color/underline"
+                android:text="STEP 3\nDon’t judge your thoughts. Thinking is natural, and there’s nothing inherently good or bad
+about it. It’s simply what the mind does. Just come back to the present moment."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img23"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body23"
+                android:background="@drawable/meditation14"
+                />
+
+            <TextView
+                android:id="@+id/body24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img23"
+                android:background="@color/underline"
+                android:text="STEP 4\nInevitably, your mind will wander again. Just acknowledge whatever it is you were thinking
+of and resume your meditation."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img24"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body24"
+                android:background="@drawable/meditation15"
+                />
+
+            <TextView
+                android:id="@+id/body25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img24"
+                android:background="@color/underline"
+                android:text="STEP 5\nWith time, it will become easier to keep your attention focused on the breath or the body. But even for the most experienced meditators, the mind is prone to wander. When it does, begin
+again."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+
+            <View
+                android:id="@+id/u2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/body25"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/head3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/u2"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Mindfulness Meditation Practices"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/body31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head3"
+                android:background="@color/underline"
+                android:text="Listening to basic guided meditations can also be helpful, especially when getting started."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/body32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body31"
+                android:background="@color/underline"
+                android:text="Level 1:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body32"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body32"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play1"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body32"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause1"
+                android:text="Stop"/>
+
+            <TextView
+                android:id="@+id/body33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play1"
+                android:background="@color/underline"
+                android:text="Level 2:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body33"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body33"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play2"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body33"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause2"
+                android:text="Stop"/>
+
+            <TextView
+                android:id="@+id/body34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play2"
+                android:background="@color/underline"
+                android:text="Level 3:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body34"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body34"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play3"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body34"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause3"
+                android:text="Stop"/>
+
+            <TextView
+                android:id="@+id/body35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/play3"
+                android:background="@color/underline"
+                android:text="Level 4:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body35"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body35"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play4"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body35"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause4"
+                android:text="Stop"/>
+
+            <View
+                android:id="@+id/u3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/play4"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/head4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/u3"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Body Scan Meditation"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/body41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head4"
+                android:background="@color/underline"
+                android:text="Instead of training your attention on the breath, as is the case in basic mindfulness meditation,
+the body scan involves systematically focusing on different sensations and areas, from the
+head to the toes."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img41"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body41"
+                android:background="@drawable/body_scan"
+                />
+
+            <TextView
+                android:id="@+id/aud2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img41"
+                android:background="@color/underline"
+                android:text="Play Audio: "
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aud2"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aud2"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play5"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aud2"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause5"
+                android:text="Stop"/>
+
+            <View
+                android:id="@+id/u4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/play5"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/head5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/u4"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Walking Meditation"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/body51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head5"
+                android:background="@color/underline"
+                android:text="Once you’re comfortable with sitting meditation and the body scan,
+you might want to try walking meditation. There’s no rule against
+trying walking meditation first, but it’s useful to learn the basics
+before you try to walk and meditate at the same time."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img51"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body51"
+                android:background="@drawable/walking"
+                />
+
+            <TextView
+                android:id="@+id/aud3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img51"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Play Audio: "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aud3"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aud3"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play6"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aud3"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause6"
+                android:text="Stop"/>
+
+            <View
+                android:id="@+id/u5"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/play6"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/head6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/u5"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Mindful Eating"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/body61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head6"
+                android:background="@color/underline"
+                android:text="Another illuminating exercise to try is mindful eating. Instead of wolfing down
+whatever is on the menu, make the time and space to give the experience your full
+attention."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img61"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/body61"
+                android:background="@drawable/teadrink"
+                />
+
+            <TextView
+                android:id="@+id/body62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img61"
+                android:background="@color/underline"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Play Audio: "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/play7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body62"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pause7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body62"
+                android:translationX="70dp"
+                android:layout_toEndOf="@id/play7"
+                android:text="Pause"/>
+
+            <Button
+                android:id="@+id/stop7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body62"
+                android:translationX="140dp"
+                android:layout_toEndOf="@id/pause7"
+                android:text="Stop"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

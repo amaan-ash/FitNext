@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_physical"
+            android:icon="@drawable/nav_physical"
+            android:title="Physical Fitness"/>
+
+        <item
+            android:id="@+id/nav_mental"
+            android:icon="@drawable/nav_mental"
+            android:title="Mental Fitness"/>
+        <item
+            android:id="@+id/nav_diet"
+            android:icon="@drawable/nav_diet"
+            android:title="Diet Plan"/>
+
+        <item
+            android:id="@+id/nav_meditation"
+            android:icon="@drawable/nav_meditate"
+            android:title="Meditation"/>
+
+        <item
+            android:id="@+id/nav_pedometer"
+            android:icon="@drawable/nav_walk"
+            android:title="Pedometer"/>
+
+        <item
+            android:id="@+id/nav_articles"
+            android:icon="@drawable/nav_article"
+            android:title="Health Articles"/>
+        <item
+            android:id="@+id/nav_goals"
+            android:icon="@drawable/goal"
+            android:title="Set Goals"/>
+
+        <item
+            android:id="@+id/nav_supplements"
+            android:icon="@drawable/nav_supplements"
+            android:title="Health Supplements"/>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/nav_share"
+            android:title="Share"/>
+        <item
+            android:id="@+id/nav_helpline"
+            android:icon="@drawable/phone_call"
+            android:title="Helpline Numbers"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/nav_about"
+            android:title="About Us"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/nav_logout"
+            android:title="Logout"/>
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/nav_exit"
+            android:title="Exit"/>
+
+
+    </group>
+
+</menu>

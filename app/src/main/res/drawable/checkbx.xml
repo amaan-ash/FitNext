@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- checkbox_border.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Unchecked state -->
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" /> <!-- Adjust the radius for rounded corners -->
+            <stroke
+                android:width="2dp"
+            android:color="#808080" /> <!-- Border color -->
+        </shape>
+    </item>
+    <!-- Checked state -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" /> <!-- Adjust the radius for rounded corners -->
+            <solid android:color="#FF4081" /> <!-- Fill color when checked -->
+            <stroke
+                android:width="2dp"
+            android:color="#FF4081" /> <!-- Border color -->
+        </shape>
+    </item>
+</selector>

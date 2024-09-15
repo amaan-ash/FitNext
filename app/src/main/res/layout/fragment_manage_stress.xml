@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageStressFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textsecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/muli_black"
+                android:text="STRESS MANAGEMENT"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/freq1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textsecond"
+                android:background="@color/lavender"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The Name Game"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@id/freq1"
+                android:layout_gravity="start"
+                android:background="@color/black"
+                android:src="@drawable/thename" />
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView1"
+                android:background="@color/white"
+                android:text="This game is simpler than Eye Spy and yet it can be a powerful tool to curb spiraling
+thoughts. First, look around you and name three things you can hear, then two things
+you can see, and finally one sensation that you feel. By doing this, you are grounding
+yourself by increasing your awareness of your body and your environment."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView1"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/freq2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u1"
+                android:background="@color/lavender"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Intention Setting Exercises"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@id/freq2"
+                android:layout_gravity="start"
+                android:background="@color/black"
+                android:src="@drawable/intention" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView2"
+                android:background="@color/white"
+                android:text="Before you open up your laptop and begin your usual grind, take a few
+moments to center yourself.&quot;Setting aside a little time in the morning
+to set intentions helps you start the day with a clear mind. This can
+include journaling, movement, reading, or meditation. Be flexible and
+do what feels best.&quot;"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView2"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/freq3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u2"
+                android:background="@color/lavender"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Deep Breathing Exercise"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@id/freq3"
+                android:layout_gravity="start"
+                android:background="@color/black"
+                android:src="@drawable/deep" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView3"
+                android:background="@color/white"
+                android:text="The quality of our breathing tells us a lot about where our headspace is at. Chances
+are, if you're feeling a bit anxious, your breath may feel short, shallow, or
+constrained. So one simple way to relieve stress is to practice deep breathing through
+the diaphragm.\n
+&quot;Taking long, deep breaths when feeling cluttered, distracted, or ungrounded begins
+to relax the nervous system and draws the attention to the present moment, which in
+turn promotes a feeling of intimacy with the body, with the earth, and with the
+natural spaciousness that is inherent in each moment,&quot; says Randhawa."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView3"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/freq4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u3"
+                android:background="@color/lavender"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="4.The Wiggle and Freeze Game"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@id/freq4"
+                android:layout_gravity="start"
+                android:background="@color/black"
+                android:src="@drawable/thewiggle" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView4"
+                android:background="@color/white"
+                android:text="It’s a fun way to move around, and to start cultivating a greater
+awareness of bodily sensations, which is a core component of mindfulness practice.\n
+In this game you and your kid (or friend), wiggle, bounce around, or
+dance until you say &quot;Freeze!&quot;. Then everyone freezes and takes a
+moment to notice what they can feel in their body — perhaps
+movement, tingling, heat, shaking, buzzing, or something else,&quot; says
+Beach. &quot;You can repeat it as many times as you’d like!&quot;"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView4"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/freq5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u4"
+                android:text="Candle Study Exercise"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/lavender"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@id/freq5"
+                android:layout_gravity="start"
+                android:background="@color/black"
+                android:src="@drawable/candle" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView5"
+                android:background="@color/white"
+                android:text="Light your favorite candle, sit comfortably, and watch the flame sway
+and flicker. &quot;This is actually a form of meditation,&quot;. Gaze at candle for
+five to 10 minutes and let your mind wander, she says. Observe your
+thoughts. Let them pass without judgement."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u5"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView5"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/freq6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u5"
+                android:text="Tea Drinking Exercise"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/lavender"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_gravity="start"
+                android:layout_below="@id/freq6"
+                android:background="@color/black"
+                android:src="@drawable/tea" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView6"
+                android:text="If you love drinking tea every day, why not try drinking it a little bit
+slower? Better yet, try drawing you attention to the sensations, smells,
+or sounds you observe from the moment you start brewing to the
+moment you finish your cup. &quot;Notice how it feels to make the tea, the
+color of the tea leaves, the sound of the kettle, the shape of the mug,
+the scent that arises, what the tea tastes like, and how it feels in the
+body as you make and drink the tea&quot;. Invite yourself to meet the
+activity with an embodied presence by noticing sensations that arise
+as you drink the tea and how often the mind wanders. Then with
+compassionate awareness, gently bring the mind back to the tea, back
+to the body, resting it in the present moment.&quot;"
+                android:textSize="20sp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u6"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView6"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/freq7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u6"
+                android:text="Pyramid Pose (Parsvottanasana)"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/lavender"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_gravity="start"
+                android:layout_below="@id/freq7"
+                android:background="@color/black"
+                android:src="@drawable/berry" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView7"
+                android:text="When it comes to mealtime, many of us scarf down our food while
+watching TV, scrolling on our phones, or typing on our computers.
+Since we&#39;re distracted, sometimes we eat our food too fast, increasing
+the risk of overeating, indigestion, bloating, and gas. That&#39;s a recipe
+for crankiness and irritability. So, here&#39;s a challenge for you: try to eat
+a strawberry as slow as possible. &quot;To begin, aim for 30 seconds to a
+minute.&quot;"
+                android:textSize="20sp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u7"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView7"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/freq8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u7"
+                android:text="Gratitude List Exercise"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/lavender"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@id/freq8"
+                android:layout_gravity="start"
+                android:background="@color/black"
+                android:src="@drawable/gratitute" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView8"
+                android:background="@color/white"
+                android:text="After you wake up in the morning or before you go to bed at night,
+write five to 10 things that you are grateful for.&quot;Gratitude lists are the
+quickest way to ground yourself in difficult times because they help
+you focus on what is working,&quot; says Eskandani. &quot;The trick, though, is
+to get specific. So instead of just writing down &#39;I am grateful for
+family,&#39; try: &#39;I am grateful for the zoom call I had with my parents and
+sister last night.&quot;"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u8"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView8"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/freq9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u8"
+                android:text="Follow Your Breath Exercise"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/lavender"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_gravity="start"
+                android:layout_below="@id/freq9"
+                android:background="@color/black"
+                android:src="@drawable/follow" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView9"
+                android:text="This activity is awesome to do with your child or even by yourself. You
+can also combine this with any deep breathing techniques. If you&#39;re
+doing this with your kid, invite them to breathe with you. Ask them:
+Can they feel their breath in their nose? In their chest or belly? Can
+they hear their breath?"
+                android:textSize="20sp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/u9"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView9"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/freq10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/u9"
+                android:text="Stillness Exercise"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/lavender"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_gravity="start"
+                android:layout_below="@id/freq10"
+                android:background="@color/black"
+                android:src="@drawable/still" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView10"
+                android:text="For many, the word &quot;meditation&quot; can feel intimidating. But instead of
+thinking about mastering meditation, think about practicing stillness.
+This can be as simple as focusing on your breath, a mantra (if you
+have one you like), or an image. You can do this for five minutes, 20
+minutes, or however long you choose to be still."
+                android:textSize="20sp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
