@@ -1,6 +1,6 @@
 # FitNext 🏋️‍♂️📱
 
-**FitNext** is a comprehensive fitness app designed to help users maintain both their physical and mental health. It features an intuitive user interface and a variety of tools, from workout exercises to meditation music, all in one place.
+**FitNext** is a comprehensive Native Android Application designed to help users maintain both their physical and mental health. It features an intuitive user interface and a variety of tools, from workout exercises to meditation music, all in one place.
 
 ## Features ✨
 
