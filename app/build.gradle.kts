@@ -60,10 +60,5 @@ dependencies {
     implementation("com.google.firebase:firebase-inappmessaging-display")
     implementation("com.google.firebase:firebase-analytics")
 
-    //credential manager api for login
-
-        implementation ("androidx.credentials:credentials:<latest version>")
-        implementation ("androidx.credentials:credentials-play-services-auth:<latest version>")
-        implementation ("com.google.android.libraries.identity.googleid:googleid:<latest version>")
     }
 
