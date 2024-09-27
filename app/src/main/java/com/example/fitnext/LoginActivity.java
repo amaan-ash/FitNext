@@ -370,7 +370,7 @@ public class LoginActivity extends AppCompatActivity {
             // check condition
             if (signInAccountTask.isSuccessful()) {
                 // When google sign in successful initialize string
-                String s = "Google sign in successful";
+                String s = "Google Sign in successful";
                 // Display Toast
                 displayToast(s);
                 try {
