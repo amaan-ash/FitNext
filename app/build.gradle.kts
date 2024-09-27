@@ -30,11 +30,13 @@ android {
 
 dependencies {
 
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-auth:23.0.0")
     implementation("com.google.firebase:firebase-messaging:24.0.1")
+    implementation("androidx.media3:media3-common:1.4.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
@@ -53,7 +55,15 @@ dependencies {
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
 
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
-
+    implementation("androidx.activity:activity-ktx:1.9.2") // Or latest version
+    implementation("androidx.fragment:fragment-ktx:1.8.3")
     implementation("com.google.firebase:firebase-inappmessaging-display")
     implementation("com.google.firebase:firebase-analytics")
-}
+
+    //credential manager api for login
+
+        implementation ("androidx.credentials:credentials:<latest version>")
+        implementation ("androidx.credentials:credentials-play-services-auth:<latest version>")
+        implementation ("com.google.android.libraries.identity.googleid:googleid:<latest version>")
+    }
+

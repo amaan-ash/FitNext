@@ -252,7 +252,7 @@ public class LoginActivity extends AppCompatActivity {
     //the below method is used to validate the email and password after clicking on Login Button
     public void validate(String userEmail, String userPassword){
 
-       progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
 
         //using the firebase code to sign in with email and password
         auth.signInWithEmailAndPassword(userEmail,
@@ -303,10 +303,10 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                textLayoutEmailLogin.setError("Not a valid email address");
-                textLayoutEmailLogin.requestFocus();
-                return;
-            }
+            textLayoutEmailLogin.setError("Not a valid email address");
+            textLayoutEmailLogin.requestFocus();
+            return;
+        }
 
 
         // Clear the error if the email is valid
@@ -321,18 +321,18 @@ public class LoginActivity extends AppCompatActivity {
             textLayoutPasswordLogin.requestFocus();
             return;
         }
-         if (password.length() < 6) {
+        if (password.length() < 6) {
             textLayoutPasswordLogin.setError("Minimum 6 characters required");
             textLayoutPasswordLogin.requestFocus();
             return;
         }
 
 
-            textLayoutPasswordLogin.setError(null);
-        }
+        textLayoutPasswordLogin.setError(null);
+    }
 
 
-        //the below code is used for resetting the password
+    //the below code is used for resetting the password
     public void resetPassword(){
         final String resetEmail = textInputEmailLogin.getText().toString();
 
@@ -409,5 +409,4 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
     }
 
-    }
-
+}
