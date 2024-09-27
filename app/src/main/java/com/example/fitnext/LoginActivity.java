@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar progressBar;
     String email,password;
     FirebaseAuth auth;
-    GoogleSignInClient googleSignInClient;
+   GoogleSignInClient googleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -370,7 +370,7 @@ public class LoginActivity extends AppCompatActivity {
             // check condition
             if (signInAccountTask.isSuccessful()) {
                 // When google sign in successful initialize string
-                String s = "Google Sign in successful";
+                String s = "Google sign in successful";
                 // Display Toast
                 displayToast(s);
                 try {
